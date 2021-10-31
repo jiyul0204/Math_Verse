@@ -1,6 +1,7 @@
 using UnityEngine;
+using UniRx;
 
-namespace Satillite
+namespace SatilliteGame
 {
     public class Satellite : MonoBehaviour
     {

@@ -762,6 +762,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1933855280}
     m_Modifications:
+    - target: {fileID: 1447149862, guid: 98d56d57db23d0947a7fbb33c52cdd5b, type: 3}
+      propertyPath: IntervalSecond
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1929479888335103112, guid: 98d56d57db23d0947a7fbb33c52cdd5b, type: 3}
       propertyPath: mainPlanet
       value: 

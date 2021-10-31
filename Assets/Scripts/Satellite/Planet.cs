@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SatilliteGame
+namespace SatelliteGame
 {
     public class Planet : MonoBehaviour
     {

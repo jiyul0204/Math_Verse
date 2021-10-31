@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 1929479888335103119}
   - component: {fileID: 1929479888335103118}
   - component: {fileID: 1929479888335103112}
+  - component: {fileID: 1447149862}
   m_Layer: 5
   m_Name: Image (Satellite)
   m_TagString: Untagged
@@ -231,4 +232,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainPlanet: {fileID: 0}
-  sateliteScore: {fileID: 1929479887875062920}
+  satelliteScore: {fileID: 1929479887875062920}
+--- !u!114 &1447149862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929479888335103156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2ec8ef4828e504bb97e388bd9ce609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntervalSecond: 1

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,81 +7,123 @@ using UniRx.Triggers;
 
 namespace SatelliteGame
 {
+    enum SatelliteSign
+    {
+        Plus,
+        Minus,
+        /*Multiply,
+        Divide,
+        Modular,*/
+        Max
+    }
+
     public class Satellite : MonoBehaviour
     {
+        #region Planet GameObject
         [SerializeField]
-        private GameObject mainPlanet;
+        private GameObject planetObject;
         private RectTransform mainPlanetRectTransform;
+        private Planet mainPlanet;
 
+        private RectTransform objectRectTransform;
+        private Button objectButton;
+        #endregion
+
+        #region Satellite Score
         [SerializeField]
-        private GameObject satelliteScore;
+        private GameObject scoreObject;
+        private Text scoreText;
+        private int scoreValue;
+        private SatelliteSign scoreSign;
+        #endregion
 
-        private Quaternion satelliteScoreOriginRotation;
+        #region GameObject Position
+        private Vector3 originPosition;
+        private Quaternion scoreOriginRotation;
+        #endregion
 
-        private RectTransform satelliteRectTransform;
-        private Button satelliteButton;
-
+        #region Coroutine
         private Coroutine revolutionCoroutine;
-        private Coroutine satelliteMoveCoroutine;
-
-        private ObservableLongPointerDownTrigger longPointerDownTrigger;
+        #endregion
 
         private void Awake()
         {
-            mainPlanetRectTransform = mainPlanet.GetComponent<RectTransform>();
-            satelliteRectTransform = GetComponent<RectTransform>();
-            satelliteButton = GetComponent<Button>();
-            longPointerDownTrigger = GetComponent<ObservableLongPointerDownTrigger>();
+            mainPlanetRectTransform = planetObject.GetComponent<RectTransform>();
+            mainPlanet = planetObject.GetComponent<Planet>();
 
-            satelliteScoreOriginRotation = satelliteScore.transform.rotation;
+            objectRectTransform = GetComponent<RectTransform>();
+            objectButton = GetComponent<Button>();
+
+            scoreText = GetComponentInChildren<Text>();
+
+            originPosition = GetComponent<RectTransform>().localPosition;
+            scoreOriginRotation = scoreObject.transform.rotation;
         }
 
         private void Start()
         {
+            SetSatelliteScore();
             BindView();
-
             StartRevolve();
         }
 
-        private void OnDestroy()
+        private void SetSatelliteScore()
         {
-            StopRevolve();
+            scoreValue = Random.Range(0, 11);
+            scoreSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
+
+            char scoreSignText = '+';
+
+            switch (scoreSign)
+            {
+                case SatelliteSign.Plus:
+                    // '+'의 경우 이미 초기화 단계에서 설정했으므로
+                    // 아무 것도 안하고 지나감. - Hyeonwoo, 2021.11.07.
+                    break;
+                case SatelliteSign.Minus:
+                    scoreSignText = '-';
+                    break;
+                /*case SatelliteSign.Multiply:
+                    scoreSignText = '*';
+                    break;
+                case SatelliteSign.Divide:
+                    scoreSignText = '/';
+                    break;
+                case SatelliteSign.Modular:
+                    scoreSignText = '%';
+                    break;*/
+            }
+
+            scoreText.text = $"{scoreSignText}{scoreValue}";
         }
 
         private void BindView()
         {
-            satelliteButton.OnPointerDownAsObservable()
+            objectButton.OnPointerDownAsObservable()
                 .Subscribe(_ =>
                 {
-                    Debug.Log($"[KHW] Pointer Down");
-
                     StopRevolve();
                 })
                 .AddTo(gameObject);
 
-            satelliteButton.OnPointerUpAsObservable()
+            objectButton.OnPointerUpAsObservable()
                 .Subscribe(_ =>
                 {
-                    Debug.Log($"[KHW] Pointer Up");
-
                     StartRevolve();
-                })
-                .AddTo(gameObject);
-
-            longPointerDownTrigger.OnLongPointerDownAsObservable()
-                .Subscribe(_ =>
-                {
-                    Debug.Log($"[KHW] Long Pointer Down");
                 })
                 .AddTo(gameObject);
         }
 
         private void StartRevolve()
         {
-            StopRevolve();
+            /*if (mainPlanet.CalculateScore())
+            {
+                Destroy(gameObject);
+                return;
+            }*/
 
+            objectRectTransform.localPosition = originPosition;
             revolutionCoroutine = StartCoroutine(RotateAroundMainPlanet());
-            /*satelliteMoveCoroutine = StartCoroutine()*/
         }
 
         private void StopRevolve()
@@ -89,6 +131,7 @@ namespace SatelliteGame
             if (revolutionCoroutine != null)
             {
                 StopCoroutine(revolutionCoroutine);
+                originPosition = GetComponent<RectTransform>().localPosition;
             }
         }
 
@@ -96,8 +139,8 @@ namespace SatelliteGame
         {
             while (true)
             {
-                satelliteRectTransform.RotateAround(mainPlanetRectTransform.position, -transform.forward, 30f * Time.deltaTime);
-                satelliteScore.transform.rotation = satelliteScoreOriginRotation;
+                objectRectTransform.RotateAround(mainPlanetRectTransform.position, -transform.forward, 30f * Time.deltaTime);
+                scoreObject.transform.rotation = scoreOriginRotation;
 
                 yield return null;
             }

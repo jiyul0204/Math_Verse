@@ -85,7 +85,7 @@ namespace SatelliteGame
         {
             while (satellites.Count > 0)
             {
-                foreach (var satellitesTransform in satellitesTrasforms)
+                foreach (RectTransform satellitesTransform in satellitesTrasforms)
                 {
                     satellitesTransform.RotateAround(rectTransform.position, -transform.forward, satelliteMoveSpeed * Time.deltaTime);
                 }
@@ -98,7 +98,7 @@ namespace SatelliteGame
         {
             var targetSatellite = collider.GetComponent<Satellite>();
 
-            foreach (var satellite in satellites)
+            foreach (Satellite satellite in satellites)
             {
                 if (targetSatellite.Equals(satellite))
                 {
@@ -114,7 +114,7 @@ namespace SatelliteGame
 
         private void CreateSatellite(int transformIndex)
         {
-            var satelliteObject = Instantiate(satellitePrefab, satellitesTrasforms[transformIndex].position, Quaternion.identity, transform);
+            GameObject satelliteObject = Instantiate(satellitePrefab, satellitesTrasforms[transformIndex].position, Quaternion.identity, transform);
 
             var newSatellite = satelliteObject.GetComponent<Satellite>();
 

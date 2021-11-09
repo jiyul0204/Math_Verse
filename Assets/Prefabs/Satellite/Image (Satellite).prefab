@@ -219,7 +219,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 125
+  m_Radius: 90
 --- !u!50 &7126893558069345997
 Rigidbody2D:
   serializedVersion: 4
@@ -253,7 +253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a802d69363de6b4dacd67af2876047d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetObject: {fileID: 0}
   scoreObject: {fileID: 7126893556577003209}
 --- !u!114 &7126893558069345996
 MonoBehaviour:

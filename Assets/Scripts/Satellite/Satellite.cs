@@ -20,9 +20,6 @@ namespace SatelliteGame
     public class Satellite : MonoBehaviour
     {
         #region Planet GameObject
-        [SerializeField]
-        private GameObject planetObject;
-        private RectTransform mainPlanetRectTransform;
         private Planet mainPlanet;
 
         private RectTransform objectRectTransform;
@@ -38,9 +35,11 @@ namespace SatelliteGame
         #endregion
 
         #region GameObject Position
-        private Vector3 originPosition;
+        private RectTransform originRectTransform;
         private Quaternion scoreOriginRotation;
         #endregion
+
+        private float moveSpeed;
 
         #region Coroutine
         private Coroutine revolutionCoroutine;
@@ -48,15 +47,11 @@ namespace SatelliteGame
 
         private void Awake()
         {
-            mainPlanetRectTransform = planetObject.GetComponent<RectTransform>();
-            mainPlanet = planetObject.GetComponent<Planet>();
-
             objectRectTransform = GetComponent<RectTransform>();
             objectButton = GetComponent<Button>();
 
             scoreText = GetComponentInChildren<Text>();
 
-            originPosition = GetComponent<RectTransform>().localPosition;
             scoreOriginRotation = scoreObject.transform.rotation;
         }
 
@@ -65,6 +60,14 @@ namespace SatelliteGame
             SetSatelliteScore();
             BindView();
             StartRevolve();
+        }
+
+        public void Init(Planet planet, RectTransform originRectTransform, float moveSpeed)
+        {
+            mainPlanet = planet;
+
+            this.originRectTransform = originRectTransform;
+            this.moveSpeed = moveSpeed;
         }
 
         private void SetSatelliteScore()
@@ -122,7 +125,7 @@ namespace SatelliteGame
                 return;
             }*/
 
-            objectRectTransform.localPosition = originPosition;
+            objectRectTransform.localPosition = originRectTransform.localPosition;
             revolutionCoroutine = StartCoroutine(RotateAroundMainPlanet());
         }
 
@@ -131,7 +134,6 @@ namespace SatelliteGame
             if (revolutionCoroutine != null)
             {
                 StopCoroutine(revolutionCoroutine);
-                originPosition = GetComponent<RectTransform>().localPosition;
             }
         }
 
@@ -139,7 +141,7 @@ namespace SatelliteGame
         {
             while (true)
             {
-                objectRectTransform.RotateAround(mainPlanetRectTransform.position, -transform.forward, 30f * Time.deltaTime);
+                objectRectTransform.localPosition = originRectTransform.localPosition;
                 scoreObject.transform.rotation = scoreOriginRotation;
 
                 yield return null;

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,22 +11,20 @@ namespace SatelliteGame
     {
         Plus,
         Minus,
-        /*Multiply,
-        Divide,
+        Multiply,
+        /*Divide,
         Modular,*/
         Max
     }
 
     public class Satellite : MonoBehaviour
     {
-        #region Planet GameObject
-        private Planet mainPlanet;
-
+        #region GameObject
         private RectTransform objectRectTransform;
         private Button objectButton;
         #endregion
 
-        #region Satellite Score
+        #region Score
         [SerializeField]
         private GameObject scoreObject;
         private Text scoreText;
@@ -38,8 +36,6 @@ namespace SatelliteGame
         private RectTransform originRectTransform;
         private Quaternion scoreOriginRotation;
         #endregion
-
-        private float moveSpeed;
 
         #region Coroutine
         private Coroutine revolutionCoroutine;
@@ -62,12 +58,14 @@ namespace SatelliteGame
             StartRevolve();
         }
 
-        public void Init(Planet planet, RectTransform originRectTransform, float moveSpeed)
+        private void OnDestroy()
         {
-            mainPlanet = planet;
+            StopRevolve();
+        }
 
+        public void Init(RectTransform originRectTransform)
+        {
             this.originRectTransform = originRectTransform;
-            this.moveSpeed = moveSpeed;
         }
 
         private void SetSatelliteScore()
@@ -75,26 +73,28 @@ namespace SatelliteGame
             scoreValue = Random.Range(0, 11);
             scoreSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
 
-            char scoreSignText = '+';
+            char scoreSignText;
 
             switch (scoreSign)
             {
-                case SatelliteSign.Plus:
-                    // '+'의 경우 이미 초기화 단계에서 설정했으므로
-                    // 아무 것도 안하고 지나감. - Hyeonwoo, 2021.11.07.
-                    break;
                 case SatelliteSign.Minus:
                     scoreSignText = '-';
                     break;
-                /*case SatelliteSign.Multiply:
+                case SatelliteSign.Plus:
+                    scoreSignText = '+';
+                    break;
+                case SatelliteSign.Multiply:
                     scoreSignText = '*';
                     break;
-                case SatelliteSign.Divide:
+                /*case SatelliteSign.Divide:
                     scoreSignText = '/';
                     break;
                 case SatelliteSign.Modular:
                     scoreSignText = '%';
                     break;*/
+                default:
+                    scoreSignText = '-';
+                    break;
             }
 
             scoreText.text = $"{scoreSignText}{scoreValue}";
@@ -119,11 +119,10 @@ namespace SatelliteGame
 
         private void StartRevolve()
         {
-            /*if (mainPlanet.CalculateScore())
+            if (gameObject == null)
             {
-                Destroy(gameObject);
                 return;
-            }*/
+            }
 
             objectRectTransform.localPosition = originRectTransform.localPosition;
             revolutionCoroutine = StartCoroutine(RotateAroundMainPlanet());
@@ -131,10 +130,12 @@ namespace SatelliteGame
 
         private void StopRevolve()
         {
-            if (revolutionCoroutine != null)
+            if (revolutionCoroutine == null || gameObject == null)
             {
-                StopCoroutine(revolutionCoroutine);
+                return;
             }
+
+            StopCoroutine(revolutionCoroutine);
         }
 
         private IEnumerator RotateAroundMainPlanet()
@@ -145,6 +146,25 @@ namespace SatelliteGame
                 scoreObject.transform.rotation = scoreOriginRotation;
 
                 yield return null;
+            }
+        }
+
+        public int CalculateScore(int planetScore)
+        {
+            switch (scoreSign)
+            {
+                case SatelliteSign.Minus:
+                    return planetScore - scoreValue;
+                case SatelliteSign.Plus:
+                    return planetScore + scoreValue;
+                case SatelliteSign.Multiply:
+                    return planetScore * scoreValue;
+                /*case SatelliteSign.Divide:
+                    return planetScore / scoreValue;
+                case SatelliteSign.Modular:
+                    return planetScore % scoreValue;*/
+                default:
+                    return planetScore - scoreValue;
             }
         }
     }

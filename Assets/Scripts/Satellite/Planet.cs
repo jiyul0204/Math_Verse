@@ -1,42 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SatelliteGame
 {
+    enum Difficulty
+    {
+        EASY,
+        NORMAL,
+        HARD
+    }
+
     public class Planet : MonoBehaviour
     {
         private RectTransform rectTransform;
 
+        [Header("Game Difficulty")]
+        [SerializeField]
+        private Difficulty gameDifficulty;
+
+        #region Score
+        [Header("Score")]
+        [SerializeField]
+        private Text scoreText;
+        private int scoreValue;
+        #endregion
+
+        [Header("Satellite")]
         [SerializeField]
         private GameObject satellitePrefab;
-
         [SerializeField]
         private List<RectTransform> satellitesTrasforms;
-
+        private List<Satellite> satellites;
         [SerializeField]
         private float satelliteMoveSpeed = 30f;
 
         private void Awake()
         {
             rectTransform = GetComponent<RectTransform>();
+            satellites = new List<Satellite>();
         }
 
         private void Start()
         {
-            foreach (var satellitesTransform in satellitesTrasforms)
-            {
-                var satelliteObject = Instantiate(satellitePrefab, satellitesTransform.position, Quaternion.identity, transform);
+            SetPlanetScore();
 
-                satelliteObject.GetComponent<Satellite>().Init(this, satellitesTransform, satelliteMoveSpeed);
+            int satellitesCount;
+
+            switch (gameDifficulty)
+            {
+                case Difficulty.EASY:
+                    satellitesCount = 0;
+                    break;
+                case Difficulty.NORMAL:
+                    satellitesCount = 1;
+                    break;
+                case Difficulty.HARD:
+                    satellitesCount = 2;
+                    break;
+                default:
+                    satellitesCount = 0;
+                    break;
             }
 
-            StartCoroutine(RotateAroundMainPlanet());
+            for (int i = 0; i < satellitesCount; i++)
+            {
+                CreateSatellite(i);
+            }
+
+            if (satellites.Count > 0)
+            {
+                StartCoroutine(RotateAroundMainPlanet());
+            }
+        }
+
+        private void SetPlanetScore()
+        {
+            scoreValue = Random.Range(20, 201);
+            scoreText.text = $"{scoreValue}";
         }
 
         private IEnumerator RotateAroundMainPlanet()
         {
-            while (true)
+            while (satellites.Count > 0)
             {
                 foreach (var satellitesTransform in satellitesTrasforms)
                 {
@@ -49,22 +96,30 @@ namespace SatelliteGame
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
-            Debug.Log($"[KHW] collider.name : {collider.name}");
+            var targetSatellite = collider.GetComponent<Satellite>();
+
+            foreach (var satellite in satellites)
+            {
+                if (targetSatellite.Equals(satellite))
+                {
+                    scoreValue = targetSatellite.CalculateScore(scoreValue);
+                    scoreText.text = $"{scoreValue}";
+
+                    satellites.Remove(satellite);
+                    Destroy(satellite.gameObject);
+                    return;
+                }
+            }
         }
 
-        private void OnTriggerExit2D(Collider2D collider)
+        private void CreateSatellite(int transformIndex)
         {
-            
-        }
+            var satelliteObject = Instantiate(satellitePrefab, satellitesTrasforms[transformIndex].position, Quaternion.identity, transform);
 
-        private void GenerateSatellite()
-        {
+            var newSatellite = satelliteObject.GetComponent<Satellite>();
 
-        }
-
-        public bool CalculateScore()
-        {
-            return true;
+            newSatellite.Init(satellitesTrasforms[transformIndex]);
+            satellites.Add(newSatellite);
         }
     }
 }

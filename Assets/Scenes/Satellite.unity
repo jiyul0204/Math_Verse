@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11711697}
   m_Layer: 5
-  m_Name: Satellite Position (2)
+  m_Name: Satellite Position (East)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55337034}
   m_Layer: 5
-  m_Name: Satellite Position (4)
+  m_Name: Satellite Position (West)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ RectTransform:
   - {fileID: 1702489462}
   - {fileID: 55337034}
   m_Father: {fileID: 690422256}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 690422259}
   - component: {fileID: 690422260}
   m_Layer: 5
-  m_Name: Image (Planet)
+  m_Name: Panel (Main Planet)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,6 +497,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 899680338}
   - {fileID: 859648064}
   - {fileID: 1284236932}
   - {fileID: 2014728878}
@@ -516,7 +517,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690422255}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -575,11 +576,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1662f1f576def9f488303f35b9643bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameDifficulty: 2
+  scoreText: {fileID: 859648065}
   satellitePrefab: {fileID: 7126893558069346037, guid: 98d56d57db23d0947a7fbb33c52cdd5b, type: 3}
   satellitesTrasforms:
   - {fileID: 803580784}
-  - {fileID: 11711697}
   - {fileID: 1702489462}
+  - {fileID: 11711697}
   - {fileID: 55337034}
   satelliteMoveSpeed: 30
 --- !u!1 &803580783
@@ -592,7 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803580784}
   m_Layer: 5
-  m_Name: Satellite Position (1)
+  m_Name: Satellite Position (North)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,7 +632,7 @@ GameObject:
   - component: {fileID: 837494983}
   - component: {fileID: 837494982}
   m_Layer: 5
-  m_Name: background
+  m_Name: Image (Background)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -704,7 +707,7 @@ GameObject:
   - component: {fileID: 859648066}
   - component: {fileID: 859648065}
   m_Layer: 5
-  m_Name: Text (Planet HP)
+  m_Name: Text (Main Planet HP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,7 +725,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 690422256}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -762,7 +765,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 888
 --- !u!222 &859648066
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -770,6 +773,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859648063}
+  m_CullTransparentMesh: 1
+--- !u!1 &899680337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899680338}
+  - component: {fileID: 899680340}
+  - component: {fileID: 899680339}
+  m_Layer: 5
+  m_Name: Image (Temp Planet Component)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &899680338
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899680337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_Children: []
+  m_Father: {fileID: 690422256}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -17, y: 0}
+  m_SizeDelta: {x: 512, y: 512}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &899680339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899680337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 731adf9f51dd5aa419116cf60dead460, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &899680340
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899680337}
   m_CullTransparentMesh: 1
 --- !u!1 &1284236931
 GameObject:
@@ -783,7 +861,7 @@ GameObject:
   - component: {fileID: 1284236934}
   - component: {fileID: 1284236933}
   m_Layer: 5
-  m_Name: Image (Planet Shield)
+  m_Name: Image (Main Planet Shield)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,7 +879,7 @@ RectTransform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 690422256}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -856,7 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702489462}
   m_Layer: 5
-  m_Name: Satellite Position (3)
+  m_Name: Satellite Position (South)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,7 +1087,7 @@ GameObject:
   - component: {fileID: 2014728880}
   - component: {fileID: 2014728879}
   m_Layer: 5
-  m_Name: Image (Circle Line)
+  m_Name: Image (Main Planet Circle Line)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,7 +1105,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 690422256}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

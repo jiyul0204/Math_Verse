@@ -2,17 +2,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-using UniRx;
-using UniRx.Triggers;
+/*using UniRx;
+using UniRx.Triggers;*/
 
 namespace SatelliteGame
 {
     enum SatelliteSign
     {
-        Plus,
         Minus,
+        /*Plus,        
         Multiply,
-        /*Divide,
+        Divide,
         Modular,*/
         Max
     }
@@ -20,21 +20,23 @@ namespace SatelliteGame
     public class Satellite : MonoBehaviour
     {
         #region GameObject
+        private Planet mainPlanet;
+
         private RectTransform objectRectTransform;
         private Button objectButton;
         #endregion
 
-        #region Score
+        #region CenterNumber
         [SerializeField]
-        private GameObject scoreObject;
-        private Text scoreText;
-        private int scoreValue;
-        private SatelliteSign scoreSign;
+        private GameObject centerNumberObject;
+        private Text centerNumberText;
+        private int centerNumberValue;
+        /*private SatelliteSign centerNumberSign;*/
         #endregion
 
         #region GameObject Position
         private RectTransform originRectTransform;
-        private Quaternion scoreOriginRotation;
+        private Quaternion centerNumberOriginRotation;
         #endregion
 
         #region Coroutine
@@ -46,15 +48,14 @@ namespace SatelliteGame
             objectRectTransform = GetComponent<RectTransform>();
             objectButton = GetComponent<Button>();
 
-            scoreText = GetComponentInChildren<Text>();
-
-            scoreOriginRotation = scoreObject.transform.rotation;
+            centerNumberText = GetComponentInChildren<Text>();
+            centerNumberOriginRotation = centerNumberObject.transform.rotation;
         }
 
         private void Start()
         {
             SetSatelliteScore();
-            BindView();
+            /*BindView();*/
             StartRevolve();
         }
 
@@ -63,44 +64,45 @@ namespace SatelliteGame
             StopRevolve();
         }
 
-        public void Init(RectTransform originRectTransform)
+        public void Init(Planet mainPlanet, RectTransform originRectTransform)
         {
+            this.mainPlanet = mainPlanet;
             this.originRectTransform = originRectTransform;
         }
 
         private void SetSatelliteScore()
         {
-            scoreValue = Random.Range(0, 11);
-            scoreSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
+            centerNumberValue = Random.Range(1, 31);
+            /*centerNumberSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
 
-            char scoreSignText;
+            char centerNumberSignText;
 
-            switch (scoreSign)
+            switch (centerNumberSign)
             {
                 case SatelliteSign.Minus:
-                    scoreSignText = '-';
+                    centerNumberSignText = '-';
                     break;
                 case SatelliteSign.Plus:
-                    scoreSignText = '+';
+                    centerNumberSignText = '+';
                     break;
                 case SatelliteSign.Multiply:
-                    scoreSignText = '*';
+                    centerNumberSignText = '*';
                     break;
-                /*case SatelliteSign.Divide:
+                *//*case SatelliteSign.Divide:
                     scoreSignText = '/';
                     break;
                 case SatelliteSign.Modular:
                     scoreSignText = '%';
-                    break;*/
+                    break;*//*
                 default:
-                    scoreSignText = '-';
+                    centerNumberSignText = '-';
                     break;
-            }
+            }*/
 
-            scoreText.text = $"{scoreSignText}{scoreValue}";
+            centerNumberText.text = $"{centerNumberValue}";
         }
 
-        private void BindView()
+        /*private void BindView()
         {
             objectButton.OnPointerDownAsObservable()
                 .Subscribe(_ =>
@@ -115,7 +117,7 @@ namespace SatelliteGame
                     StartRevolve();
                 })
                 .AddTo(gameObject);
-        }
+        }*/
 
         private void StartRevolve()
         {
@@ -142,29 +144,26 @@ namespace SatelliteGame
         {
             while (true)
             {
-                objectRectTransform.localPosition = originRectTransform.localPosition;
-                scoreObject.transform.rotation = scoreOriginRotation;
+                objectRectTransform.SetPositionAndRotation(originRectTransform.position, originRectTransform.rotation);
+                centerNumberObject.transform.rotation = centerNumberOriginRotation;
 
                 yield return null;
             }
         }
 
-        public int CalculateScore(int planetScore)
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            switch (scoreSign)
+            var targetArtificialSatellite = collider.GetComponent<ArtificialSatellite>();
+
+            if (mainPlanet.RemoveArtificialSatellite(targetArtificialSatellite))
             {
-                case SatelliteSign.Minus:
-                    return planetScore - scoreValue;
-                case SatelliteSign.Plus:
-                    return planetScore + scoreValue;
-                case SatelliteSign.Multiply:
-                    return planetScore * scoreValue;
-                /*case SatelliteSign.Divide:
-                    return planetScore / scoreValue;
-                case SatelliteSign.Modular:
-                    return planetScore % scoreValue;*/
-                default:
-                    return planetScore - scoreValue;
+                centerNumberValue = targetArtificialSatellite.CalculateScore(centerNumberValue);
+                centerNumberText.text = $"{centerNumberValue}";
+
+                if (centerNumberValue <= 0)
+                {
+                    mainPlanet.RemoveSatellite(this);
+                }
             }
         }
     }

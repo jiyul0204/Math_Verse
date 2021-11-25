@@ -10,6 +10,9 @@ public class GetDragMessage : MonoBehaviour
 
     Arrager workingArranger;
     int oriIndex;
+
+
+
     void Start()
     {
         arragers = new List<Arrager>();

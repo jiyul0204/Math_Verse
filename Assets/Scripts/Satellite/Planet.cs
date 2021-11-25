@@ -32,7 +32,7 @@ namespace SatelliteGame
         private RxCountDownTimer rxCountDownTimer;
         #endregion
 
-        #region Center Number
+        #region NU Number
         [Header("[Planet Center Number]")]
 
         [SerializeField]

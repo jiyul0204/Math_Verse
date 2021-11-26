@@ -4,25 +4,13 @@ using UnityEngine;
 
 public class CollisionEvent : MonoBehaviour
 {
-    private Vector3 invisdefaultposition;
-    private Vector3 ansdefaultposition;
-
-    CDragnDrop DragnDrop;
-
-    public Transform Invisialble;
-
-    void Start()
-    {
-        invisdefaultposition = Invisialble.position;
-        ansdefaultposition = DragnDrop.transform.position;
-    }
+    public bool IsCollision = false;
 
     void OnTriggerEnter2D(Collider2D o)
     {
-        if (o.gameObject.CompareTag("Ans"))
+        if (o.tag == "Ans")
         {
-            DragnDrop.transform.position = invisdefaultposition;
-            Invisialble.position = ansdefaultposition;
+            IsCollision = true;
         }
     }
 }

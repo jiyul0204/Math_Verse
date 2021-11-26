@@ -11,7 +11,8 @@ public class CWriteCsv : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        using (var writer = new CsvFileWriter("C:\\Users\\KOREA\\Documents\\GitHub\\Math_Verse\\Assets\\AI_Edu_Data\\EducationData.csv"))
+        // 절대 좌표 말고 상대 좌표로 써주기! - Hyeonwoo, 2021.11.26.
+        /*using (var writer = new CsvFileWriter("C:\\Users\\KOREA\\Documents\\GitHub\\Math_Verse\\Assets\\AI_Edu_Data\\EducationData.csv"))
         {
             List<string> columns = new List<string>() { "UserID", "Level", "Correctw", "Quiz" };
             writer.WriteRow(columns);
@@ -34,12 +35,6 @@ public class CWriteCsv : MonoBehaviour
             columns.Add("2*8=16");
             writer.WriteRow(columns);
             columns.Clear();
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }*/
     }
 }

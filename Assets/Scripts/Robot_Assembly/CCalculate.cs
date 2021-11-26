@@ -26,10 +26,12 @@ public class CCalculate : MonoBehaviour
     private void Awake()
     {
         GenerateQuiz();
-        DontDestroyOnLoad(this);
+        // 아래 Code는 최상위 Object가 아니면 작동을 안 해서 주석 처리함. - Hyeonwoo, 2021.11.26.
+        // DontDestroyOnLoad(this);
         try
         {
-            Debug.Log(nLikestandard.ToString());
+            // Debugging 끝난 Code는 삭제하거나 주석 처리 해주기! - Hyeonwoo, 2021.11.26.
+            // Debug.Log(nLikestandard.ToString());
         }
         catch (NullReferenceException ex)
         {
@@ -130,7 +132,8 @@ public class CCalculate : MonoBehaviour
             }
             else continue;
         }
-        Debug.Log(Multiplication_tableCnt.ToString());
+        // Debugging 끝난 Code는 삭제하거나 주석 처리 해주기! - Hyeonwoo, 2021.11.26.
+        /*Debug.Log(Multiplication_tableCnt.ToString());*/
         if (Multiplication_tableCnt > 6)              // 호감도 기준치 이하 로봇 4개 이하일경우,
         {
             nMid = Range(2, 9);               // 2~9단까지 모두 출력
@@ -149,7 +152,8 @@ public class CCalculate : MonoBehaviour
             nMid = Multiplication_table[nMid];      //기준 호감도 이하인 문제 출제
         }
         SelectCurSel(nMid);
-        Debug.Log(nMid+"단출력");
+        // Debugging 끝난 Code는 삭제하거나 주석 처리 해주기! - Hyeonwoo, 2021.11.26.
+        //Debug.Log(nMid+"단출력");
         Txt_MidNum.text = nMid.ToString();
     }
 

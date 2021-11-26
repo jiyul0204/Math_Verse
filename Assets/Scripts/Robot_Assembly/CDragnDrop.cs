@@ -21,6 +21,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void Awake()
     {
+        m_CCollsion = GetComponent<CollisionEvent>();
+        m_CCal = GetComponent<CCalculate>();
     }
 
     void Start()
@@ -36,31 +38,35 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         //if (OldAnsObj != null)
         //{ }
         //OldAnsObj = ClickAnsObj;
-        defaultposition = this.transform.position;  //처음 위치 저장
+        defaultposition = transform.position;  //처음 위치 저장
     }
+
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
-        Vector2 currentPos = Input.mousePosition;
-        this.transform.position = currentPos;
+        Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition); ;
+        transform.position = currentPos;
     }
+
     void IEndDragHandler.OnEndDrag(PointerEventData eventData)
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         if (m_CCollsion.IsCollision == false)
         {
-            this.transform.position = defaultposition;
+            transform.position = defaultposition;
+            SCriptTxt = GetComponentInChildren<Text>();
 
-            SCriptTxt = this.gameObject.GetComponent<Text>();
-            int nAnsNum = int.Parse(SCriptTxt.ToString());
+            int nAnsNum = int.Parse(SCriptTxt.text);
             m_CCal.GenerateQuiz();
 
-            var c = new CCalculate();
+            // 아래 Code가 Warning 발생해서 임시 주석 처리해둠. 필요 없으면 삭제하기! - Hyeonwoo, 2021.11.26.
+            // var c = new CCalculate();
             int nMid = CCalculate.MiddleNum;
             SCriptTxt.text = CCalculate.MiddleNum.ToString();
         }
         else
         {
-            this.transform.position = invisdefaultposition;
+            transform.position = invisdefaultposition;
             Invisiable.transform.position = defaultposition;
 
             m_CCollsion.IsCollision = false;

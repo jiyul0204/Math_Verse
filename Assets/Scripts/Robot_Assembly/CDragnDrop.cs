@@ -18,6 +18,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     Text SCriptTxt;
 
     CollisionEvent m_CCollsion;
+
+    [SerializeField]
     CCalculate     m_CCal;
 
     public Transform PopUp;
@@ -25,7 +27,6 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private void Awake()
     {
         m_CCollsion = GetComponent<CollisionEvent>();
-        m_CCal = GetComponent<CCalculate>();
     }
 
     void Start()

@@ -2175,6 +2175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsCorrect: 1
   Invisiable: {fileID: 943426639}
+  m_CCal: {fileID: 990840897}
   PopUp: {fileID: 1841944896}
   PopUp_txt: {fileID: 572503384}
 --- !u!114 &1168333411
@@ -3021,6 +3022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsCorrect: 1
   Invisiable: {fileID: 943426639}
+  m_CCal: {fileID: 990840897}
   PopUp: {fileID: 1841944896}
   PopUp_txt: {fileID: 572503384}
 --- !u!114 &1589826848
@@ -3416,7 +3418,6 @@ GameObject:
   - component: {fileID: 1841944896}
   - component: {fileID: 1841944898}
   - component: {fileID: 1841944897}
-  - component: {fileID: 1841944899}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -3482,18 +3483,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841944895}
   m_CullTransparentMesh: 1
---- !u!114 &1841944899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841944895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff4fcfbf54241c240a5b2cc27f4a3d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1971330400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,6 +3540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsCorrect: 1
   Invisiable: {fileID: 943426639}
+  m_CCal: {fileID: 990840897}
   PopUp: {fileID: 1841944896}
   PopUp_txt: {fileID: 572503384}
 --- !u!114 &1971330403

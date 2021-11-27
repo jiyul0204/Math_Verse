@@ -91,21 +91,23 @@ public class CCalculate : MonoBehaviour
         switch (DecideType(num))
         {
             case Type.EASY:
-                fin = FinalNum * MiddleNum;
                 ans = Calculate(Operation.MULTIPLY, MiddleNum, FinalNum);
                 break;
             case Type.NORMAL:
+                FinalNum = FinalNum * MiddleNum;
                 ans = Calculate(Operation.DIVISION, MiddleNum, FinalNum);
                 break;
             case Type.HARD:
+                FinalNum = FinalNum * MiddleNum;
                 ans = Calculate(Operation.DIVISION, MiddleNum, FinalNum);
                 break;
             case Type.HARDEST:
+                FinalNum = FinalNum * MiddleNum;
                 ans = Calculate(Operation.DIVISION, MiddleNum, FinalNum);
                 break;
         }
         AnsNum = ans;
-        Txt_FinNum.text = fin.ToString();
+        Txt_FinNum.text = FinalNum.ToString();
         Txt_AnsNum.text = ans.ToString();
     }
 

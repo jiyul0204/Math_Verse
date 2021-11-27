@@ -9,6 +9,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
     //Transform ClickAnsObj = null;
     //Transform OldAnsObj = null;
+    public bool IsCorrect = true;
 
     private Vector3 invisdefaultposition;
     private Vector3 defaultposition;
@@ -16,9 +17,12 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public GameObject Invisiable;
     Text SCriptTxt;
 
+    CPopup popup;
     CollisionEvent m_CCollsion;
     CCalculate     m_CCal;
 
+    public Transform PopUp;
+    public Text PopUp_txt;
     private void Awake()
     {
         m_CCollsion = GetComponent<CollisionEvent>();
@@ -54,22 +58,35 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if (m_CCollsion.IsCollision == false)
         {
             transform.position = defaultposition;
-            SCriptTxt = GetComponentInChildren<Text>();
-
-            int nAnsNum = int.Parse(SCriptTxt.text);
-            m_CCal.GenerateQuiz();
-
-            // 아래 Code가 Warning 발생해서 임시 주석 처리해둠. 필요 없으면 삭제하기! - Hyeonwoo, 2021.11.26.
-            // var c = new CCalculate();
-            int nMid = CCalculate.MiddleNum;
-            SCriptTxt.text = CCalculate.MiddleNum.ToString();
         }
         else
         {
             transform.position = invisdefaultposition;
             Invisiable.transform.position = defaultposition;
 
-            m_CCollsion.IsCollision = false;
+            int DragNum = int.Parse(m_CCal.Txt_AnsNum.text);
+            int nAnsNum = CCalculate.AnsNum;
+            //SCriptTxt = GetComponentInChildren<Text>();
+            //int DragNum = int.Parse(SCriptTxt.text);
+
+            Debug.Log(nAnsNum);
+            Debug.Log(DragNum);
+
+            if (nAnsNum == DragNum)
+            {
+                PopUp_txt.text = "일시정지";
+                m_CCal.GenerateQuiz();
+                IsCorrect = true;
+            }
+            else
+            {
+                PopUp_txt.text = "게임 오버";
+                PopUp.gameObject.SetActive(true);
+                IsCorrect = false;
+            }
+            transform.position = defaultposition;
         }
+
+        m_CCollsion.IsCollision = !m_CCollsion.IsCollision;
     }
 }

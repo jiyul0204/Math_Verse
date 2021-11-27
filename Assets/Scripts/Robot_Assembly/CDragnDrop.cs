@@ -17,7 +17,6 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public GameObject Invisiable;
     Text SCriptTxt;
 
-    CPopup popup;
     CollisionEvent m_CCollsion;
     CCalculate     m_CCal;
 
@@ -55,19 +54,20 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (m_CCollsion.IsCollision == false)
+        if (CollisionEvent.IsCollision == false)
         {
             transform.position = defaultposition;
         }
         else
         {
-            transform.position = invisdefaultposition;
-            Invisiable.transform.position = defaultposition;
+            CollisionEvent.IsCollision = false;
 
-            int DragNum = int.Parse(m_CCal.Txt_AnsNum.text);
+            transform.position = invisdefaultposition;
+            //Invisiable.transform.position = defaultposition;
+
             int nAnsNum = CCalculate.AnsNum;
-            //SCriptTxt = GetComponentInChildren<Text>();
-            //int DragNum = int.Parse(SCriptTxt.text);
+            SCriptTxt = GetComponentInChildren<Text>();
+            int DragNum = int.Parse(SCriptTxt.text);
 
             Debug.Log(nAnsNum);
             Debug.Log(DragNum);
@@ -75,6 +75,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             if (nAnsNum == DragNum)
             {
                 PopUp_txt.text = "일시정지";
+                Invoke("waiting3second", 3.0f);
+                transform.position = defaultposition;
                 m_CCal.GenerateQuiz();
                 IsCorrect = true;
             }
@@ -82,11 +84,13 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             {
                 PopUp_txt.text = "게임 오버";
                 PopUp.gameObject.SetActive(true);
+                transform.position = defaultposition;
                 IsCorrect = false;
             }
-            transform.position = defaultposition;
         }
-
-        m_CCollsion.IsCollision = !m_CCollsion.IsCollision;
+    }
+    void waiting3second()
+    {
+        Debug.Log("Waiting 3 Second");
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CollisionEvent : MonoBehaviour
 {
-    public bool IsCollision = false;
+    public static bool IsCollision = false;
 
     public int AnsNumber;
     public int MidNumber;

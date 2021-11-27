@@ -9,7 +9,9 @@ public class CCalculate : MonoBehaviour
     #region Cal_Text
     public Text Txt_FinNum;
     public Text Txt_MidNum;
-    public Text Txt_AnsNum;
+    public Text[] Txt_AnsNum = new Text[3];
+    int nAnsNumCnt = 1;
+    public int nRealAns = 0;
     #endregion
 
     float [] likeability = new float[10];     //호감도 배열
@@ -22,7 +24,8 @@ public class CCalculate : MonoBehaviour
     public static int AnsNum=0;                               //맞춰야 할 수
     #endregion
 
-  
+    int[] nArrnum = new int[3];
+
     private void Awake()
     {
         GenerateQuiz();
@@ -106,13 +109,47 @@ public class CCalculate : MonoBehaviour
                 ans = Calculate(Operation.DIVISION, MiddleNum, FinalNum);
                 break;
         }
-        AnsNum = ans;
+        nRealAns = AnsNum = ans;
         Txt_FinNum.text = FinalNum.ToString();
-        Txt_AnsNum.text = ans.ToString();
+        nAnsNumCnt = Range(0, 2);
+        Txt_AnsNum[nAnsNumCnt].text = ans.ToString();
+
+        int min = 2;
+        int max = 9;
+        if (ans == 2) min = 3;
+        else if (ans == 9) max = 8;
+
+        int Spare1 = 0;
+        int Spare2 = 0;
+
+        Spare1 = (min == 3) ? (Range(3, max)) : (Range(min, ans - 1));
+        Spare2 = Range(ans + 1, max);
+        if(min==3)
+        {
+            while(Spare1!=Spare2)
+            {
+                Spare2 = Range(ans + 1, max);
+            }
+        }
+
+        if (nAnsNumCnt > 1)
+        {
+            Txt_AnsNum[0].text = Spare1.ToString();
+            Txt_AnsNum[1].text = Spare2.ToString();
+        }
+        else
+        {
+            Txt_AnsNum[2].text = Spare2.ToString();
+            int a = (nAnsNumCnt == 1) ? (0) : (1);
+            Txt_AnsNum[a].text = Spare1.ToString();
+        }
     }
 
     public void GenerateQuiz()
     {
+        for (int n = 0; n < 3; n++)
+            nArrnum[n] = 1;//정규화
+
         int nMid;
         int Multiplication_tableCnt = 0;
 
@@ -143,9 +180,11 @@ public class CCalculate : MonoBehaviour
         else if (Multiplication_tableCnt == 0)     //모두 기준치 이상 호감도를 넘겼을 경우,
         {
             nLikestandard += 10.0f;                //기준 호감도 +10
-            if (nLikestandard == 110.0f)          //호감도가 모두 100퍼센트일경우,
-                CreateNewRobot();               //새로운 로봇 생성
             nMid = Range(2, 9);
+            if (nLikestandard == 110.0f)
+            {
+                CreateNewRobot();               //새로운 로봇 생성
+            }//호감도가 모두 100퍼센트일경우,
             GenerateQuiz();
         }
         else
@@ -154,8 +193,6 @@ public class CCalculate : MonoBehaviour
             nMid = Multiplication_table[nMid];      //기준 호감도 이하인 문제 출제
         }
         SelectCurSel(nMid);
-        // Debugging 끝난 Code는 삭제하거나 주석 처리 해주기! - Hyeonwoo, 2021.11.26.
-        //Debug.Log(nMid+"단출력");
         Txt_MidNum.text = nMid.ToString();
     }
 

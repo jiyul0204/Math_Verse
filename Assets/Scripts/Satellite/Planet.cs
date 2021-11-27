@@ -123,7 +123,7 @@ namespace SatelliteGame
                 {
                     if (satellites.Count >= 4)
                     {
-                        GameManager.Insatnce.ShowGameOverResult(false);
+                        GameManager.Instance.ShowGameOverResult(false);
                         return;
                     }
 
@@ -186,7 +186,7 @@ namespace SatelliteGame
 
                 if (centerNumberValue <= 0)
                 {
-                    GameManager.Insatnce.ShowGameOverResult(true);
+                    GameManager.Instance.ShowGameOverResult(true);
                     Destroy(gameObject);
                 }
 

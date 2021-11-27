@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 0
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 3ecbb0cd4d2f33f4db448614f46f8710, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 42f8a90037f6bb1428421b7f48b6cb2c, type: 3}
+  - {fileID: 21300000, guid: 27e2d910ddc2ba34d933bb0bff99a187, type: 3}
+  - {fileID: 21300000, guid: e8ff7d40dcb648241a9e255e5df02bea, type: 3}
+  - {fileID: 21300000, guid: 202ed18099c2af44a95c4a70b6e0d145, type: 3}
+  - {fileID: 21300000, guid: 5a4a5480327a7274e93c4821f242c6a6, type: 3}
+  - {fileID: 21300000, guid: b55633b073a1bf5429f2e92d4c7509cb, type: 3}
+  - {fileID: 21300000, guid: 6438d1f0b09db7a4eaa60651632a51f8, type: 3}
+  - {fileID: 21300000, guid: 470c8c31217870a489ff86dfa2d741bb, type: 3}
+  - {fileID: 21300000, guid: af98ab713b05bf64f821f9608a3cbea2, type: 3}
+  - {fileID: 21300000, guid: 942032b1935bf8c4d83b330691d78373, type: 3}
+  - {fileID: 21300000, guid: 08e8602209b00b64dbdf44a52e464500, type: 3}
+  - {fileID: 21300000, guid: 63f98f42d75207a47becc13d69f8252a, type: 3}
+  - {fileID: 21300000, guid: 96701882b9f7f564d8be5a91f607a63d, type: 3}
+  - {fileID: 21300000, guid: c77023835e142f941acf0c6dfb818d67, type: 3}
+  - {fileID: -5345492709418878898, guid: 8e453ee344d9cfb4eb15094ab10ca72c, type: 3}
+  - {fileID: -3652584577601127995, guid: 8e453ee344d9cfb4eb15094ab10ca72c, type: 3}
+  - {fileID: 5274050219490939779, guid: 8e453ee344d9cfb4eb15094ab10ca72c, type: 3}
+  - {fileID: 21300000, guid: 7adf99a56a87b16438787158b16b17ee, type: 3}
+  - {fileID: 21300000, guid: 6dd763f521893434b8159a82b2c6887e, type: 3}
+  - {fileID: 21300000, guid: 0c217d16bbe63de4ebd38bb6f4e83e02, type: 3}
+  - {fileID: 21300000, guid: 61bc6466432b20142b7cbdf41411f2e6, type: 3}
+  - {fileID: 5930550432092296695, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: -7537730205069879095, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: -6651878024332834668, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: 8021418182336587807, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: 2528065873153829524, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: -1647854680527269228, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: 471047157680996626, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: -2028812796674292343, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
+  - {fileID: 21300000, guid: 99a1d137f31fbdb4f9553dc3adfcd550, type: 3}
+  - {fileID: 21300000, guid: b7e46e67fbd6c4f46b4aba9b0b1f05d4, type: 3}
+  - {fileID: 21300000, guid: 140408d7959cfdd408a1357fda019d63, type: 3}
+  - {fileID: 21300000, guid: 3a84ad28169ce3e4cb31b070c6b27b20, type: 3}
+  - {fileID: 21300000, guid: d88ad37917c6ae647882cdc347035f5e, type: 3}
+  - {fileID: 21300000, guid: bc9ee03a7ea5c32439fbc65fb166e829, type: 3}
+  - {fileID: 21300000, guid: 487533faf529d2c48af80da118b18ef3, type: 3}
+  - {fileID: 21300000, guid: 68a7ec8b468a5d54793b8aba53f6d629, type: 3}
+  - {fileID: 21300000, guid: 9293b0bbb7590184bb5b03382dc8a30a, type: 3}
+  - {fileID: 21300000, guid: b683c7db56593bf47bb27da6cea6c0f6, type: 3}
+  - {fileID: 21300000, guid: 59dc76eb7fdec594aad98390b7eb1645, type: 3}
+  - {fileID: 21300000, guid: 9ad0611c3a2510e40af9a94f0f88cdd7, type: 3}
+  - {fileID: 21300000, guid: 2593544cfc4efe94ba81c0bb6390d1b1, type: 3}
+  - {fileID: 21300000, guid: 0a57651de64cbde48af26384a2a6dc79, type: 3}
+  - {fileID: 21300000, guid: 0d8fdf6d74dabce4ba0d44fabaaabc02, type: 3}
+  - {fileID: 21300000, guid: ed0c618d3426a0e4a82dc1c8a33d2490, type: 3}
+  - {fileID: 21300000, guid: e43091ce737407e44a4d8925a2216931, type: 3}
+  - {fileID: 21300000, guid: d2e1106f67f6e094fb55faf2e495cf24, type: 3}
+  - {fileID: 21300000, guid: 37193f6fb2b3d074186029bfa7a774e7, type: 3}
+  - {fileID: 21300000, guid: 731adf9f51dd5aa419116cf60dead460, type: 3}
+  - {fileID: 21300000, guid: 86e8cfdfdfd380e4086847dc424ac772, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Addition
+  - number_10
+  - dummy_login
+  - dummy_lobby_userNickname
+  - background
+  - dummy_start
+  - Multiplication
+  - dummy_lobby_setting
+  - lobby_2
+  - dummy_game_title
+  - dummy_lobby_game_money
+  - circle
+  - Rabbit
+  - dummy_back
+  - "\uBB38"
+  - "\uB85C\uBE44"
+  - "\uCC3D\uBB38"
+  - circle_line
+  - lobby_3
+  - dummy_card_collection_check
+  - dummy_card_collection_4
+  - "\uB208"
+  - "\uD314"
+  - "\uC717\uD1B5"
+  - "\uBA38\uB9AC"
+  - "\uB2E4\uB9AC"
+  - "\uB9AC\uBCF8"
+  - "\uD558\uBC18\uC2E0"
+  - "\uADC0"
+  - lobby_1
+  - dummy_card_collection_2
+  - Equalization
+  - Lobby
+  - dummy_card_collection_title
+  - dummy_login_and_join
+  - Subtraction
+  - dummy_join
+  - Artificial_Statelite
+  - dummy_lobby_left_arrow
+  - dummy_card_collection_3
+  - game_lobby_collection
+  - planet_2
+  - number_5
+  - dummy_card_collection_1
+  - dummy_card_collection_back
+  - dummy_lobby_quest
+  - Rabbit_Head
+  - planet_shield
+  - planet
+  - Rabbit_Body
+  m_RenderDataMap: {}
+  m_Tag: Sprite Atlas
+  m_IsVariant: 0

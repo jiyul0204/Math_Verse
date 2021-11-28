@@ -38,7 +38,7 @@ public class LobbyService : MonoBehaviour
         gameStartButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                SceneService.Instance.LoadScene("Assemble_Robot");
+                SceneService.Instance.LoadScene("Store");
             })
             .AddTo(gameObject);
     }

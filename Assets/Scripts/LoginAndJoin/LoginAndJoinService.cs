@@ -6,7 +6,16 @@ using UniRx;
 public class LoginAndJoinService : MonoBehaviour
 {
     [SerializeField]
-    private Button backButton;
+    private Button mainBackButton;
+
+    [SerializeField]
+    private Button joinButton;
+
+    [SerializeField]
+    private GameObject joinSuccessPanel;
+
+    [SerializeField]
+    private Button joinBackButton;
 
     private void Start()
     {
@@ -15,7 +24,21 @@ public class LoginAndJoinService : MonoBehaviour
 
     private void BindView()
     {
-        backButton.OnClickAsObservable()
+        mainBackButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                SceneService.Instance.LoadScene("Logo");
+            })
+            .AddTo(gameObject);
+
+        joinButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                joinSuccessPanel.SetActive(true);
+            })
+            .AddTo(gameObject);
+
+        joinBackButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 SceneService.Instance.LoadScene("Logo");

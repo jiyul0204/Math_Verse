@@ -72,6 +72,7 @@ SpriteAtlas:
   - {fileID: -5345492709418878898, guid: 8e453ee344d9cfb4eb15094ab10ca72c, type: 3}
   - {fileID: -3652584577601127995, guid: 8e453ee344d9cfb4eb15094ab10ca72c, type: 3}
   - {fileID: 5274050219490939779, guid: 8e453ee344d9cfb4eb15094ab10ca72c, type: 3}
+  - {fileID: 21300000, guid: eedbfb24ef4cae7498725bc41d7303de, type: 3}
   - {fileID: 21300000, guid: d6bb23156bcd88c468e4528389e05697, type: 3}
   - {fileID: 21300000, guid: 7adf99a56a87b16438787158b16b17ee, type: 3}
   - {fileID: 21300000, guid: b13a96e5c297d0f43bdd1ab45682ec4e, type: 3}
@@ -88,6 +89,7 @@ SpriteAtlas:
   - {fileID: -2028812796674292343, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
   - {fileID: 21300000, guid: c90678c6204a5b34cabe028e44df7a8d, type: 3}
   - {fileID: 21300000, guid: 99a1d137f31fbdb4f9553dc3adfcd550, type: 3}
+  - {fileID: 21300000, guid: 43ec9c37bd5efb444b4f4d33fd3f0368, type: 3}
   - {fileID: 21300000, guid: b7e46e67fbd6c4f46b4aba9b0b1f05d4, type: 3}
   - {fileID: 21300000, guid: 140408d7959cfdd408a1357fda019d63, type: 3}
   - {fileID: 21300000, guid: 3a84ad28169ce3e4cb31b070c6b27b20, type: 3}
@@ -140,6 +142,7 @@ SpriteAtlas:
   - "\uBB38"
   - "\uB85C\uBE44"
   - "\uCC3D\uBB38"
+  - pngwing.com
   - number_7
   - circle_line
   - lobby_2
@@ -156,6 +159,7 @@ SpriteAtlas:
   - "\uADC0"
   - lobby_3
   - lobby_1
+  - person-244
   - dummy_card_collection_2
   - Equalization
   - Lobby

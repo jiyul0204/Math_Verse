@@ -19,7 +19,7 @@ public class AssembleRobotService : MonoBehaviour
         homeButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                SceneService.Instance.LoadScene("Logo");
+                SceneService.Instance.LoadScene("Lobby");
             })
             .AddTo(gameObject);
     }

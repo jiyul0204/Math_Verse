@@ -98,6 +98,7 @@ SpriteAtlas:
   - {fileID: 471047157680996626, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
   - {fileID: -2028812796674292343, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
   - {fileID: 21300000, guid: c90678c6204a5b34cabe028e44df7a8d, type: 3}
+  - {fileID: 21300000, guid: 5aba2b2785209c6409d1402ed4de745a, type: 3}
   - {fileID: 21300000, guid: 99a1d137f31fbdb4f9553dc3adfcd550, type: 3}
   - {fileID: 21300000, guid: 43ec9c37bd5efb444b4f4d33fd3f0368, type: 3}
   - {fileID: 21300000, guid: b7e46e67fbd6c4f46b4aba9b0b1f05d4, type: 3}
@@ -121,6 +122,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1ef8996ab5400b44dbb6c00db78ae96f, type: 3}
   - {fileID: 21300000, guid: fc84cb7a0253e2f448d55fb6927070fe, type: 3}
   - {fileID: 21300000, guid: f6d914aa93464a846b9700233c38e142, type: 3}
+  - {fileID: 21300000, guid: 72f6d4dacb9f5ff45a9ad76b0aad3a1d, type: 3}
   - {fileID: 21300000, guid: 2f48a4ea3e707a64a89bf24e2d63e3fa, type: 3}
   - {fileID: 21300000, guid: 487533faf529d2c48af80da118b18ef3, type: 3}
   - {fileID: 21300000, guid: 9523b33b2da4f5440bdf226b697af2e2, type: 3}
@@ -201,6 +203,7 @@ SpriteAtlas:
   - "\uD558\uBC18\uC2E0"
   - "\uADC0"
   - lobby_3
+  - MathVerseLogo
   - lobby_1
   - person-244
   - dummy_card_collection_2
@@ -224,6 +227,7 @@ SpriteAtlas:
   - number_6
   - lemon_robot
   - card_collection_frame_empty
+  - MathVerseLogo
   - card_collection_frame_bookmark
   - Subtraction
   - rusty_robot

@@ -21,14 +21,19 @@ public class ChangeImage : MonoBehaviour
 
     private void Awake()
     {
-         //여러개의 로봇이 생겼을 경우 Path를 랜덤으로 돌려준다 .
-        AddPath = "Robot\\RobotA\\AddBody\\";
-        AnsPath = "Robot\\RobotA\\RobotBody\\";
+        //여러개의 로봇이 생겼을 경우 Path를 랜덤으로 돌려준다 .
+        AddPath = "Robot\\" + SelRobot() + "\\AddBody\\";
+        AnsPath = "Robot\\"+SelRobot() +"\\RobotBody\\";
     }
     private void Start()
     {
         ChangeImg();
-
+    }
+    string SelRobot()
+    {
+        string strRobot;
+        strRobot = "RobotA";
+        return strRobot;
     }
     public void ChangeImg()
     {

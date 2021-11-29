@@ -74,6 +74,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 63f98f42d75207a47becc13d69f8252a, type: 3}
   - {fileID: 21300000, guid: a37909724e3ab4f449b18d6d2c2bbb75, type: 3}
   - {fileID: 21300000, guid: 96701882b9f7f564d8be5a91f607a63d, type: 3}
+  - {fileID: 21300000, guid: f9959192930d3f049baabb71ed1c6e76, type: 3}
   - {fileID: 21300000, guid: c79e7ac255664074f92d613927ad1638, type: 3}
   - {fileID: 21300000, guid: c77023835e142f941acf0c6dfb818d67, type: 3}
   - {fileID: -5345492709418878898, guid: 8e453ee344d9cfb4eb15094ab10ca72c, type: 3}
@@ -85,6 +86,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7adf99a56a87b16438787158b16b17ee, type: 3}
   - {fileID: 21300000, guid: b13a96e5c297d0f43bdd1ab45682ec4e, type: 3}
   - {fileID: 21300000, guid: 6dd763f521893434b8159a82b2c6887e, type: 3}
+  - {fileID: 21300000, guid: 88040016d5f39244384806d1a6200783, type: 3}
   - {fileID: 21300000, guid: 0c217d16bbe63de4ebd38bb6f4e83e02, type: 3}
   - {fileID: 21300000, guid: 61bc6466432b20142b7cbdf41411f2e6, type: 3}
   - {fileID: 5930550432092296695, guid: d9d271c63dfc8034da718213c317cdbd, type: 3}
@@ -117,7 +119,11 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4a5eb71a847e2604b860a39a99c01433, type: 3}
   - {fileID: 21300000, guid: bc9ee03a7ea5c32439fbc65fb166e829, type: 3}
   - {fileID: 21300000, guid: 1ef8996ab5400b44dbb6c00db78ae96f, type: 3}
+  - {fileID: 21300000, guid: fc84cb7a0253e2f448d55fb6927070fe, type: 3}
+  - {fileID: 21300000, guid: f6d914aa93464a846b9700233c38e142, type: 3}
+  - {fileID: 21300000, guid: 2f48a4ea3e707a64a89bf24e2d63e3fa, type: 3}
   - {fileID: 21300000, guid: 487533faf529d2c48af80da118b18ef3, type: 3}
+  - {fileID: 21300000, guid: 9523b33b2da4f5440bdf226b697af2e2, type: 3}
   - {fileID: 21300000, guid: f9308d7bd3a98064ca67b88c00bfdeb7, type: 3}
   - {fileID: 21300000, guid: e072e58bf41c6b149b2404237a671bf8, type: 3}
   - {fileID: 21300000, guid: 68a7ec8b468a5d54793b8aba53f6d629, type: 3}
@@ -126,6 +132,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 59dc76eb7fdec594aad98390b7eb1645, type: 3}
   - {fileID: 21300000, guid: 9ad0611c3a2510e40af9a94f0f88cdd7, type: 3}
   - {fileID: 21300000, guid: 2593544cfc4efe94ba81c0bb6390d1b1, type: 3}
+  - {fileID: 21300000, guid: bb3ebe5c061c39d4386b0dae16f67184, type: 3}
   - {fileID: 21300000, guid: db302feca6cb7744999c2a64658fdd1f, type: 3}
   - {fileID: 21300000, guid: b0a7270d473ad0a4e8735499c41d997b, type: 3}
   - {fileID: 21300000, guid: 0a57651de64cbde48af26384a2a6dc79, type: 3}
@@ -170,6 +177,7 @@ SpriteAtlas:
   - circle
   - number_0
   - Rabbit
+  - math_verse_icon
   - Head
   - dummy_back
   - "\uBB38"
@@ -181,6 +189,7 @@ SpriteAtlas:
   - circle_line
   - lobby_2
   - lobby_3
+  - hotpink_robot
   - dummy_card_collection_check
   - dummy_card_collection_4
   - "\uB208"
@@ -213,7 +222,11 @@ SpriteAtlas:
   - Eyes
   - dummy_login_and_join
   - number_6
+  - lemon_robot
+  - card_collection_frame_empty
+  - card_collection_frame_bookmark
   - Subtraction
+  - rusty_robot
   - UI_login_start
   - AddEyes1
   - dummy_join
@@ -222,6 +235,7 @@ SpriteAtlas:
   - dummy_card_collection_3
   - game_lobby_collection
   - planet_2
+  - blue_robot
   - LowerBody
   - Leg
   - number_5

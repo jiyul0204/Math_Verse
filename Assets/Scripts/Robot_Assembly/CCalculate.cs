@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CCalculate : MonoBehaviour
 {
     ChangeImage CChangeimg;
+    public Text PopUp_txt;
     #region Cal_Text
     public Text Txt_FinNum;
     public Text Txt_MidNum;
@@ -125,15 +126,11 @@ public class CCalculate : MonoBehaviour
         int Spare1 = 0;
         int Spare2 = 0;
 
-        Spare1 = (min == 3) ? (Range(3, max)) : (Range(min, ans - 1));
-        Spare2 = Range(ans + 1, max);
-        if(min==3)
+        do
         {
-            while(Spare1!=Spare2)
-            {
-                Spare2 = Range(ans + 1, max);
-            }
-        }
+            Spare1 = Range(min, max);
+            Spare2 = Range(min, max);
+        } while ((Spare1 == Spare2) | (Spare1 == ans) | (Spare2 == ans));
 
         if (nAnsNumCnt > 1)
         {
@@ -151,7 +148,7 @@ public class CCalculate : MonoBehaviour
     public void GenerateQuiz()
     {
         CChangeimg.ChangeImg();
-
+        PopUp_txt.text = "일시정지";
         for (int n = 0; n < 3; n++)
             nArrnum[n] = 1;//정규화
 

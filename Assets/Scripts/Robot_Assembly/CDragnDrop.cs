@@ -67,7 +67,6 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             transform.position = invisdefaultposition;
             //Invisiable.transform.position = defaultposition;
 
-            PopUp_txt.text = "일시정지";
 
             int nAnsNum = CCalculate.AnsNum;
             SCriptTxt = GetComponentInChildren<Text>();
@@ -86,9 +85,9 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             }
             else
             {
-                PopUp_txt.text = "게임 오버";
                 nStage = 0;
                 m_CCal.GenerateQuiz();
+                PopUp_txt.text = "게임 오버";
                 PopUp.gameObject.SetActive(true);
                 transform.position = defaultposition;
                 IsCorrect = false;

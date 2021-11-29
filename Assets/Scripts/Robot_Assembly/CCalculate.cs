@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class CCalculate : MonoBehaviour
 {
     ChangeImage CChangeimg;
-    public Text PopUp_txt;
     #region Cal_Text
     public Text Txt_FinNum;
     public Text Txt_MidNum;
@@ -148,7 +147,6 @@ public class CCalculate : MonoBehaviour
     public void GenerateQuiz()
     {
         CChangeimg.ChangeImg();
-        PopUp_txt.text = "일시정지";
         for (int n = 0; n < 3; n++)
             nArrnum[n] = 1;//정규화
 

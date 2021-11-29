@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CCalculate : MonoBehaviour
 {
+    ChangeImage CChangeimg;
     #region Cal_Text
     public Text Txt_FinNum;
     public Text Txt_MidNum;
@@ -15,8 +16,8 @@ public class CCalculate : MonoBehaviour
     #endregion
 
     float [] likeability = new float[10];     //호감도 배열
-    int HavetoAns;                          //맞춰야할 수
-    float nLikestandard = 50.0f;        //기준 호감도
+    int HavetoAns;                                //맞춰야할 수
+    float nLikestandard = 50.0f;             //기준 호감도
 
     #region Quiz_Num(static)
     public static int MiddleNum=0;                          //문제의 수
@@ -28,7 +29,9 @@ public class CCalculate : MonoBehaviour
 
     private void Awake()
     {
+        CChangeimg = GetComponent<ChangeImage>();
         GenerateQuiz();
+        
         // 아래 Code는 최상위 Object가 아니면 작동을 안 해서 주석 처리함. - Hyeonwoo, 2021.11.26.
         // DontDestroyOnLoad(this);
         try
@@ -147,6 +150,8 @@ public class CCalculate : MonoBehaviour
 
     public void GenerateQuiz()
     {
+        CChangeimg.ChangeImg();
+
         for (int n = 0; n < 3; n++)
             nArrnum[n] = 1;//정규화
 

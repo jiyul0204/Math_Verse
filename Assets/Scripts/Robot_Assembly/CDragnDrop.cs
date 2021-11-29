@@ -9,6 +9,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
     //Transform ClickAnsObj = null;
     //Transform OldAnsObj = null;
+    static public int nStage=0;
     public bool IsCorrect = true;
 
     private Vector3 invisdefaultposition;
@@ -66,6 +67,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             transform.position = invisdefaultposition;
             //Invisiable.transform.position = defaultposition;
 
+            PopUp_txt.text = "일시정지";
+
             int nAnsNum = CCalculate.AnsNum;
             SCriptTxt = GetComponentInChildren<Text>();
             int DragNum = int.Parse(SCriptTxt.text);
@@ -75,7 +78,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
             if (nAnsNum == DragNum)
             {
-                PopUp_txt.text = "일시정지";
+                ++nStage;
                 Invoke("waiting3second", 3.0f);
                 transform.position = defaultposition;
                 m_CCal.GenerateQuiz();
@@ -84,6 +87,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             else
             {
                 PopUp_txt.text = "게임 오버";
+                nStage = 0;
+                m_CCal.GenerateQuiz();
                 PopUp.gameObject.SetActive(true);
                 transform.position = defaultposition;
                 IsCorrect = false;

@@ -48,7 +48,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
-        Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition); ;
+        Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = currentPos;
     }
 

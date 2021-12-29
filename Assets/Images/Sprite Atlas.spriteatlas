@@ -149,6 +149,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c6338c4d277a2b846adbfd9d1a57ca37, type: 3}
   - {fileID: 21300000, guid: 0d8fdf6d74dabce4ba0d44fabaaabc02, type: 3}
   - {fileID: 21300000, guid: ed0c618d3426a0e4a82dc1c8a33d2490, type: 3}
+  - {fileID: 21300000, guid: 8bdbe28da40bbb2408df65923e97f8e8, type: 3}
   - {fileID: 21300000, guid: cf66021e4e17d7d41b8c707d951a0d2f, type: 3}
   - {fileID: 21300000, guid: de15641ec45630f46b77d074c9ec9ebb, type: 3}
   - {fileID: 21300000, guid: 45e1cb4eed2fb0f4aa166e77ef55397f, type: 3}
@@ -263,6 +264,7 @@ SpriteAtlas:
   - UI_lobby4
   - Dummy_card_collection_1
   - Dummy_card_collection_back
+  - UI_lobby 1
   - Arms
   - UI_card_02
   - AddUpperBody3

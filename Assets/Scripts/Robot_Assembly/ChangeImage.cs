@@ -41,39 +41,39 @@ public class ChangeImage : MonoBehaviour
         switch (CDragnDrop.nStage)
         {
             case 0:
-                MidSpt = Resources.Load(AddPath + "AddStart", typeof(Sprite)) as Sprite;
-                FinSpt = Resources.Load(AddPath + "AddEyes1", typeof(Sprite)) as Sprite;
-                AnsSpt = Resources.Load(AnsPath + "Eyes", typeof(Sprite)) as Sprite;
+                MidSpt = Resources.Load(AddPath + "mugari", typeof(Sprite)) as Sprite;
+                FinSpt = Resources.Load(AddPath + "a", typeof(Sprite)) as Sprite;
+                AnsSpt = Resources.Load(AnsPath + "noon", typeof(Sprite)) as Sprite;
                 break;
             case 1:
-                MidSpt = Resources.Load(AddPath + "AddEyes1", typeof(Sprite)) as Sprite;
-                FinSpt = Resources.Load(AddPath + "AddEars2", typeof(Sprite)) as Sprite;
-                AnsSpt = Resources.Load(AnsPath + "Ears", typeof(Sprite)) as Sprite;
+                MidSpt = Resources.Load(AddPath + "a", typeof(Sprite)) as Sprite;
+                FinSpt = Resources.Load(AddPath + "b", typeof(Sprite)) as Sprite;
+                AnsSpt = Resources.Load(AnsPath + "gye", typeof(Sprite)) as Sprite;
                 break;
             case 2:
-                MidSpt = Resources.Load(AddPath + "AddEars2", typeof(Sprite)) as Sprite;
-                FinSpt = Resources.Load(AddPath + "AddUpperBody3", typeof(Sprite)) as Sprite;
-                AnsSpt = Resources.Load(AnsPath + "UpperBody", typeof(Sprite)) as Sprite;
+                MidSpt = Resources.Load(AddPath + "b", typeof(Sprite)) as Sprite;
+                FinSpt = Resources.Load(AddPath + "c", typeof(Sprite)) as Sprite;
+                AnsSpt = Resources.Load(AnsPath + "mom", typeof(Sprite)) as Sprite;
                 break;
             case 3:
-                MidSpt = Resources.Load(AddPath + "AddUpperBody3", typeof(Sprite)) as Sprite;
-                FinSpt = Resources.Load(AddPath + "AddAccesary4", typeof(Sprite)) as Sprite;
-                AnsSpt = Resources.Load(AnsPath + "Accessary", typeof(Sprite)) as Sprite;
+                MidSpt = Resources.Load(AddPath + "c", typeof(Sprite)) as Sprite;
+                FinSpt = Resources.Load(AddPath + "d", typeof(Sprite)) as Sprite;
+                AnsSpt = Resources.Load(AnsPath + "jangsik", typeof(Sprite)) as Sprite;
                 break;
             case 4:
-                MidSpt = Resources.Load(AddPath + "AddAccesary4", typeof(Sprite)) as Sprite;
-                FinSpt = Resources.Load(AddPath + "AddArms5", typeof(Sprite)) as Sprite;
-                AnsSpt = Resources.Load(AnsPath + "Arms", typeof(Sprite)) as Sprite;
+                MidSpt = Resources.Load(AddPath + "d", typeof(Sprite)) as Sprite;
+                FinSpt = Resources.Load(AddPath + "e", typeof(Sprite)) as Sprite;
+                AnsSpt = Resources.Load(AnsPath + "pal", typeof(Sprite)) as Sprite;
                 break;
             case 5:
-                MidSpt = Resources.Load(AddPath + "AddArms5", typeof(Sprite)) as Sprite;
-                FinSpt = Resources.Load(AddPath + "AddLowerBody6", typeof(Sprite)) as Sprite;
-                AnsSpt = Resources.Load(AnsPath + "LowerBody", typeof(Sprite)) as Sprite;
+                MidSpt = Resources.Load(AddPath + "e", typeof(Sprite)) as Sprite;
+                FinSpt = Resources.Load(AddPath + "f", typeof(Sprite)) as Sprite;
+                AnsSpt = Resources.Load(AnsPath + "habansin", typeof(Sprite)) as Sprite;
                 break;
             case 6:
-                MidSpt = Resources.Load(AddPath + "AddLowerBody6", typeof(Sprite)) as Sprite;
-                FinSpt = Resources.Load(AddPath + "AddLegs7", typeof(Sprite)) as Sprite;
-                AnsSpt = Resources.Load(AnsPath + "Leg", typeof(Sprite)) as Sprite;
+                MidSpt = Resources.Load(AddPath + "f", typeof(Sprite)) as Sprite;
+                FinSpt = Resources.Load(AddPath + "g", typeof(Sprite)) as Sprite;
+                AnsSpt = Resources.Load(AnsPath + "dari", typeof(Sprite)) as Sprite;
                 break;
         }
 

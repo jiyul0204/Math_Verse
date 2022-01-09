@@ -55,19 +55,19 @@ namespace SatelliteGame
 
             switch (centerNumberSign)
             {
-                case SatelliteSign.Minus:
+                /*case SatelliteSign.Minus:
                     centerNumberSignText = '-';
                     break;
-                /*case SatelliteSign.Plus:
+                case SatelliteSign.Plus:
                     centerNumberSignText = '+';
                     break;
                 case SatelliteSign.Multiply:
                     centerNumberSignText = '*';
-                    break;
+                    break;*/
                 case SatelliteSign.Divide:
-                    scoreSignText = '/';
+                    centerNumberSignText = '/';
                     break;
-                case SatelliteSign.Modular:
+                /*case SatelliteSign.Modular:
                     scoreSignText = '%';
                     break;*/
                 default:
@@ -110,16 +110,16 @@ namespace SatelliteGame
         {
             switch (centerNumberSign)
             {
-                case SatelliteSign.Minus:
+                /*case SatelliteSign.Minus:
                     return sourceCenterNumber - centerNumberValue;
-                /*case SatelliteSign.Plus:
+                case SatelliteSign.Plus:
                     return sourceCenterNumber + centerNumberValue;
                 case SatelliteSign.Multiply:
-                    return sourceCenterNumber * centerNumberValue;
+                    return sourceCenterNumber * centerNumberValue;*/
                 case SatelliteSign.Divide:
-                    return planetScore / scoreValue;
-                case SatelliteSign.Modular:
-                    return planetScore % scoreValue;*/
+                    return sourceCenterNumber / centerNumberValue;
+                /*case SatelliteSign.Modular:
+                    return sourceCenterNumber % centerNumberValue;*/
                 default:
                     return sourceCenterNumber - centerNumberValue;
             }

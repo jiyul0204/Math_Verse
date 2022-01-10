@@ -1,37 +1,22 @@
+using System;
 using System.Text;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-[SerializeField]
-public class UserData
-{
-    public string gameKey = "dcbb2ad5bc4d3fe7d85fd4cd113984e7";  // 게임키
-    public string mbr_id;   // Default 회원 ID
-    public string stg_cd;   // 학습주제 코드
-    public string sid;      // 이력코드
-}
-
 public class NetworkService : Singleton<NetworkService>
 {
-    private void Start()
+    public void RequestJSONData<T>(string json, string url, Action<List<T>> completeCallback = null)
     {
-        UserData userData = new UserData();
-
-        userData.mbr_id = "MPID0120060011959";
-        userData.stg_cd = "F02_0_1";
-        userData.sid = "mathpd28500398652414182";
-
-        string jsonString = JsonUtility.ToJson(userData);
-
-        StartCoroutine(SendRequestJson(jsonString));
+        StartCoroutine(SendRequestJson<T>(json, url, completeCallback));
     }
 
-    private IEnumerator SendRequestJson(string jsonString)
+    private IEnumerator SendRequestJson<T>(string json, string url, Action<List<T>> completeCallback = null)
     {
-        var www = new UnityWebRequest("https://api.wjtbgame.com/getStudyResult", "POST");
+        var www = new UnityWebRequest(url, "POST");
 
-        www.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(jsonString));
+        www.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(json));
         www.downloadHandler = new DownloadHandlerBuffer();
         www.SetRequestHeader("Content-Type", "application/json");
 
@@ -43,7 +28,9 @@ public class NetworkService : Singleton<NetworkService>
         }
         else
         {
-            Debug.Log($"* Result : {www.downloadHandler.text}");
+            var responseData = JsonUtility.FromJson<ResponseData<T>>(www.downloadHandler.text);
+
+            completeCallback?.Invoke(responseData.data);
         }
     }
 }

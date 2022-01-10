@@ -2,9 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using UniRx;
+using System.Collections;
+ 
 
 public class LobbyService : MonoBehaviour
 {
+    ChangeImage m_ChangeImg;
+
     [SerializeField]
     private Button topUICollectionButton;
 
@@ -13,10 +17,14 @@ public class LobbyService : MonoBehaviour
 
     [SerializeField]
     private Button gameStartButton;
-
+    private void Awake()
+    {
+        m_ChangeImg = GetComponent<ChangeImage>();
+    }
     private void Start()
     {
         BindView();
+        Invoke("EntranceStore", 1f);
     }
 
     private void BindView()
@@ -34,9 +42,12 @@ public class LobbyService : MonoBehaviour
                 SceneService.Instance.LoadScene("CardCollection");
             })
             .AddTo(gameObject);
+    }
 
+    void EntranceStore()
+    {
         gameStartButton.OnClickAsObservable()
-            .Subscribe(_ =>
+             .Subscribe(_ =>
             {
                 SceneService.Instance.LoadScene("Store");
             })

@@ -28,6 +28,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private void Awake()
     {
         m_CCollsion = GetComponent<CollisionEvent>();
+        m_CCal = GetComponent<CCalculate>();
     }
 
     void Start()
@@ -94,8 +95,5 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             }
         }
     }
-    void waiting3second()
-    {
-        Debug.Log("Waiting 3 Second");
-    }
+
 }

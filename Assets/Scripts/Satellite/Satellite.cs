@@ -2,18 +2,18 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*using UniRx;
-using UniRx.Triggers;*/
+using UniRx;
+using UniRx.Triggers;
 
 namespace SatelliteGame
 {
     enum SatelliteSign
     {
-        Minus,
-        /*Plus,        
-        Multiply,
+        /*Minus,
+        Plus,        
+        Multiply,*/
         Divide,
-        Modular,*/
+        /*Modular,*/
         Max
     }
 
@@ -31,7 +31,7 @@ namespace SatelliteGame
         private GameObject centerNumberObject;
         private Text centerNumberText;
         private int centerNumberValue;
-        /*private SatelliteSign centerNumberSign;*/
+        private SatelliteSign centerNumberSign;
         #endregion
 
         #region GameObject Position
@@ -55,7 +55,7 @@ namespace SatelliteGame
         private void Start()
         {
             SetSatelliteScore();
-            /*BindView();*/
+            BindView();
             StartRevolve();
         }
 
@@ -73,13 +73,13 @@ namespace SatelliteGame
         private void SetSatelliteScore()
         {
             centerNumberValue = Random.Range(1, 31);
-            /*centerNumberSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
+            centerNumberSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
 
             char centerNumberSignText;
 
             switch (centerNumberSign)
             {
-                case SatelliteSign.Minus:
+                /*case SatelliteSign.Minus:
                     centerNumberSignText = '-';
                     break;
                 case SatelliteSign.Plus:
@@ -87,22 +87,22 @@ namespace SatelliteGame
                     break;
                 case SatelliteSign.Multiply:
                     centerNumberSignText = '*';
+                    break;*/
+                case SatelliteSign.Divide:
+                    centerNumberSignText = '/';
                     break;
-                *//*case SatelliteSign.Divide:
-                    scoreSignText = '/';
-                    break;
-                case SatelliteSign.Modular:
-                    scoreSignText = '%';
-                    break;*//*
+                /*case SatelliteSign.Modular:
+                    centerNumberSignText = '%';
+                    break;*/
                 default:
                     centerNumberSignText = '-';
                     break;
-            }*/
+            }
 
-            centerNumberText.text = $"{centerNumberValue}";
+            centerNumberText.text = $"{centerNumberSignText}{centerNumberValue}";
         }
 
-        /*private void BindView()
+        private void BindView()
         {
             objectButton.OnPointerDownAsObservable()
                 .Subscribe(_ =>
@@ -117,7 +117,7 @@ namespace SatelliteGame
                     StartRevolve();
                 })
                 .AddTo(gameObject);
-        }*/
+        }
 
         private void StartRevolve()
         {

@@ -5,8 +5,8 @@ using UniRx;
 
 public class LogoService : MonoBehaviour
 {
-    [SerializeField]
-    private Button loginAndJoinButton;
+    /*[SerializeField]
+    private Button loginAndJoinButton;*/
 
     [SerializeField]
     private Button startButton;
@@ -18,12 +18,12 @@ public class LogoService : MonoBehaviour
 
     private void BindView()
     {
-        loginAndJoinButton.OnClickAsObservable()
+        /*loginAndJoinButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 SceneService.Instance.LoadScene("LoginAndJoin");
             })
-            .AddTo(gameObject);
+            .AddTo(gameObject);*/
 
         startButton.OnClickAsObservable()
             .Subscribe(_ =>

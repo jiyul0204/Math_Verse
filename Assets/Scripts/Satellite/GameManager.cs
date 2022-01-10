@@ -36,7 +36,7 @@ namespace SatelliteGame
                     time =>
                     {
                         // onNext에서 시간을 표시한다.
-                        remainTimeText.text = $"남은 시간 : {time}초";
+                        // remainTimeText.text = $"남은 시간 : {time}초";
                     },
                     () =>
                     {

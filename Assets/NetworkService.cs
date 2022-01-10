@@ -1,3 +1,4 @@
+using System.Text;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -11,8 +12,7 @@ public class UserData
     public string sid;      // 이력코드
 }
 
-
-public class NetworkService : MonoBehaviour
+public class NetworkService : Singleton<NetworkService>
 {
     private void Start()
     {
@@ -24,14 +24,15 @@ public class NetworkService : MonoBehaviour
 
         string jsonString = JsonUtility.ToJson(userData);
 
-        Debug.Log($"[KHW] jsonString : {jsonString}");
-
         StartCoroutine(SendRequestJson(jsonString));
     }
 
     private IEnumerator SendRequestJson(string jsonString)
     {
-        var www = UnityWebRequest.Post("https://api.wjtbgame.com/getStudyResult", jsonString);
+        var www = new UnityWebRequest("https://api.wjtbgame.com/getStudyResult", "POST");
+
+        www.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(jsonString));
+        www.downloadHandler = new DownloadHandlerBuffer();
         www.SetRequestHeader("Content-Type", "application/json");
 
         yield return www.SendWebRequest();

@@ -132,7 +132,7 @@ namespace SatelliteGame
                 .AddTo(gameObject);
 
             // 일정 주기마다 인공 위성 생성
-            rxCountDownTimer.CountDownObservable
+            /*rxCountDownTimer.CountDownObservable
                 .Where(time => time % artificialSatelliteGenerateTerm == 0)
                 .Subscribe(_ =>
                 {
@@ -143,7 +143,7 @@ namespace SatelliteGame
 
                     CreateArtificialSatellite(Random.Range(0, artificialSatellitesTransforms.Count));
                 })
-                .AddTo(gameObject);
+                .AddTo(gameObject);*/
         }
 
         private void OnDestroy()

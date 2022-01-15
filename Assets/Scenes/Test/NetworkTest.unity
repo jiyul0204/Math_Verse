@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1701582007}
   - component: {fileID: 1701582008}
   m_Layer: 0
-  m_Name: NetworkService
+  m_Name: WoongjinAPIService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -76,12 +76,6 @@ public class DBInitData     // 비식별전처리 인입데이터
 }
 
 [Serializable]
-public class DBInitDataList
-{
-    public List<DBInitData> initDatas;
-}
-
-[Serializable]
 public class DBStudyData    // 비식별전처리 학습데이터
 {
     public string mbr_id;   // 회원 ID (회원 가입시 생성, 일반적으로 회원마다 1개씩 부여 (= Irnmbrid)
@@ -98,16 +92,9 @@ public class DBStudyData    // 비식별전처리 학습데이터
 }
 
 [Serializable]
-public class DBStudyDataList
+public class DBQuestionData
 {
-    public List<DBStudyData> studyDatas;
+
 }
 
 #endregion
-
-public enum WoongjinAPIType
-{
-    getStudyInfo,
-    getAllStudyInfo,
-    getStudyResult
-}

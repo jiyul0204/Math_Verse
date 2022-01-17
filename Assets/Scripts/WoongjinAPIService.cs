@@ -1,6 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WoongjinAPIType
+{
+    getStudyInfo,       // 가상 회원의 학습 주제에 대한 이전 학습성취도 조회
+    getAllStudyInfo,    // 가상 회원의 샘플 학습 주제별 학습성취도 전체 조회
+    getStudyResult      // 가상 회원의 학습 결과 조회
+}
+
 public class WoongjinAPIService : Singleton<WoongjinAPIService>
 {
     public List<StudyInfoData> studyInfoDatas { get; set; }

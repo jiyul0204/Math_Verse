@@ -7,7 +7,8 @@ using System.Collections;
 
 public class LobbyService : MonoBehaviour
 {
-    ChangeImage m_ChangeImg;
+    public GameObject SettingWindow;
+    public GameObject QuestWindow;
 
     [SerializeField]
     private Button topUICollectionButton;
@@ -16,11 +17,13 @@ public class LobbyService : MonoBehaviour
     private Button storeCollectionButton;
 
     [SerializeField]
+    private Button SettingButton;
+
+    [SerializeField]
+    private Button QuestButton;
+
+    [SerializeField]
     private Button gameStartButton;
-    private void Awake()
-    {
-        m_ChangeImg = GetComponent<ChangeImage>();
-    }
     private void Start()
     {
         BindView();
@@ -42,6 +45,21 @@ public class LobbyService : MonoBehaviour
                 SceneService.Instance.LoadScene("CardCollection");
             })
             .AddTo(gameObject);
+
+        SettingButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                SettingWindow.SetActive(!SettingWindow.activeSelf);
+            })
+            .AddTo(gameObject);
+
+        QuestButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                QuestWindow.SetActive(!QuestWindow.activeSelf);
+            })
+            .AddTo(gameObject);
+
     }
 
     void EntranceStore()
@@ -53,4 +71,5 @@ public class LobbyService : MonoBehaviour
             })
             .AddTo(gameObject);
     }
+
 }

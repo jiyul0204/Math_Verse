@@ -19,7 +19,7 @@ public class RocketMovement : MonoBehaviour
 		// Use SetOptions to close the path
 		// and SetLookAt to make the target orient to the path itself
 		Tween t = target.DOPath(waypoints, 4, pathType, PathMode.Sidescroller2D)
-			.SetOptions(false, lockRotation: AxisConstraint.Z)
+			.SetOptions(false)
 			.SetLookAt(0.001f);
 
 		// Then set the ease to Linear and use infinite loops

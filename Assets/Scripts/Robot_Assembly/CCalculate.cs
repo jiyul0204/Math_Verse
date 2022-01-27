@@ -27,8 +27,12 @@ public class CCalculate : MonoBehaviour
 
     int[] nArrnum = new int[3];
 
+    public static CCalculate Instance { get; private set; }
+
     private void Awake()
     {
+        Instance = this;
+
         CChangeimg = GetComponent<ChangeImage>();
         GenerateQuiz();
         

@@ -28,7 +28,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private void Awake()
     {
         m_CCollsion = GetComponent<CollisionEvent>();
-        m_CCal = GetComponent<CCalculate>();
+        m_CCal = CCalculate.Instance;
     }
 
     void Start()

@@ -15,7 +15,7 @@ public class PlayMusic : MonoBehaviour
 
     void Awake()
     {
-        backmusic = GetComponent<AudioSource>(); //배경음악 저장해둠
+        // backmusic = GetComponent<AudioSource>(); //배경음악 저장해둠
         if (backmusic.isPlaying) return; //배경음악이 재생되고 있다면 패스
         else
         {
@@ -40,7 +40,7 @@ public class PlayMusic : MonoBehaviour
 
     public void BackGroundMusicOffButton() //배경음악 키고 끄는 버튼
     {
-        backmusic = GetComponent<AudioSource>(); //배경음악 저장해둠
+        // backmusic = GetComponent<AudioSource>(); //배경음악 저장해둠
         if (backmusic.isPlaying)
         {
             backmusic.Pause();

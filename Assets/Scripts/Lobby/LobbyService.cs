@@ -39,6 +39,9 @@ public class LobbyService : MonoBehaviour
     [SerializeField]
     private Button DelQuestWindow;
 
+    [SerializeField]
+    private Button educationResultButton;
+
     private void Start()
     {
         BindView();
@@ -60,6 +63,13 @@ public class LobbyService : MonoBehaviour
                 SceneService.Instance.LoadScene("CardCollection");
             })
             .AddTo(gameObject);
+
+        educationResultButton.OnClickAsObservable()
+           .Subscribe(_ =>
+           {
+               SceneService.Instance.LoadScene("Education_Result");
+           })
+           .AddTo(gameObject);
 
         SettingButton.OnClickAsObservable()
             .Subscribe(_ =>

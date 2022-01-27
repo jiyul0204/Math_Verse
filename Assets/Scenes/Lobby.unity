@@ -2711,6 +2711,7 @@ MonoBehaviour:
   satelliteStartButton: {fileID: 2079986827}
   HowToPlayButton: {fileID: 270406874}
   DelHowToPlayButton: {fileID: 1320323812}
+  educationCheckButton: {fileID: 1969514295}
 --- !u!1 &634840466
 GameObject:
   m_ObjectHideFlags: 0

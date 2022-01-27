@@ -33,6 +33,9 @@ public class LobbyService : MonoBehaviour
     [SerializeField]
     private Button DelHowToPlayButton;
 
+    [SerializeField]
+    private Button educationCheckButton;
+
     private void Start()
     {
         BindView();
@@ -52,6 +55,13 @@ public class LobbyService : MonoBehaviour
             .Subscribe(_ =>
             {
                 SceneService.Instance.LoadScene("CardCollection");
+            })
+            .AddTo(gameObject);
+
+        educationCheckButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                SceneService.Instance.LoadScene("Education_Check");
             })
             .AddTo(gameObject);
 

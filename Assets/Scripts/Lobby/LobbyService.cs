@@ -22,7 +22,10 @@ public class LobbyService : MonoBehaviour
     private Button QuestButton;
 
     [SerializeField]
-    private Button gameStartButton;
+    private Button aseembleRobotStartButton;
+
+    [SerializeField]
+    private Button satelliteStartButton;
 
     [SerializeField]
     private Button HowToPlayButton;
@@ -83,12 +86,20 @@ public class LobbyService : MonoBehaviour
 
     void EntranceStore()
     {
-        gameStartButton.OnClickAsObservable()
+        aseembleRobotStartButton.OnClickAsObservable()
              .Subscribe(_ =>
             {
-                LocalDBDataService.Instance.PlayGameType = GameType.Satellite;
+                LocalDBDataService.Instance.PlayGameType = GameType.Assemble_Robot;
                 SceneService.Instance.LoadScene("Store");
             })
+            .AddTo(gameObject);
+
+        satelliteStartButton.OnClickAsObservable()
+             .Subscribe(_ =>
+             {
+                 LocalDBDataService.Instance.PlayGameType = GameType.Satellite;
+                 SceneService.Instance.LoadScene("Store");
+             })
             .AddTo(gameObject);
     }
 }

@@ -879,5 +879,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca15559edfe03a4bb7a00527fd93e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loginAndJoinButton: {fileID: 1656163385}
   startButton: {fileID: 1656163385}

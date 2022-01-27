@@ -1,9 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-using UniRx;
-using System.Collections;
- 
+using UniRx; 
 
 public class LobbyService : MonoBehaviour
 {
@@ -81,7 +79,6 @@ public class LobbyService : MonoBehaviour
             HowToPlayWindow.SetActive(!HowToPlayWindow.activeSelf);
          })
         .AddTo(gameObject);
-
     }
 
     void EntranceStore()
@@ -89,9 +86,9 @@ public class LobbyService : MonoBehaviour
         gameStartButton.OnClickAsObservable()
              .Subscribe(_ =>
             {
+                LocalDBDataService.Instance.PlayGameType = GameType.Satellite;
                 SceneService.Instance.LoadScene("Store");
             })
             .AddTo(gameObject);
     }
-
 }

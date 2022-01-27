@@ -9,6 +9,7 @@ public class LobbyService : MonoBehaviour
 {
     public GameObject SettingWindow;
     public GameObject QuestWindow;
+    public GameObject HowToPlayWindow;
 
     [SerializeField]
     private Button topUICollectionButton;
@@ -24,6 +25,13 @@ public class LobbyService : MonoBehaviour
 
     [SerializeField]
     private Button gameStartButton;
+
+    [SerializeField]
+    private Button HowToPlayButton;
+
+    [SerializeField]
+    private Button DelHowToPlayButton;
+
     private void Start()
     {
         BindView();
@@ -59,6 +67,20 @@ public class LobbyService : MonoBehaviour
                 QuestWindow.SetActive(!QuestWindow.activeSelf);
             })
             .AddTo(gameObject);
+
+        HowToPlayButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                HowToPlayWindow.SetActive(!HowToPlayWindow.activeSelf);
+            })
+            .AddTo(gameObject);
+
+        DelHowToPlayButton.OnClickAsObservable()
+        .Subscribe(_ =>
+        {
+            HowToPlayWindow.SetActive(!HowToPlayWindow.activeSelf);
+         })
+        .AddTo(gameObject);
 
     }
 

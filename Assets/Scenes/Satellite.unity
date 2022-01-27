@@ -552,7 +552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -485.02103}
+  m_AnchoredPosition: {x: 50, y: -485.021}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &420836331
@@ -650,6 +650,7 @@ MonoBehaviour:
   remainTimeText: {fileID: 1983258903}
   resultPopupPanel: {fileID: 1356212028}
   gameResultText: {fileID: 1142048049}
+  mainPlanet: {fileID: 0}
 --- !u!1 &506087871
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.5, y: -53.391224}
+  m_AnchoredPosition: {x: 49.5, y: -53.39122}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &546684777
@@ -1067,8 +1068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1662f1f576def9f488303f35b9643bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDifficulty: 2
-  rxCountDownTimer: {fileID: 488574667}
   centerNumberText: {fileID: 859648065}
   satellitePrefab: {fileID: 7126893558069346037, guid: 98d56d57db23d0947a7fbb33c52cdd5b, type: 3}
   satelliteMoveSpeed: 30
@@ -1077,18 +1076,6 @@ MonoBehaviour:
   - {fileID: 11711697}
   - {fileID: 1702489462}
   - {fileID: 55337034}
-  artificialSatellitePrefab: {fileID: 6456818096793194143, guid: 626c070704d141d44a89a564ac3554a7, type: 3}
-  artificialSatellitesTransforms:
-  - {fileID: 680315624}
-  - {fileID: 934037205}
-  - {fileID: 233857535}
-  - {fileID: 643859888}
-  - {fileID: 381788913}
-  - {fileID: 680315624}
-  - {fileID: 1679845884}
-  - {fileID: 994550233}
-  - {fileID: 420836332}
-  - {fileID: 630798381}
 --- !u!1 &710811105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,7 +3079,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBBF8\uC158 : \uAC00\uC6B4\uB370 \uC22B\uC790\uB97C 10\uC73C\uB85C \uB9CC\uB4E4\uAE30"
+  m_Text: "\uBBF8\uC158 : \uAC00\uC6B4\uB370 \uC22B\uC790\uB97C 25\uB85C \uB9CC\uB4E4\uAE30"
 --- !u!222 &1983258904
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Satellite.unity
     guid: d7f2f3da989eed849a84effb42730cec
+  - enabled: 1
+    path: Assets/Scenes/Education_Check.unity
+    guid: dd310dd0a38897745b456b8887c7ea80
   m_configObjects: {}

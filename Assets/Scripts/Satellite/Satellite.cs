@@ -54,7 +54,7 @@ namespace SatelliteGame
 
         private void Start()
         {
-            SetSatelliteScore();
+            SetSatelliteScore(Random.Range(1, 5));
             BindView();
             StartRevolve();
         }
@@ -70,9 +70,9 @@ namespace SatelliteGame
             this.originRectTransform = originRectTransform;
         }
 
-        private void SetSatelliteScore()
+        private void SetSatelliteScore(int score)
         {
-            centerNumberValue = Random.Range(1, 31);
+            centerNumberValue = score;
             centerNumberSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
 
             char centerNumberSignText;
@@ -89,13 +89,13 @@ namespace SatelliteGame
                     centerNumberSignText = '*';
                     break;*/
                 case SatelliteSign.Divide:
-                    centerNumberSignText = '/';
+                    centerNumberSignText = '÷';
                     break;
                 /*case SatelliteSign.Modular:
                     centerNumberSignText = '%';
                     break;*/
                 default:
-                    centerNumberSignText = '-';
+                    centerNumberSignText = '÷';
                     break;
             }
 
@@ -151,7 +151,7 @@ namespace SatelliteGame
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collider)
+        /*private void OnTriggerEnter2D(Collider2D collider)
         {
             var targetArtificialSatellite = collider.GetComponent<ArtificialSatellite>();
 
@@ -164,6 +164,25 @@ namespace SatelliteGame
                 {
                     mainPlanet.RemoveSatellite(this);
                 }
+            }
+        }*/
+
+        public int CalculateScore(int sourceCenterNumber)
+        {
+            switch (centerNumberSign)
+            {
+                /*case SatelliteSign.Minus:
+                    return sourceCenterNumber - centerNumberValue;
+                case SatelliteSign.Plus:
+                    return sourceCenterNumber + centerNumberValue;
+                case SatelliteSign.Multiply:
+                    return sourceCenterNumber * centerNumberValue;*/
+                case SatelliteSign.Divide:
+                    return sourceCenterNumber / centerNumberValue;
+                /*case SatelliteSign.Modular:
+                    return sourceCenterNumber % centerNumberValue;*/
+                default:
+                    return sourceCenterNumber / centerNumberValue;
             }
         }
     }

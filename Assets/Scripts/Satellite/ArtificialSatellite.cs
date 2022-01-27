@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,7 +55,7 @@ namespace SatelliteGame
 
             switch (centerNumberSign)
             {
-                /*case SatelliteSign.Minus:
+                *//*case SatelliteSign.Minus:
                     centerNumberSignText = '-';
                     break;
                 case SatelliteSign.Plus:
@@ -63,13 +63,13 @@ namespace SatelliteGame
                     break;
                 case SatelliteSign.Multiply:
                     centerNumberSignText = '*';
-                    break;*/
+                    break;*//*
                 case SatelliteSign.Divide:
                     centerNumberSignText = '/';
                     break;
-                /*case SatelliteSign.Modular:
+                *//*case SatelliteSign.Modular:
                     scoreSignText = '%';
-                    break;*/
+                    break;*//*
                 default:
                     centerNumberSignText = '-';
                     break;
@@ -110,19 +110,19 @@ namespace SatelliteGame
         {
             switch (centerNumberSign)
             {
-                /*case SatelliteSign.Minus:
+                *//*case SatelliteSign.Minus:
                     return sourceCenterNumber - centerNumberValue;
                 case SatelliteSign.Plus:
                     return sourceCenterNumber + centerNumberValue;
                 case SatelliteSign.Multiply:
-                    return sourceCenterNumber * centerNumberValue;*/
+                    return sourceCenterNumber * centerNumberValue;*//*
                 case SatelliteSign.Divide:
                     return sourceCenterNumber / centerNumberValue;
-                /*case SatelliteSign.Modular:
-                    return sourceCenterNumber % centerNumberValue;*/
+                *//*case SatelliteSign.Modular:
+                    return sourceCenterNumber % centerNumberValue;*//*
                 default:
                     return sourceCenterNumber - centerNumberValue;
             }
         }
     }
-}
+}*/

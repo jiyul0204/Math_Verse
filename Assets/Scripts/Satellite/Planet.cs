@@ -7,30 +7,30 @@ using UniRx;
 
 namespace SatelliteGame
 {
-    enum Difficulty
+    /*enum Difficulty
     {
         EASY,
         NORMAL,
         HARD
-    }
+    }*/
 
     public class Planet : MonoBehaviour
     {
         private RectTransform rectTransform;
 
-        #region Game Difficulty
+        /*#region Game Difficulty
         [Header("[Game Difficulty]")]
 
         [SerializeField]
         private Difficulty gameDifficulty;
-        #endregion
+        #endregion*/
 
-        #region Count Down Timer
+        /*#region Count Down Timer
         [Header("[Count Down Timer]")]
 
         [SerializeField]
         private RxCountDownTimer rxCountDownTimer;
-        #endregion
+        #endregion*/
 
         #region NU Number
         [Header("[Planet Center Number]")]
@@ -56,7 +56,7 @@ namespace SatelliteGame
         private int satelliteGenerateTerm;
         #endregion
 
-        #region Artificial Satellite
+        /*#region Artificial Satellite
         [Header("[Artificial Satellite]")]
 
         [SerializeField]
@@ -67,43 +67,43 @@ namespace SatelliteGame
 
         public List<ArtificialSatellite> artificialSatellites { get; private set; }
         private int artificialSatelliteGenerateTerm;
-        #endregion
+        #endregion*/
 
         private void Awake()
         {
             rectTransform = GetComponent<RectTransform>();
 
             satellites = new List<Satellite>(satellitesTransforms.Count);
-            artificialSatellites = new List<ArtificialSatellite>(artificialSatellitesTransforms.Count);
+            /*artificialSatellites = new List<ArtificialSatellite>(artificialSatellitesTransforms.Count);*/
         }
 
         private void Start()
         {
-            SetPlanetScore();
+            SetPlanetScore(100);
 
-            int satellitesCount;
+            int satellitesCount = 4;
 
-            switch (gameDifficulty)
+            /*switch (gameDifficulty)
             {
                 case Difficulty.EASY:
                     satellitesCount = 0;
                     satelliteGenerateTerm = 20;
-                    artificialSatelliteGenerateTerm = 1;
+                    *//*artificialSatelliteGenerateTerm = 1;*//*
                     break;
                 case Difficulty.NORMAL:
                     satellitesCount = 1;
                     satelliteGenerateTerm = 10;
-                    artificialSatelliteGenerateTerm = 1;
+                    *//*artificialSatelliteGenerateTerm = 1;*//*
                     break;
                 case Difficulty.HARD:
                     satellitesCount = 2;
                     satelliteGenerateTerm = 5;
-                    artificialSatelliteGenerateTerm = 1;
+                    *//*artificialSatelliteGenerateTerm = 1;*//*
                     break;
                 default:
                     satellitesCount = 0;
                     break;
-            }
+            }*/
 
             for (int i = 0; i < satellitesCount; i++)
             {
@@ -116,20 +116,20 @@ namespace SatelliteGame
             }
 
             // 일정 주기마다 위성 생성
-            rxCountDownTimer.CountDownObservable
+            /*rxCountDownTimer.CountDownObservable
                 .Skip(1)
                 .Where(time => time % satelliteGenerateTerm == 0)
                 .Subscribe(_ =>
                 {
                     if (satellites.Count >= 4)
                     {
-                        GameManager.Instance.ShowGameOverResult(false);
+                        SatelliteService.Instance.ShowGameOverResult(false);
                         return;
                     }
 
                     CreateSatellite(satellites.Count);
                 })
-                .AddTo(gameObject);
+                .AddTo(gameObject);*/
 
             // 일정 주기마다 인공 위성 생성
             /*rxCountDownTimer.CountDownObservable
@@ -151,9 +151,9 @@ namespace SatelliteGame
             StopAllCoroutines();
         }
 
-        private void SetPlanetScore()
+        public void SetPlanetScore(int score)
         {
-            centerNumberValue = Random.Range(60, 101);
+            centerNumberValue = score;
             centerNumberText.text = $"{centerNumberValue}";
         }
 
@@ -172,7 +172,7 @@ namespace SatelliteGame
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
-            if (satellites.Count > 0)
+            /*if (satellites.Count > 0)
             {
                 return;
             }
@@ -186,28 +186,48 @@ namespace SatelliteGame
 
                 if (centerNumberValue <= 0)
                 {
-                    GameManager.Instance.ShowGameOverResult(true);
+                    SatelliteService.Instance.ShowGameOverResult(true);
                     Destroy(gameObject);
                 }
+            }*/
 
+            var targetSatellite = collider.GetComponent<Satellite>();
+
+            if (RemoveSatellite(targetSatellite))
+            {
+                centerNumberValue = targetSatellite.CalculateScore(centerNumberValue);
+                centerNumberText.text = $"{centerNumberValue}";
+
+                if (centerNumberValue <= 0)
+                {
+                    SatelliteService.Instance.ShowGameOverResult(true);
+                    Destroy(gameObject);
+                }
             }
         }
 
-        public void RemoveSatellite(Satellite targetSatellite)
+        public bool RemoveSatellite(Satellite targetSatellite)
         {
             foreach (Satellite satellite in satellites)
             {
+                if (targetSatellite == null || satellite == null)
+                {
+                    return false;
+                }
+
                 if (targetSatellite.Equals(satellite))
                 {
                     satellites.Remove(satellite);
                     Destroy(satellite.gameObject);
 
-                    return;
+                    return true;
                 }
             }
+
+            return false;
         }
 
-        public bool RemoveArtificialSatellite(ArtificialSatellite targetArtificialSatellite)
+        /*public bool RemoveArtificialSatellite(ArtificialSatellite targetArtificialSatellite)
         {
             foreach (ArtificialSatellite artificialSatellite in artificialSatellites)
             {
@@ -226,12 +246,10 @@ namespace SatelliteGame
             }
 
             return false;
-        }
+        }*/
 
         private void CreateSatellite(int transformIndex)
         {
-            Debug.Log($"[KHW] transformIndex : {transformIndex}");
-
             GameObject satelliteObject = Instantiate(satellitePrefab, satellitesTransforms[transformIndex].position, Quaternion.identity, transform);
 
             var newSatellite = satelliteObject.GetComponent<Satellite>();
@@ -240,13 +258,13 @@ namespace SatelliteGame
             satellites.Add(newSatellite);
         }
 
-        private void CreateArtificialSatellite(int transformIndex)
+        /*private void CreateArtificialSatellite(int transformIndex)
         {
             GameObject artificialSatelliteObject = Instantiate(artificialSatellitePrefab, artificialSatellitesTransforms[transformIndex].position, Quaternion.identity, transform);
 
             var newArtificailSatellite = artificialSatelliteObject.GetComponent<ArtificialSatellite>();
 
             artificialSatellites.Add(newArtificailSatellite);
-        }
+        }*/
     }
 }

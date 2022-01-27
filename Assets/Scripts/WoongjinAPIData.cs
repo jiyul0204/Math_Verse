@@ -70,7 +70,7 @@ public class DBInitData     // 비식별전처리 인입데이터
     public string thma_nm;  // 주제명 (소주제가 포함된 주제 이름)
     public string step_nm;  // 단계명 (소주제가 포함된 단계 이름)
     public string stg_nm;   // 소주제명 (소주제 이름)
-    public string ctl_cn;   // 소주제 세부 사항 (소주제에 대한 세부 설명)
+    public string dtl_cn;   // 소주제 세부 사항 (소주제에 대한 세부 설명)
     public int try_no;      // 학습 시도 횟수 (소주제 별로 학습을 시도한 횟수, 종료 여부와 관계없이 진입 횟수에 따라 증가함)
     public string lrn_prgs_sts_cd;  // 학습 성취 (LPSC01: 노력, LPSC02: 기본, LPSC03: 충분, LPSC04: 훌륭)
 }
@@ -92,9 +92,38 @@ public class DBStudyData    // 비식별전처리 학습데이터
 }
 
 [Serializable]
-public class DBQuestionData
+public class DBQuestMultiplicationData
 {
+    public string stg_cd;   // 소주제 코드 (학습에서 현재 진행중인 소주제)
+    public string qst_cd;   // 문항 코드 (출제된 문항코드)
+    public string text_cn;  // 지시문 (문제에 대한 지시문)
+    public string qst_cn;   // 문제 (매쓰피드에서 제공되는 문제, latex 형태로 되어 있음)
+    public int qst_cn1;
+    public string math_smb1;
+    public int qst_cn2;
+    public string math_smb2;
+    public string qst_cn3;
+    public int boxed_cransr; // 정답 (문제에 대한 정답, 정답이 여러 개일 경우 세미콜론(;)으로 구분)
+}
 
+[Serializable]
+public class DBQuestDivisionData
+{
+    public string stg_cd;   // 소주제 코드 (학습에서 현재 진행중인 소주제)
+    public string qst_cd;   // 문항 코드 (출제된 문항코드)
+    public string text_cn;  // 지시문 (문제에 대한 지시문)
+    public string qst_cn;   // 문제 (매쓰피드에서 제공되는 문제, latex 형태로 되어 있음)
+    public int qst_cn1_1;
+    public string math_smb1_1;
+    public int qst_cn1_2;
+    public string math_smb1_2;
+    public int qst_cn1_3;
+    public int qst_cn2_1;
+    public string math_smb2_1;
+    public int qst_cn2_2;
+    public string math_smb2_2;
+    public string qst_cn2_3;
+    public int boxed_cransr; // 정답 (문제에 대한 정답, 정답이 여러 개일 경우 세미콜론(;)으로 구분)
 }
 
 #endregion

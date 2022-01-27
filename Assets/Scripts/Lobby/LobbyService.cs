@@ -33,6 +33,12 @@ public class LobbyService : MonoBehaviour
     [SerializeField]
     private Button DelHowToPlayButton;
 
+    [SerializeField]
+    private Button DelSoundBar;
+
+    [SerializeField]
+    private Button DelQuestWindow;
+
     private void Start()
     {
         BindView();
@@ -62,7 +68,21 @@ public class LobbyService : MonoBehaviour
             })
             .AddTo(gameObject);
 
+        DelSoundBar.OnClickAsObservable()
+        .Subscribe(_ =>
+        {
+            SettingWindow.SetActive(!SettingWindow.activeSelf);
+        })
+        .AddTo(gameObject);
+
         QuestButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                QuestWindow.SetActive(!QuestWindow.activeSelf);
+            })
+            .AddTo(gameObject);
+
+        DelQuestWindow.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 QuestWindow.SetActive(!QuestWindow.activeSelf);

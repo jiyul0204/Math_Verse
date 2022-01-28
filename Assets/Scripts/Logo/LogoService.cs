@@ -10,6 +10,8 @@ public class LogoService : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Inst.PlayBGM(SoundType.main_bgm.ToString());
+
         BindView();
     }
 

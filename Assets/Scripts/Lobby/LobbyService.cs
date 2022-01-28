@@ -67,7 +67,7 @@ public class LobbyService : MonoBehaviour
         educationResultButton.OnClickAsObservable()
            .Subscribe(_ =>
            {
-               SceneService.Instance.LoadScene("Education_Result");
+               SceneService.Instance.LoadScene("Education_Check");
            })
            .AddTo(gameObject);
 

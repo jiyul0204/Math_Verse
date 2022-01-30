@@ -29,13 +29,11 @@ public class AudioManager : MonoBehaviour
     {
         get
         {
-            Debug.Log($"[KHW] musicOnDebug - get : {musicOnDebug}");
             return musicOnDebug;
         }
         set
         {
             musicOnDebug = value;
-            Debug.Log($"[KHW] musicOnDebug - set : {musicOnDebug}");
         }
     }
 
@@ -250,10 +248,6 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     private bool IsMusicAltered()
     {
-        Debug.Log($"[KHW] condition 1 - {musicOn != _musicOn}");
-        Debug.Log($"[KHW] condition 2 - {musicOn != !musicSource.mute}");
-        Debug.Log($"[KHW] condition 3 - {!FloatEquals(currentMusicVol, _musicVolume)} / currentMusicVol : {currentMusicVol}, _musicVolume : {_musicVolume}");
-
         bool flag = musicOn != _musicOn || musicOn != !musicSource.mute || !FloatEquals(currentMusicVol, _musicVolume);
 
         // 믹서 그룹을 사용할 경우
@@ -1504,8 +1498,6 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetInt(BgMusicMuteKey, _musicOn ? 1 : 0);
         PlayerPrefs.SetFloat(BgMusicVolKey, _musicVolume);
         PlayerPrefs.Save();
-
-        Debug.Log($"[KHW] _musicOn : {_musicOn}");
     }
 
     /// <summary>

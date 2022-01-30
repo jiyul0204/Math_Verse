@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,50 @@ public enum SoundType
     division_incorrect  // 오답인 위성을 드래그한 경우 출력되는 효과음
 }
 
+public class StoreQuestData : IEquatable<StoreQuestData>
+{
+    public string stg_cd;   // 소주제 코드 (학습에서 현재 진행중인 소주제)
+    public string stg_nm;   // 소주제명 (소주제 이름)
+    public string dtl_cn;   // 소주제 세부 사항 (소주제에 대한 세부 설명)
+
+    public StoreQuestData(string stg_cd, string stg_nm, string dtl_cn)
+    {
+        this.stg_cd = stg_cd;
+        this.stg_nm = stg_nm;
+        this.dtl_cn = dtl_cn;
+    }
+
+    // 참고 : https://docs.microsoft.com/ko-kr/dotnet/api/system.linq.enumerable.distinct?view=net-6.0
+    public bool Equals(StoreQuestData other)
+    {
+        // Check whether the compared object is null.
+        if (ReferenceEquals(other, null))
+        {
+            return false;
+        }
+
+        // Check whether the compared object references the same data.
+        if (ReferenceEquals(this, other))
+        {
+            return true;
+        }
+
+        // Check whether the StoreQuestData's properties are equal.
+        return stg_cd.Equals(other.stg_cd);
+    }
+
+    // If Equals() returns true for a pair of objects
+    // then GetHashCode() must return the same value for these objects.
+    public override int GetHashCode()
+    {
+        // Get hash code for the stg_cd field if it is not null.
+        int hashProductName = stg_cd == null ? 0 : stg_cd.GetHashCode();
+
+        // Calculate the hash stg_cd for the StoreQuestData.
+        return hashProductName;
+    }
+}
+
 public class LocalDBDataService : Singleton<LocalDBDataService>
 {
     #region Common
@@ -42,10 +87,10 @@ public class LocalDBDataService : Singleton<LocalDBDataService>
     private const string FILE_NAME_STUDY_INFO_DATA = "DBInitDataList";
 
     private int currentMultiplicationNameIndex;
-    private List<(string, string)> storeQuestMultiplicationNameList; // stg_nm, dtl_cn
+    private List<StoreQuestData> storeQuestMultiplicationNameList;
 
     private int currentDivisionNameIndex;
-    private List<(string, string)> storeQuestDivisionNameList; // stg_nm, dtl_cn
+    private List<StoreQuestData> storeQuestDivisionNameList;
 
     #endregion
 
@@ -65,32 +110,29 @@ public class LocalDBDataService : Singleton<LocalDBDataService>
         // 참고2 : https://blog.goldface.kr/83
 
         // 곱셈 문제 Parsing 후 Caching
-        /*string questMultiplicationDataListCSV = File.ReadAllText($"{Application.persistentDataPath}/{FILE_NAME_MULTIPLICATION_TEST}");*/
         string questMultiplicationDataListCSV = ((TextAsset)Resources.Load($"CSV/{FILE_NAME_MULTIPLICATION_TEST}", typeof(TextAsset))).text;
 
         GameQuestMultiplicationList = new List<DBQuestMultiplicationData>(CSVParser.Deserialize<DBQuestMultiplicationData>(questMultiplicationDataListCSV));
 
         // 나눗셈 문제 Parsing 후 Caching
-        /*string questDivisionDataListCSV = File.ReadAllText($"{Application.persistentDataPath}/{FILE_NAME_DIVISION_TEST}");*/
         string questDivisionDataListCSV = ((TextAsset)Resources.Load($"CSV/{FILE_NAME_DIVISION_TEST}", typeof(TextAsset))).text;
 
         GameQuestDivisionList = new List<DBQuestDivisionData>(CSVParser.Deserialize<DBQuestDivisionData>(questDivisionDataListCSV));
 
-        /*string initDataListCSV = File.ReadAllText($"{Application.persistentDataPath}/{FILE_NAME_STUDY_INFO_DATA}");*/
         string initDataListCSV = ((TextAsset)Resources.Load($"CSV/{FILE_NAME_STUDY_INFO_DATA}", typeof(TextAsset))).text;
         DBInitData[] initDatas = CSVParser.Deserialize<DBInitData>(initDataListCSV);
 
         // Store 곱셈 문제 유형 Parsing 후 Caching
         string[] multiplicationFilter = { "E" };
-        storeQuestMultiplicationNameList = new List<(string, string)>((from initData in initDatas
+        storeQuestMultiplicationNameList = new List<StoreQuestData>((from initData in initDatas
                           where multiplicationFilter.Any(filter => initData.stg_cd.Contains(filter))
-                          select (initData.stg_nm, initData.dtl_cn)).Distinct());
+                          select new StoreQuestData(initData.stg_cd, initData.stg_nm, initData.dtl_cn)).Distinct());
 
         // Store 나눗셈 문제 유형 Parsing 후 Caching
         string[] divisionFilter = { "F" };
-        storeQuestDivisionNameList = new List<(string, string)>((from initData in initDatas
+        storeQuestDivisionNameList = new List<StoreQuestData>((from initData in initDatas
                           where divisionFilter.Any(filter => initData.stg_cd.Contains(filter))
-                          select (initData.stg_nm, initData.dtl_cn)).Distinct());
+                          select new StoreQuestData(initData.stg_cd, initData.stg_nm, initData.dtl_cn)).Distinct());
     }
 
     public string GetCurrentQuestName()
@@ -98,9 +140,9 @@ public class LocalDBDataService : Singleton<LocalDBDataService>
         switch (PlayGameType)
         {
             case GameType.Assemble_Robot:
-                return $"{storeQuestMultiplicationNameList[currentMultiplicationNameIndex].Item1}\n({storeQuestMultiplicationNameList[currentMultiplicationNameIndex].Item2})";
+                return $"{storeQuestMultiplicationNameList[currentMultiplicationNameIndex].stg_nm}\n({storeQuestMultiplicationNameList[currentMultiplicationNameIndex].dtl_cn})";
             case GameType.Satellite:
-                return $"{storeQuestDivisionNameList[currentDivisionNameIndex].Item1}\n({storeQuestDivisionNameList[currentDivisionNameIndex].Item2})";
+                return $"{storeQuestDivisionNameList[currentDivisionNameIndex].stg_nm}\n({storeQuestDivisionNameList[currentDivisionNameIndex].dtl_cn})";
             default:
                 return string.Empty;
         }
@@ -138,5 +180,14 @@ public class LocalDBDataService : Singleton<LocalDBDataService>
         }
 
         return GetCurrentQuestName();
+    }
+
+    public DBQuestDivisionData GetRandomQuestDivisionData()
+    {
+        var query = new List<DBQuestDivisionData>(from divisionData in GameQuestDivisionList
+                    where string.Equals(divisionData.stg_cd, storeQuestDivisionNameList[currentDivisionNameIndex].stg_cd)
+                    select divisionData);
+
+        return query[UnityEngine.Random.Range(0, query.Count)];
     }
 }

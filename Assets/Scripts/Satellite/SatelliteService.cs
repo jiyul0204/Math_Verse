@@ -1,8 +1,6 @@
-using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-
-using UniRx;
 
 namespace SatelliteGame
 {
@@ -52,6 +50,10 @@ namespace SatelliteGame
             changeCountDownTextColorDisposable = rxCountDownTimer.CountDownObservable
                 .First(timer => timer <= 10)
                 .Subscribe(_ => remainTimeText.color = Color.red);*/
+
+            DBQuestDivisionData data = LocalDBDataService.Instance.GetRandomQuestDivisionData();
+
+            Debug.Log($"[KHW] data.stg_cd : {data.stg_cd}\ndata.qst_cd : {data.qst_cd}\ndata.text_cn : {data.text_cn}\ndata.qst_cn : {data.qst_cn}\ndata.qst_cn1_1 : {data.qst_cn1_1}\ndata.math_smb1_1 : {data.math_smb1_1}\ndata.qst_cn1_2 : {data.qst_cn1_2}\ndata.math_smb1_2 : {data.math_smb1_2}\ndata.qst_cn1_3 : {data.qst_cn1_3}\ndata.qst_cn2_1 : {data.qst_cn2_1}\ndata.math_smb2_1 : {data.math_smb2_1}\ndata.qst_cn2_2 : {data.qst_cn2_2}\ndata.math_smb2_2 : {data.math_smb2_2}\ndata.qst_cn2_3 : {data.qst_cn2_3}\ndata.boxed_cransr : {data.boxed_cransr}");
         }
 
         public void ShowGameOverResult(bool isClear)

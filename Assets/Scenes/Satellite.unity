@@ -600,7 +600,6 @@ GameObject:
   m_Component:
   - component: {fileID: 488574668}
   - component: {fileID: 488574669}
-  - component: {fileID: 488574667}
   m_Layer: 0
   m_Name: SatelliteService
   m_TagString: Untagged
@@ -608,19 +607,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &488574667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488574666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd123990f444da418f777a54cb738ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTime: 60
 --- !u!4 &488574668
 Transform:
   m_ObjectHideFlags: 0
@@ -650,7 +636,7 @@ MonoBehaviour:
   remainTimeText: {fileID: 1983258903}
   resultPopupPanel: {fileID: 1356212028}
   gameResultText: {fileID: 1142048049}
-  mainPlanet: {fileID: 0}
+  mainPlanet: {fileID: 690422260}
 --- !u!1 &506087871
 GameObject:
   m_ObjectHideFlags: 0

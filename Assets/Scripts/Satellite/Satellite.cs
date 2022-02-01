@@ -9,19 +9,13 @@ namespace SatelliteGame
 {
     enum SatelliteSign
     {
-        /*Minus,
-        Plus,        
-        Multiply,*/
         Divide,
-        /*Modular,*/
         Max
     }
 
     public class Satellite : MonoBehaviour
     {
         #region GameObject
-        private Planet mainPlanet;
-
         private RectTransform objectRectTransform;
         private Button objectButton;
         #endregion
@@ -54,7 +48,6 @@ namespace SatelliteGame
 
         private void Start()
         {
-            SetSatelliteScore(Random.Range(1, 5));
             BindView();
             StartRevolve();
         }
@@ -64,42 +57,17 @@ namespace SatelliteGame
             StopRevolve();
         }
 
-        public void Init(Planet mainPlanet, RectTransform originRectTransform)
+        public void Init(RectTransform originRectTransform)
         {
-            this.mainPlanet = mainPlanet;
             this.originRectTransform = originRectTransform;
         }
 
-        private void SetSatelliteScore(int score)
+        public void SetSatelliteScore(int score)
         {
             centerNumberValue = score;
             centerNumberSign = (SatelliteSign)Random.Range(0, (int)SatelliteSign.Max);
 
-            char centerNumberSignText;
-
-            switch (centerNumberSign)
-            {
-                /*case SatelliteSign.Minus:
-                    centerNumberSignText = '-';
-                    break;
-                case SatelliteSign.Plus:
-                    centerNumberSignText = '+';
-                    break;
-                case SatelliteSign.Multiply:
-                    centerNumberSignText = '*';
-                    break;*/
-                case SatelliteSign.Divide:
-                    centerNumberSignText = '÷';
-                    break;
-                /*case SatelliteSign.Modular:
-                    centerNumberSignText = '%';
-                    break;*/
-                default:
-                    centerNumberSignText = '÷';
-                    break;
-            }
-
-            centerNumberText.text = $"{centerNumberSignText}{centerNumberValue}";
+            centerNumberText.text = $"{centerNumberValue}";
         }
 
         private void BindView()
@@ -119,7 +87,7 @@ namespace SatelliteGame
                 .AddTo(gameObject);
         }
 
-        private void StartRevolve()
+        public void StartRevolve()
         {
             if (gameObject == null)
             {
@@ -151,39 +119,9 @@ namespace SatelliteGame
             }
         }
 
-        /*private void OnTriggerEnter2D(Collider2D collider)
+        public bool CompareNumber(int sourceCenterNumber)
         {
-            var targetArtificialSatellite = collider.GetComponent<ArtificialSatellite>();
-
-            if (mainPlanet.RemoveArtificialSatellite(targetArtificialSatellite))
-            {
-                centerNumberValue = targetArtificialSatellite.CalculateScore(centerNumberValue);
-                centerNumberText.text = $"{centerNumberValue}";
-
-                if (centerNumberValue <= 0)
-                {
-                    mainPlanet.RemoveSatellite(this);
-                }
-            }
-        }*/
-
-        public int CalculateScore(int sourceCenterNumber)
-        {
-            switch (centerNumberSign)
-            {
-                /*case SatelliteSign.Minus:
-                    return sourceCenterNumber - centerNumberValue;
-                case SatelliteSign.Plus:
-                    return sourceCenterNumber + centerNumberValue;
-                case SatelliteSign.Multiply:
-                    return sourceCenterNumber * centerNumberValue;*/
-                case SatelliteSign.Divide:
-                    return sourceCenterNumber / centerNumberValue;
-                /*case SatelliteSign.Modular:
-                    return sourceCenterNumber % centerNumberValue;*/
-                default:
-                    return sourceCenterNumber / centerNumberValue;
-            }
+            return sourceCenterNumber == centerNumberValue;
         }
     }
 }

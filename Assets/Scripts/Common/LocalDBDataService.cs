@@ -182,11 +182,26 @@ public class LocalDBDataService : Singleton<LocalDBDataService>
         return GetCurrentQuestName();
     }
 
+    public DBQuestMultiplicationData GetRandomQuestMultiplicationData()
+    {
+        var query = new List<DBQuestMultiplicationData>
+            (
+                from multiplicationData in GameQuestMultiplicationList
+                where string.Equals(multiplicationData.stg_cd, storeQuestMultiplicationNameList[currentMultiplicationNameIndex].stg_cd)
+                select multiplicationData
+            );
+
+        return query[UnityEngine.Random.Range(0, query.Count)];
+    }
+
     public DBQuestDivisionData GetRandomQuestDivisionData()
     {
-        var query = new List<DBQuestDivisionData>(from divisionData in GameQuestDivisionList
-                    where string.Equals(divisionData.stg_cd, storeQuestDivisionNameList[currentDivisionNameIndex].stg_cd)
-                    select divisionData);
+        var query = new List<DBQuestDivisionData>
+            (
+                from divisionData in GameQuestDivisionList
+                where string.Equals(divisionData.stg_cd, storeQuestDivisionNameList[currentDivisionNameIndex].stg_cd)
+                select divisionData
+            );
 
         return query[UnityEngine.Random.Range(0, query.Count)];
     }

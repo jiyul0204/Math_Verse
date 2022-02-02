@@ -3,41 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-using UniRx;
-
 namespace SatelliteGame
 {
-    /*enum Difficulty
-    {
-        EASY,
-        NORMAL,
-        HARD
-    }*/
-
     public class Planet : MonoBehaviour
     {
         private RectTransform rectTransform;
 
-        /*#region Game Difficulty
-        [Header("[Game Difficulty]")]
-
-        [SerializeField]
-        private Difficulty gameDifficulty;
-        #endregion*/
-
-        /*#region Count Down Timer
-        [Header("[Count Down Timer]")]
-
-        [SerializeField]
-        private RxCountDownTimer rxCountDownTimer;
-        #endregion*/
-
-        #region NU Number
+        #region Number
         [Header("[Planet Center Number]")]
 
         [SerializeField]
         private Text centerNumberText;
         private int centerNumberValue;
+
+        private List<int> aliquots;
         #endregion
 
         #region Satellite
@@ -53,108 +32,52 @@ namespace SatelliteGame
         private List<RectTransform> satellitesTransforms;
 
         private List<Satellite> satellites;
-        private int satelliteGenerateTerm;
+        private IEnumerator rotateCoroutine;
+
+        [SerializeField]
+        private List<Sprite> satelliteSprites;
         #endregion
-
-        /*#region Artificial Satellite
-        [Header("[Artificial Satellite]")]
-
-        [SerializeField]
-        private GameObject artificialSatellitePrefab;
-
-        [SerializeField]
-        private List<RectTransform> artificialSatellitesTransforms;
-
-        public List<ArtificialSatellite> artificialSatellites { get; private set; }
-        private int artificialSatelliteGenerateTerm;
-        #endregion*/
 
         private void Awake()
         {
             rectTransform = GetComponent<RectTransform>();
-
             satellites = new List<Satellite>(satellitesTransforms.Count);
-            /*artificialSatellites = new List<ArtificialSatellite>(artificialSatellitesTransforms.Count);*/
-        }
-
-        private void Start()
-        {
-            SetPlanetScore(100);
-
-            int satellitesCount = 4;
-
-            /*switch (gameDifficulty)
-            {
-                case Difficulty.EASY:
-                    satellitesCount = 0;
-                    satelliteGenerateTerm = 20;
-                    *//*artificialSatelliteGenerateTerm = 1;*//*
-                    break;
-                case Difficulty.NORMAL:
-                    satellitesCount = 1;
-                    satelliteGenerateTerm = 10;
-                    *//*artificialSatelliteGenerateTerm = 1;*//*
-                    break;
-                case Difficulty.HARD:
-                    satellitesCount = 2;
-                    satelliteGenerateTerm = 5;
-                    *//*artificialSatelliteGenerateTerm = 1;*//*
-                    break;
-                default:
-                    satellitesCount = 0;
-                    break;
-            }*/
-
-            for (int i = 0; i < satellitesCount; i++)
-            {
-                CreateSatellite(i);
-            }
-
-            if (satellites.Count > 0)
-            {
-                StartCoroutine(RotateAroundMainPlanet());
-            }
-
-            // 일정 주기마다 위성 생성
-            /*rxCountDownTimer.CountDownObservable
-                .Skip(1)
-                .Where(time => time % satelliteGenerateTerm == 0)
-                .Subscribe(_ =>
-                {
-                    if (satellites.Count >= 4)
-                    {
-                        SatelliteService.Instance.ShowGameOverResult(false);
-                        return;
-                    }
-
-                    CreateSatellite(satellites.Count);
-                })
-                .AddTo(gameObject);*/
-
-            // 일정 주기마다 인공 위성 생성
-            /*rxCountDownTimer.CountDownObservable
-                .Where(time => time % artificialSatelliteGenerateTerm == 0)
-                .Subscribe(_ =>
-                {
-                    if (artificialSatellites.Count >= artificialSatellitesTransforms.Count)
-                    {
-                        return;
-                    }
-
-                    CreateArtificialSatellite(Random.Range(0, artificialSatellitesTransforms.Count));
-                })
-                .AddTo(gameObject);*/
         }
 
         private void OnDestroy()
         {
-            StopAllCoroutines();
+            StopCoroutine(rotateCoroutine);
         }
 
-        public void SetPlanetScore(int score)
+        public void SetPlanetScore(int questionNumber, int answer)
         {
-            centerNumberValue = score;
-            centerNumberText.text = $"{centerNumberValue}";
+            ResetSatellites();
+
+            centerNumberValue = answer;
+            centerNumberText.text = "?";
+
+            aliquots = GetAliquotList(questionNumber);
+
+            int satellitesCount = aliquots.Count > 6 ? 6 : aliquots.Count;
+            bool isAnswer = false;
+
+            for (int i = 0; i < satellitesCount; i++)
+            {
+                CreateSatellite(i);
+
+                if (aliquots[i] == answer)
+                {
+                    isAnswer = true;
+                }
+            }
+
+            if (!isAnswer)
+            {
+                satellites[Random.Range(0, satellitesCount)].SetSatelliteScore(answer);
+            }
+
+            rotateCoroutine = RotateAroundMainPlanet();
+            StartCoroutine(rotateCoroutine);
         }
 
         private IEnumerator RotateAroundMainPlanet()
@@ -172,81 +95,29 @@ namespace SatelliteGame
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
-            /*if (satellites.Count > 0)
-            {
-                return;
-            }
-
-            var targetArtificialSatellite = collider.GetComponent<ArtificialSatellite>();
-
-            if (RemoveArtificialSatellite(targetArtificialSatellite))
-            {
-                centerNumberValue = targetArtificialSatellite.CalculateScore(centerNumberValue);
-                centerNumberText.text = $"{centerNumberValue}";
-
-                if (centerNumberValue <= 0)
-                {
-                    SatelliteService.Instance.ShowGameOverResult(true);
-                    Destroy(gameObject);
-                }
-            }*/
-
-            var targetSatellite = collider.GetComponent<Satellite>();
-
-            if (RemoveSatellite(targetSatellite))
-            {
-                centerNumberValue = targetSatellite.CalculateScore(centerNumberValue);
-                centerNumberText.text = $"{centerNumberValue}";
-
-                if (centerNumberValue <= 0)
-                {
-                    SatelliteService.Instance.ShowGameOverResult(true);
-                    Destroy(gameObject);
-                }
-            }
+            StartCoroutine(ChangeAnswerSprite(collider.GetComponent<Satellite>()));
         }
 
-        public bool RemoveSatellite(Satellite targetSatellite)
+        private IEnumerator ChangeAnswerSprite(Satellite targetSatellite)
         {
+            targetSatellite.StartRevolve();
+
             foreach (Satellite satellite in satellites)
             {
-                if (targetSatellite == null || satellite == null)
+                if (!satellite.CompareNumber(centerNumberValue))
                 {
-                    return false;
-                }
-
-                if (targetSatellite.Equals(satellite))
-                {
-                    satellites.Remove(satellite);
-                    Destroy(satellite.gameObject);
-
-                    return true;
+                    satellite.GetComponent<Image>().sprite = satelliteSprites[1];
                 }
             }
 
-            return false;
+            bool isClear = targetSatellite.CompareNumber(centerNumberValue);
+
+            centerNumberText.text = isClear ? "성공" : "실패";
+
+            yield return new WaitForSeconds(2.0f);
+
+            SatelliteService.Instance.ShowGameResult(isClear);
         }
-
-        /*public bool RemoveArtificialSatellite(ArtificialSatellite targetArtificialSatellite)
-        {
-            foreach (ArtificialSatellite artificialSatellite in artificialSatellites)
-            {
-                if (targetArtificialSatellite == null || artificialSatellite == null)
-                {
-                    return false;
-                }
-
-                if (targetArtificialSatellite.Equals(artificialSatellite))
-                {
-                    artificialSatellites.Remove(artificialSatellite);
-                    Destroy(artificialSatellite.gameObject);
-
-                    return true;
-                }
-            }
-
-            return false;
-        }*/
 
         private void CreateSatellite(int transformIndex)
         {
@@ -254,17 +125,52 @@ namespace SatelliteGame
 
             var newSatellite = satelliteObject.GetComponent<Satellite>();
 
-            newSatellite.Init(this, satellitesTransforms[transformIndex]);
+            newSatellite.Init(satellitesTransforms[transformIndex]);
             satellites.Add(newSatellite);
+
+            newSatellite.SetSatelliteScore(aliquots[transformIndex]);
         }
 
-        /*private void CreateArtificialSatellite(int transformIndex)
+        private void ResetSatellites()
         {
-            GameObject artificialSatelliteObject = Instantiate(artificialSatellitePrefab, artificialSatellitesTransforms[transformIndex].position, Quaternion.identity, transform);
+            if (satellites.Count > 0)
+            {
+                if (rotateCoroutine != null)
+                {
+                    StopCoroutine(rotateCoroutine);
+                }
 
-            var newArtificailSatellite = artificialSatelliteObject.GetComponent<ArtificialSatellite>();
+                foreach (var satellite in satellites)
+                {
+                    if (satellite.gameObject != null)
+                    {
+                        Destroy(satellite.gameObject);
+                    }
+                }
 
-            artificialSatellites.Add(newArtificailSatellite);
-        }*/
+                satellites.Clear();
+            }
+        }
+
+        private List<int> GetAliquotList(int score)
+        {
+            int loopEndNum = (int)Mathf.Sqrt(score);
+            var newAliquots = new List<int>();
+
+            for (int i = 1; i <= loopEndNum; i++)
+            {
+                if (score % i == 0)
+                {
+                    newAliquots.Add(i);
+
+                    if (i != score / i)
+                    {
+                        newAliquots.Add(score / i);
+                    }
+                }
+            }
+
+            return newAliquots;
+        }
     }
 }

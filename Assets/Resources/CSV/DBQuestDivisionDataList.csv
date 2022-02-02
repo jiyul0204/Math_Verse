@@ -1,149 +1,149 @@
 ﻿stg_cd,qst_cd,text_cn,qst_cn,qst_cn1_1,math_smb1_1,qst_cn1_2,math_smb1_2,qst_cn1_3,qst_cn2_1,math_smb2_1,qst_cn2_2,math_smb2_2,qst_cn2_3,boxed_cransr
-F02_0_1,F02010901,다음을 계산하세요.,\img{https://s3.ap-northeast-2.amazonaws.com/wjtb-prd-pub/brs/img/common/image/1607648062427883595.svg}{}{200px}{}\\~~~~~~~~~~~~~~9\div3=\boxed{\phantom{3}},3,X,3,=,9,9,÷,3,=,ㅁ,3
-F02_0_1,F02011002,다음을 계산하세요., 2 \times 8 = 16\leftrightarrow16\div2=\boxed{\phantom{8}} ,2,X,8,=,16,16,÷,2,=,ㅁ,8
-F02_0_1,F02011003,다음을 계산하세요., 3 \times 5 = 15\leftrightarrow15\div3=\boxed{\phantom{5}},3,X,5,=,15,15,÷,3,=,ㅁ,5
-F02_0_1,F02011004,다음을 계산하세요.,4 \times 2 = 8\leftrightarrow8\div4=\boxed{\phantom{2}} ,4,X,2,=,8,8,÷,4,=,ㅁ,2
-F02_0_1,F02011005,다음을 계산하세요.,\begin{multiplication-and-division} 3\times2=6 & 6\div3=\boxed{\phantom{2}} & 6\div2=\boxed{\phantom{3}} \end{multiplication-and-division},3,X,2,=,6,6,÷,3,=,ㅁ,2
-F02_0_1,F02011006,다음을 계산하세요.,\begin{multiplication-and-division} 4\times5=20 & 20\div4=\boxed{\phantom{5}} & 20\div5=\boxed{\phantom{4}} \end{multiplication-and-division},4,X,5,=,20,20,÷,4,=,ㅁ,5
-F02_0_1,F02011007,다음을 계산하세요.,\begin{multiplication-and-division} 2\times6=12 & 12\div2=\boxed{\phantom{6}} & 12\div6=\boxed{\phantom{2}} \end{multiplication-and-division},2,X,6,=,12,12,÷,2,=,ㅁ,6
-F02_0_1,F02011101,다음을 계산하세요., 7 \times 3 = 21\leftrightarrow21\div3=\boxed{\phantom{7}} ,7,X,3,=,21,21,÷,3,=,ㅁ,7
-F02_0_1,F02011102,다음을 계산하세요., 8 \times 9 = 72\leftrightarrow72\div9=\boxed{\phantom{8}} ,8,X,9,=,72,72,÷,9,=,ㅁ,8
-F02_0_1,F02011103,다음을 계산하세요.,\begin{multiplication-and-division} 7\times5=35 & 35\div7=\boxed{\phantom{5}} & 35\div5=\boxed{\phantom{7}} \end{multiplication-and-division},7,X,5,=,35,35,÷,7,=,ㅁ,5
-F02_0_1,F02011104,다음을 계산하세요.,\begin{multiplication-and-division} 8\times4=32 & 32\div8=\boxed{\phantom{4}} & 32\div4=\boxed{\phantom{8}} \end{multiplication-and-division},8,X,4,=,32,32,÷,8,=,ㅁ,4
-F02_0_1,F02011205,다음을 계산하세요., 7 \times 2 = 14\leftrightarrow14\div2=\boxed{\phantom{7}} ,7,X,2,=,12,14,÷,2,=,ㅁ,7
-F02_0_1,F02011207,다음을 계산하세요., 7 \times 9 = 63\leftrightarrow63\div9=\boxed{\phantom{7}} ,7,X,9,=,63,63,÷,9,=,ㅁ,7
-F02_0_1,F02011208,다음을 계산하세요.,\begin{multiplication-and-division} 7\times4=28 & 28\div7=\boxed{\phantom{4}} & 28\div4=\boxed{\phantom{7}} \end{multiplication-and-division},7,X,4,=,28,28,÷,7,=,ㅁ,4
-F02_0_1,F02011209,다음을 계산하세요.,\begin{multiplication-and-division} 8\times5=40 & 40\div8=\boxed{\phantom{5}} & 40\div5=\boxed{\phantom{8}} \end{multiplication-and-division},8,X,5,=,40,40,÷,8,=,ㅁ,5
-F02_0_1,F02011210,다음을 계산하세요.,\begin{multiplication-and-division} 9\times3=27 & 27\div9=\boxed{\phantom{3}} & 27\div3=\boxed{\phantom{9}} \end{multiplication-and-division},9,X,3,=,27,27,÷,9,=,ㅁ,3
-F02_0_1,F02011301,다음을 계산하세요., 2 \times 2 = 4\leftrightarrow4\div2=\boxed{\phantom{2}} ,2,X,2,=,4,4,÷,2,=,ㅁ,2
-F02_0_1,F02011302,다음을 계산하세요.,3 \times 8 = 24\leftrightarrow24\div3=\boxed{\phantom{8}} ,3,X,8,=,24,24,÷,3,=,ㅁ,8
-F02_0_1,F02011303,다음을 계산하세요., 5 \times 5 = 25\leftrightarrow25\div5=\boxed{\phantom{5}} ,5,X,5,=,25,25,÷,5,=,ㅁ,5
-F02_0_1,F02011304,다음을 계산하세요.,\begin{multiplication-and-division} 6\times3=18 & 18\div6=\boxed{\phantom{3}} & 18\div3=\boxed{\phantom{6}} \end{multiplication-and-division},6,X,3,=,18,18,÷,6,=,ㅁ,3
-F02_0_1,F02011305,다음을 계산하세요.,\begin{multiplication-and-division} 4\times9=36 & 36\div4=\boxed{\phantom{9}} & 36\div9=\boxed{\phantom{4}} \end{multiplication-and-division},4,X,9,=,36,36,÷,4,=,ㅁ,9
-F02_0_1,F02011306,다음을 계산하세요.,\begin{multiplication-and-division} 6\times8=48 & 48\div6=\boxed{\phantom{8}} & 48\div8=\boxed{\phantom{6}} \end{multiplication-and-division},6,X,8,=,48,48,÷,6,=,ㅁ,8
-F02_0_1,F02011407,다음을 계산하세요., 4 \times 5 = 20\leftrightarrow20\div4=\boxed{\phantom{5}} ,4,X,5,=,20,20,÷,4,=,ㅁ,5
-F02_0_1,F02011408,다음을 계산하세요., 5 \times 9 = 45\leftrightarrow45\div5=\boxed{\phantom{9}} ,5,X,9,=,45,45,÷,5,=,ㅁ,9
-F02_0_1,F02011409,다음을 계산하세요.,6 \times 6 = 36\leftrightarrow36\div6=\boxed{\phantom{6}} ,6,X,6,=,36,36,÷,6,=,ㅁ,6
-F02_0_1,F02011410,다음을 계산하세요.,\begin{multiplication-and-division} 4\times2=8 & 8\div4=\boxed{\phantom{2}} & 8\div2=\boxed{\phantom{4}} \end{multiplication-and-division},4,X,2,=,8,8,÷,4,=,ㅁ,2
-F02_0_1,F02011411,다음을 계산하세요.,\begin{multiplication-and-division} 5\times3=15 & 15\div5=\boxed{\phantom{3}} & 15\div3=\boxed{\phantom{5}} \end{multiplication-and-division},5,X,3,=,15,15,÷,5,=,ㅁ,3
-F02_0_1,F02011412,다음을 계산하세요.,\begin{multiplication-and-division} 3\times4=12 & 12\div3=\boxed{\phantom{4}} & 12\div4=\boxed{\phantom{3}} \end{multiplication-and-division},3,X,4,=,12,12,÷,3,=,ㅁ,4
-F02_0_1,F02011501,다음을 계산하세요.,8 \times 6 = 48\leftrightarrow48\div6=\boxed{\phantom{8}} ,8,X,6,=,48,48,÷,6,=,ㅁ,8
-F02_0_1,F02011502,다음을 계산하세요.,7 \times 5 = 35\leftrightarrow35\div5=\boxed{\phantom{7}} ,7,X,5,=,35,35,÷,5,=,ㅁ,7
-F02_0_1,F02011503,다음을 계산하세요., 9 \times 9 = 81\leftrightarrow81\div9=\boxed{\phantom{9}} ,9,X,9,=,81,81,÷,9,=,ㅁ,9
-F02_0_1,F02011504,다음을 계산하세요.,\begin{multiplication-and-division} 9\times8=72 & 72\div9=\boxed{\phantom{8}} & 72\div8=\boxed{\phantom{9}} \end{multiplication-and-division},9,X,8,=,72,72,÷,9,=,ㅁ,8
-F02_0_1,F02011505,다음을 계산하세요.,\begin{multiplication-and-division} 7\times9=63 & 63\div7=\boxed{\phantom{9}} & 63\div9=\boxed{\phantom{7}} \end{multiplication-and-division},7,X,9,=,63,63,÷,7,=,ㅁ,9
-F02_0_1,F02011506,다음을 계산하세요.,\begin{multiplication-and-division} 8\times7=56 & 56\div8=\boxed{\phantom{7}} & 56\div7=\boxed{\phantom{8}} \end{multiplication-and-division},8,X,7,=,56,56,÷,8,=,ㅁ,7
-F02_0_1,F02011607,다음을 계산하세요.,9 \times 3 = 27\leftrightarrow27\div3=\boxed{\phantom{9}} ,9,X,3,=,27,27,÷,3,=,ㅁ,9
-F02_0_1,F02011608,다음을 계산하세요.,4 \times 8 = 32\leftrightarrow32\div8=\boxed{\phantom{4}} ,4,X,8,=,32,32,÷,8,=,ㅁ,4
-F02_0_1,F02011609,다음을 계산하세요.,7 \times 7 = 49\leftrightarrow49\div7=\boxed{\phantom{7}} ,7,X,7,=,49,49,÷,7,=,ㅁ,7
-F02_0_1,F02011610,다음을 계산하세요.,\begin{multiplication-and-division} 8\times2=16 & 16\div8=\boxed{\phantom{2}} & 16\div2=\boxed{\phantom{8}} \end{multiplication-and-division},8,X,2,=,16,16,÷,8,=,ㅁ,2
-F02_0_1,F02011611,다음을 계산하세요.,\begin{multiplication-and-division} 9\times7=63 & 63\div9=\boxed{\phantom{7}} & 63\div7=\boxed{\phantom{9}} \end{multiplication-and-division},9,X,7,=,63,63,÷,9,=,ㅁ,7
-F02_0_1,F02011612,다음을 계산하세요.,\begin{multiplication-and-division} 9\times6=54 & 54\div9=\boxed{\phantom{6}} & 54\div6=\boxed{\phantom{9}} \end{multiplication-and-division},9,X,6,=,54,54,÷,9,=,ㅁ,6
-F02_0_1,F02011701,다음을 계산하세요.,7 \times 3 = 21 \leftrightarrow21\div7=\boxed{\phantom{3}} ,7,X,3,=,21,21,÷,7,=,ㅁ,3
-F02_0_1,F02011702,다음을 계산하세요.,5 \times 2 = 10 \leftrightarrow10\div5=\boxed{\phantom{2}} ,5,X,2,=,10,10,÷,5,=,ㅁ,2
-F02_0_1,F02011703,다음을 계산하세요.,4 \times 9 = 36\leftrightarrow36\div9=\boxed{\phantom{4}} ,4,X,9,=,36,36,÷,9,=,ㅁ,4
-F02_0_1,F02011704,다음을 계산하세요.,\begin{multiplication-and-division} 6\times4=24 & 24\div6=\boxed{\phantom{4}} & 24\div4=\boxed{\phantom{6}} \end{multiplication-and-division},6,X,4,=,24,24,÷,6,=,ㅁ,4
-F02_0_1,F02011705,다음을 계산하세요.,\begin{multiplication-and-division} 3\times8=24 & 24\div3=\boxed{\phantom{8}} & 24\div8=\boxed{\phantom{3}} \end{multiplication-and-division},3,X,8,=,24,24,÷,3,=,ㅁ,8
-F02_0_1,F02011706,다음을 계산하세요.,\begin{multiplication-and-division} 5\times6=30 & 30\div5=\boxed{\phantom{6}} & 30\div6=\boxed{\phantom{5}} \end{multiplication-and-division},5,X,6,=,30,30,÷,5,=,ㅁ,6
-F02_0_1,F02011807,다음을 계산하세요.,2 \times 7= 14 \leftrightarrow14\div2=\boxed{\phantom{7}} ,2,X,7,=,14,14,÷,2,=,ㅁ,7
-F02_0_1,F02011808,다음을 계산하세요.,3 \times 3 = 9 \leftrightarrow9\div3=\boxed{\phantom{3}} ,3,X,3,=,9,9,÷,3,=,ㅁ,3
-F02_0_1,F02011809,다음을 계산하세요.,5 \times 8 = 40 \leftrightarrow40\div8=\boxed{\phantom{5}} ,5,X,8,=,40,40,÷,8,=,ㅁ,5
-F02_0_1,F02011810,다음을 계산하세요.,\begin{multiplication-and-division} 6\times7=42 & 42\div6=\boxed{\phantom{7}} & 42\div7=\boxed{\phantom{6}} \end{multiplication-and-division},6,X,7,=,42,42,÷,6,=,ㅁ,7
-F02_0_1,F02011811,다음을 계산하세요.,\begin{multiplication-and-division} 3\times5=15 & 15\div3=\boxed{\phantom{5}} & 15\div5=\boxed{\phantom{3}} \end{multiplication-and-division},3,X,5,=,15,15,÷,3,=,ㅁ,5
-F02_0_1,F02011812,다음을 계산하세요.,\begin{multiplication-and-division} 5\times9=45 & 45\div5=\boxed{\phantom{9}} & 45\div9=\boxed{\phantom{5}} \end{multiplication-and-division},5,X,9,=,45,45,÷,5,=,ㅁ,9
-F03_0_1,F03010901,다음을 계산하세요.,6 \times \boxed{\phantom{3}} = 18\leftrightarrow18\div6=\boxed{\phantom{3}},6,X,3,=,18,18,÷,6,=,ㅁ,3
-F03_0_1,F03010902,다음을 계산하세요.,7 \times \boxed{\phantom{5}} = 35\leftrightarrow35\div7=\boxed{\phantom{5}},7,X,5,=,35,35,÷,7,=,ㅁ,5
-F03_0_1,F03010903,다음을 계산하세요.,\begin{multiplication-and-division} 2\times\boxed{\phantom{6}}=12 & 12\div~2=\boxed{\phantom{6}} & 12\div\boxed{\phantom{6}}=2 \end{multiplication-and-division},2,X,6,=,12,12,÷,2,=,ㅁ,6
-F03_0_1,F03010904,다음을 계산하세요.,\begin{multiplication-and-division} 4\times\boxed{\phantom{9}}=36 & 36\div~4=\boxed{\phantom{9}} & 36\div\boxed{\phantom{9}}=4 \end{multiplication-and-division},4,X,9,=,36,36,÷,4,=,ㅁ,9
-F03_0_1,F03011005,다음을 계산하세요.,4 \times \boxed{\phantom{6}} = 24\leftrightarrow24\div4=\boxed{\phantom{6}},4,X,6,=,24,24,÷,4,=,ㅁ,6
-F03_0_1,F03011006,다음을 계산하세요.,8 \times \boxed{\phantom{5}} = 40\leftrightarrow40\div8=\boxed{\phantom{5}},8,X,5,=,40,40,÷,8,=,ㅁ,5
-F03_0_1,F03011007,다음을 계산하세요.,9 \times \boxed{\phantom{7}} = 63\leftrightarrow63\div9=\boxed{\phantom{7}},9,X,7,=,63,63,÷,9,=,ㅁ,7
-F03_0_1,F03011008,다음을 계산하세요.,\begin{multiplication-and-division} 4\times\boxed{\phantom{3}}=12 & 12\div~4=\boxed{\phantom{3}} & 12\div\boxed{\phantom{3}}=4 \end{multiplication-and-division},4,X,3,=,12,12,÷,4,=,ㅁ,3
-F03_0_1,F03011009,다음을 계산하세요.,\begin{multiplication-and-division} 9\times\boxed{\phantom{8}}=72 & 72\div~9=\boxed{\phantom{8}} & 72\div\boxed{\phantom{8}}=9 \end{multiplication-and-division},9,X,8,=,72,72,÷,9,=,ㅁ,8
-F03_0_1,F03011010,다음을 계산하세요.,\begin{multiplication-and-division} 5\times\boxed{\phantom{4}}=20 & 20\div~5=\boxed{\phantom{4}} & 20\div\boxed{\phantom{4}}=5 \end{multiplication-and-division},5,X,4,=,20,20,÷,5,=,ㅁ,4
-F03_0_2,F03011101,다음 나눗셈을 하세요.,8 \div 2= \boxed{\phantom{4}} ,4,X,2,=,8,8,÷,2,=,ㅁ,4
-F03_0_2,F03011102,다음 나눗셈을 하세요.,21 \div 3= \boxed{\phantom{7}} ,7,X,3,=,21,21,÷,3,=,ㅁ,7
-F03_0_2,F03011103,다음 나눗셈을 하세요.,16 \div 4= \boxed{\phantom{4}} ,4,X,4,=,16,16,÷,4,=,ㅁ,4
-F03_0_2,F03011104,다음 나눗셈을 하세요.,15 \div 5= \boxed{\phantom{3}} ,3,X,5,=,15,15,÷,5,=,ㅁ,3
-F03_0_2,F03011105,다음 나눗셈을 하세요.,27 \div 9= \boxed{\phantom{3}} ,3,X,9,=,27,27,÷,9,=,ㅁ,3
-F03_0_2,F03011106,다음 나눗셈을 하세요.,30 \div 6= \boxed{\phantom{5}} ,5,X,6,=,30,30,÷,6,=,ㅁ,5
-F03_0_2,F03011107,다음 나눗셈을 하세요.,56 \div 7= \boxed{\phantom{8}} ,8,X,7,=,56,56,÷,7,=,ㅁ,8
-F03_0_2,F03011108,다음 나눗셈을 하세요.,48 \div 8= \boxed{\phantom{6}} ,6,X,8,=,48,48,÷,8,=,ㅁ,6
-F03_0_2,F03011109,다음 나눗셈을 하세요.,54 \div 9= \boxed{\phantom{6}} ,6,X,9,=,54,54,÷,9,=,ㅁ,6
-F03_0_2,F03011110,다음 나눗셈을 하세요.,12 \div 6= \boxed{\phantom{2}} ,2,X,6,=,12,12,÷,6,=,ㅁ,2
-F03_0_2,F03011211,다음 나눗셈을 하세요.,18 \div 2= \boxed{\phantom{9}} ,9,X,2,=,18,18,÷,2,=,ㅁ,9
-F03_0_2,F03011212,다음 나눗셈을 하세요.,35 \div 5= \boxed{\phantom{7}} ,7,X,5,=,35,35,÷,5,=,ㅁ,7
-F03_0_2,F03011213,다음 나눗셈을 하세요.,32 \div 8= \boxed{\phantom{4}} ,4,X,8,=,32,32,÷,8,=,ㅁ,4
-F03_0_2,F03011214,다음 나눗셈을 하세요.,24 \div 3= \boxed{\phantom{8}} ,8,X,3,=,24,24,÷,3,=,ㅁ,8
-F03_0_2,F03011215,다음 나눗셈을 하세요.,9 \div 9= \boxed{\phantom{1}} ,1,X,9,=,9,9,÷,9,=,ㅁ,1
-F03_0_2,F03011216,다음 나눗셈을 하세요.,28 \div 4= \boxed{\phantom{7}} ,7,X,4,=,28,28,÷,4,=,ㅁ,7
-F03_0_2,F03011217,다음 나눗셈을 하세요.,48 \div 6= \boxed{\phantom{8}} ,8,X,6,=,48,48,÷,6,=,ㅁ,8
-F03_0_2,F03011218,다음 나눗셈을 하세요.,21 \div 7= \boxed{\phantom{3}} ,3,X,7,=,21,21,÷,7,=,ㅁ,3
-F03_0_2,F03011219,다음 나눗셈을 하세요.,25 \div 5= \boxed{\phantom{5}} ,5,X,5,=,25,25,÷,5,=,ㅁ,5
-F03_0_2,F03011220,다음 나눗셈을 하세요.,35 \div 7= \boxed{\phantom{5}} ,5,X,7,=,35,35,÷,7,=,ㅁ,5
-F03_0_2,F03011221,다음 나눗셈을 하세요.,3 \div 3= \boxed{\phantom{1}} ,1,X,3,=,3,3,÷,3,=,ㅁ,1
-F03_0_2,F03011222,다음 나눗셈을 하세요.,36 \div 4= \boxed{\phantom{9}} ,9,X,4,=,36,36,÷,4,=,ㅁ,9
-F03_0_2,F03011223,다음 나눗셈을 하세요.,18 \div 6= \boxed{\phantom{3}} ,3,X,6,=,18,18,÷,6,=,ㅁ,3
-F03_0_2,F03011224,다음 나눗셈을 하세요.,16 \div 8= \boxed{\phantom{2}} ,2,X,8,=,16,16,÷,8,=,ㅁ,2
-F03_0_2,F03011225,다음 나눗셈을 하세요.,6 \div 2= \boxed{\phantom{3}} ,3,X,2,=,6,6,÷,2,=,ㅁ,3
-F03_0_1,F03011301,다음을 계산하세요.,7 \times \boxed{\phantom{2}} = 14\leftrightarrow14\div7=\boxed{\phantom{2}},7,X,2,=,14,14,÷,7,=,ㅁ,2
-F03_0_1,F03011302,다음을 계산하세요.,8 \times \boxed{\phantom{3}} = 24\leftrightarrow24\div8=\boxed{\phantom{3}},8,X,3,=,24,24,÷,8,=,ㅁ,3
-F03_0_1,F03011303,다음을 계산하세요.,6 \times \boxed{\phantom{9}} = 54\leftrightarrow54\div6=\boxed{\phantom{9}},6,X,9,=,54,54,÷,6,=,ㅁ,9
-F03_0_1,F03011304,다음을 계산하세요.,\begin{multiplication-and-division} 2\times\boxed{\phantom{8}}=16 & 16\div~2=\boxed{\phantom{8}} & 16\div\boxed{\phantom{8}}=2 \end{multiplication-and-division},2,X,8,=,16,16,÷,2,=,ㅁ,8
-F03_0_1,F03011305,다음을 계산하세요.,\begin{multiplication-and-division} 9\times\boxed{\phantom{4}}=36 & 36\div~9=\boxed{\phantom{4}} & 36\div\boxed{\phantom{4}}=9 \end{multiplication-and-division},9,X,4,=,36,36,÷,9,=,ㅁ,4
-F03_0_1,F03011306,다음을 계산하세요.,\begin{multiplication-and-division} 7\times\boxed{\phantom{6}}=42 & 42\div~7=\boxed{\phantom{6}} & 42\div\boxed{\phantom{6}}=7 \end{multiplication-and-division},7,X,6,=,42,42,÷,7,=,ㅁ,6
-F03_0_1,F03011407,다음을 계산하세요.,8 \times \boxed{\phantom{9}} = 72\leftrightarrow72\div8=\boxed{\phantom{9}},8,X,9,=,72,72,÷,8,=,ㅁ,9
-F03_0_1,F03011408,다음을 계산하세요.,9 \times \boxed{\phantom{5}} = 45\leftrightarrow45\div9=\boxed{\phantom{5}},9,X,5,=,45,45,÷,9,=,ㅁ,5
-F03_0_1,F03011409,다음을 계산하세요.,3 \times \boxed{\phantom{4}} = 12\leftrightarrow12\div3=\boxed{\phantom{4}},3,X,4,=,12,12,÷,3,=,ㅁ,4
-F03_0_1,F03011410,다음을 계산하세요.,\begin{multiplication-and-division} 5\times\boxed{\phantom{3}}=15 & 15\div~5=\boxed{\phantom{3}} & 15\div\boxed{\phantom{3}}=5 \end{multiplication-and-division},5,X,3,=,15,15,÷,5,=,ㅁ,3
-F03_0_1,F03011411,다음을 계산하세요.,\begin{multiplication-and-division} 4\times\boxed{\phantom{7}}=28 & 28\div~4=\boxed{\phantom{7}} & 28\div\boxed{\phantom{7}}=4 \end{multiplication-and-division},4,X,7,=,28,28,÷,4,=,ㅁ,7
-F03_0_1,F03011412,다음을 계산하세요.,\begin{multiplication-and-division} 8\times\boxed{\phantom{6}}=48 & 48\div~8=\boxed{\phantom{6}} & 48\div\boxed{\phantom{6}}=8 \end{multiplication-and-division},8,X,6,=,48,48,÷,8,=,ㅁ,6
-F03_0_2,F03011503,다음 나눗셈을 하세요.,2 \div 2= \boxed{\phantom{1}} ,1,X,2,=,2,2,÷,2,=,ㅁ,1
-F03_0_2,F03011504,다음 나눗셈을 하세요.,32 \div 4= \boxed{\phantom{8}} ,8,X,4,=,32,32,÷,4,=,ㅁ,8
-F03_0_2,F03011505,다음 나눗셈을 하세요.,72 \div 9= \boxed{\phantom{8}} ,8,X,9,=,72,72,÷,9,=,ㅁ,8
-F03_0_2,F03011506,다음 나눗셈을 하세요.,64 \div 8= \boxed{\phantom{8}} ,8,X,8,=,64,64,÷,8,=,ㅁ,8
-F03_0_2,F03011507,다음 나눗셈을 하세요.,10 \div 5= \boxed{\phantom{2}} ,2,X,5,=,10,10,÷,5,=,ㅁ,2
-F03_0_2,F03011508,다음 나눗셈을 하세요.,12 \div 4= \boxed{\phantom{3}} ,3,X,4,=,12,12,÷,4,=,ㅁ,3
-F03_0_2,F03011509,다음 나눗셈을 하세요.,40 \div 8= \boxed{\phantom{5}} ,5,X,8,=,40,40,÷,8,=,ㅁ,5
-F03_0_2,F03011510,다음 나눗셈을 하세요.,63 \div 7= \boxed{\phantom{9}} ,9,X,7,=,63,63,÷,7,=,ㅁ,9
-F03_0_2,F03011511,다음 나눗셈을 하세요.,6 \div 6= \boxed{\phantom{1}} ,1,X,6,=,6,6,÷,6,=,ㅁ,1
-F03_0_2,F03011512,다음 나눗셈을 하세요.,40 \div 5= \boxed{\phantom{8}} ,8,X,5,=,40,40,÷,5,=,ㅁ,8
-F03_0_2,F03011513,다음 나눗셈을 하세요.,9 \div 3= \boxed{\phantom{3}} ,3,X,3,=,9,9,÷,3,=,ㅁ,3
-F03_0_2,F03011514,다음 나눗셈을 하세요.,14 \div 2= \boxed{\phantom{7}} ,7,X,2,=,14,14,÷,2,=,ㅁ,7
-F03_0_2,F03011616,다음 나눗셈을 하세요.,5 \div 5= \boxed{\phantom{1}} ,1,X,5,=,5,5,÷,5,=,ㅁ,1
-F03_0_2,F03011617,다음 나눗셈을 하세요.,15 \div 3= \boxed{\phantom{5}} ,5,X,3,=,15,15,÷,3,=,ㅁ,5
-F03_0_2,F03011618,다음 나눗셈을 하세요.,42 \div 6= \boxed{\phantom{7}} ,7,X,6,=,42,42,÷,6,=,ㅁ,7
-F03_0_2,F03011619,다음 나눗셈을 하세요.,4 \div 2= \boxed{\phantom{2}} ,2,X,2,=,4,4,÷,2,=,ㅁ,2
-F03_0_2,F03011620,다음 나눗셈을 하세요.,20 \div 4= \boxed{\phantom{5}} ,5,X,4,=,20,20,÷,4,=,ㅁ,5
-F03_0_2,F03011621,다음 나눗셈을 하세요.,42 \div 7= \boxed{\phantom{6}} ,6,X,7,=,42,42,÷,7,=,ㅁ,6
-F03_0_2,F03011622,다음 나눗셈을 하세요.,36 \div 9= \boxed{\phantom{4}} ,4,X,9,=,36,36,÷,9,=,ㅁ,4
-F03_0_2,F03011624,다음 나눗셈을 하세요.,54 \div 6= \boxed{\phantom{9}} ,9,X,6,=,54,54,÷,6,=,ㅁ,9
-F03_0_2,F03011627,다음 나눗셈을 하세요.,7 \div 7= \boxed{\phantom{1}} ,1,X,7,=,7,7,÷,7,=,ㅁ,1
-F03_0_2,F03011628,다음 나눗셈을 하세요.,81 \div 9= \boxed{\phantom{9}} ,9,X,9,=,81,81,÷,9,=,ㅁ,9
-F03_0_2,F03011629,다음 나눗셈을 하세요.,8 \div 4= \boxed{\phantom{2}} ,2,X,4,=,8,8,÷,4,=,ㅁ,2
-F03_0_2,F03011630,다음 나눗셈을 하세요.,12 \div 3= \boxed{\phantom{4}} ,4,X,3,=,12,12,÷,3,=,ㅁ,4
-F03_0_1,F03011701,다음을 계산하세요.,8 \times \boxed{\phantom{4}} = 32\leftrightarrow32\div8=\boxed{\phantom{4}},8,X,4,=,32,32,÷,8,=,ㅁ,4
-F03_0_1,F03011702,다음을 계산하세요.,9 \times \boxed{\phantom{2}} = 18\leftrightarrow18\div9=\boxed{\phantom{2}},9,X,2,=,18,18,÷,9,=,ㅁ,2
-F03_0_1,F03011703,다음을 계산하세요.,7 \times \boxed{\phantom{7}} = 49\leftrightarrow49\div7=\boxed{\phantom{7}},7,X,7,=,49,49,÷,7,=,ㅁ,7
-F03_0_1,F03011704,다음을 계산하세요.,\begin{multiplication-and-division} 6\times\boxed{\phantom{5}}=30 & 30\div~6=\boxed{\phantom{5}} & 30\div\boxed{\phantom{5}}=6 \end{multiplication-and-division},6,X,5,=,30,30,÷,6,=,ㅁ,5
-F03_0_1,F03011705,다음을 계산하세요.,\begin{multiplication-and-division} 3\times\boxed{\phantom{9}}=27 & 27\div~3=\boxed{\phantom{9}} & 27\div\boxed{\phantom{9}}=3 \end{multiplication-and-division},3,X,9,=,27,27,÷,3,=,ㅁ,9
-F03_0_1,F03011706,다음을 계산하세요.,\begin{multiplication-and-division} 7\times\boxed{\phantom{8}}=56 & 56\div~7=\boxed{\phantom{8}} & 56\div\boxed{\phantom{8}}=7 \end{multiplication-and-division},7,X,8,=,56,56,÷,7,=,ㅁ,8
-F03_0_2,F03011803,다음 나눗셈을 하세요.,8 \div 8= \boxed{\phantom{1}} ,1,X,8,=,8,8,÷,8,=,ㅁ,1
-F03_0_2,F03011805,다음 나눗셈을 하세요.,6 \div 3= \boxed{\phantom{2}} ,2,X,3,=,6,6,÷,3,=,ㅁ,2
-F03_0_2,F03011806,다음 나눗셈을 하세요.,12 \div 2= \boxed{\phantom{6}} ,6,X,2,=,12,12,÷,2,=,ㅁ,6
-F03_0_2,F03011807,다음 나눗셈을 하세요.,24 \div 6= \boxed{\phantom{4}} ,4,X,6,=,24,24,÷,6,=,ㅁ,4
-F03_0_2,F03011809,다음 나눗셈을 하세요.,20 \div 5= \boxed{\phantom{4}} ,4,X,5,=,20,20,÷,5,=,ㅁ,4
-F03_0_2,F03011810,다음 나눗셈을 하세요.,14 \div 7= \boxed{\phantom{2}} ,2,X,7,=,14,14,÷,7,=,ㅁ,2
-F03_0_2,F03011811,다음 나눗셈을 하세요.,45 \div 9= \boxed{\phantom{5}} ,5,X,9,=,45,45,÷,9,=,ㅁ,5
-F03_0_2,F03011812,다음 나눗셈을 하세요.,10 \div 2= \boxed{\phantom{5}} ,5,X,2,=,10,10,÷,2,=,ㅁ,5
-F03_0_2,F03011813,다음 나눗셈을 하세요.,36 \div 6= \boxed{\phantom{6}} ,6,X,6,=,36,36,÷,6,=,ㅁ,6
-F03_0_2,F03011814,다음 나눗셈을 하세요.,18 \div 3= \boxed{\phantom{6}} ,6,X,3,=,18,18,÷,3,=,ㅁ,6
-F03_0_2,F03011815,다음 나눗셈을 하세요.,4 \div 4= \boxed{\phantom{1}} ,1,X,4,=,4,4,÷,4,=,ㅁ,1
-F03_0_2,F03011816,다음 나눗셈을 하세요.,72 \div 8= \boxed{\phantom{9}} ,9,X,8,=,72,72,÷,8,=,ㅁ,9
-F03_0_2,F03021302,다음 나눗셈을 하세요.,30 \div 5= \boxed{\phantom{6}} ,6,X,5,=,30,30,÷,5,=,ㅁ,6
-F03_0_2,F03021308,다음 나눗셈을 하세요.,56 \div 8= \boxed{\phantom{7}} ,7,X,8,=,56,56,÷,8,=,ㅁ,7
-F03_0_2,F03021310,다음 나눗셈을 하세요.,24 \div 4= \boxed{\phantom{6}} ,6,X,4,=,24,24,÷,4,=,ㅁ,6
-F03_0_2,F03021313,다음 나눗셈을 하세요.,28 \div 7= \boxed{\phantom{4}} ,4,X,7,=,28,28,÷,7,=,ㅁ,4
-F03_0_2,F03021712,다음 나눗셈을 하세요.,49 \div 7= \boxed{\phantom{7}} ,7,X,7,=,49,49,÷,7,=,ㅁ,7
-F03_0_2,F03021827,다음 나눗셈을 하세요.,18 \div 9= \boxed{\phantom{2}} ,2,X,9,=,18,18,÷,9,=,ㅁ,2
-F03_0_2,F03031709,다음 나눗셈을 하세요.,16 \div 2= \boxed{\phantom{8}} ,8,X,2,=,16,16,÷,2,=,ㅁ,8
+F02_0_1,F02010901,다음을 계산하세요.,\img{https://s3.ap-northeast-2.amazonaws.com/wjtb-prd-pub/brs/img/common/image/1607648062427883595.svg}{}{200px}{}\\~~~~~~~~~~~~~~9\div3=\boxed{\phantom{3}},3,×,3,=,9,9,÷,3,=,□,3
+F02_0_1,F02011002,다음을 계산하세요., 2 \times 8 = 16\leftrightarrow16\div2=\boxed{\phantom{8}} ,2,×,8,=,16,16,÷,2,=,□,8
+F02_0_1,F02011003,다음을 계산하세요., 3 \times 5 = 15\leftrightarrow15\div3=\boxed{\phantom{5}},3,×,5,=,15,15,÷,3,=,□,5
+F02_0_1,F02011004,다음을 계산하세요.,4 \times 2 = 8\leftrightarrow8\div4=\boxed{\phantom{2}} ,4,×,2,=,8,8,÷,4,=,□,2
+F02_0_1,F02011005,다음을 계산하세요.,\begin{multiplication-and-division} 3\times2=6 & 6\div3=\boxed{\phantom{2}} & 6\div2=\boxed{\phantom{3}} \end{multiplication-and-division},3,×,2,=,6,6,÷,3,=,□,2
+F02_0_1,F02011006,다음을 계산하세요.,\begin{multiplication-and-division} 4\times5=20 & 20\div4=\boxed{\phantom{5}} & 20\div5=\boxed{\phantom{4}} \end{multiplication-and-division},4,×,5,=,20,20,÷,4,=,□,5
+F02_0_1,F02011007,다음을 계산하세요.,\begin{multiplication-and-division} 2\times6=12 & 12\div2=\boxed{\phantom{6}} & 12\div6=\boxed{\phantom{2}} \end{multiplication-and-division},2,×,6,=,12,12,÷,2,=,□,6
+F02_0_1,F02011101,다음을 계산하세요., 7 \times 3 = 21\leftrightarrow21\div3=\boxed{\phantom{7}} ,7,×,3,=,21,21,÷,3,=,□,7
+F02_0_1,F02011102,다음을 계산하세요., 8 \times 9 = 72\leftrightarrow72\div9=\boxed{\phantom{8}} ,8,×,9,=,72,72,÷,9,=,□,8
+F02_0_1,F02011103,다음을 계산하세요.,\begin{multiplication-and-division} 7\times5=35 & 35\div7=\boxed{\phantom{5}} & 35\div5=\boxed{\phantom{7}} \end{multiplication-and-division},7,×,5,=,35,35,÷,7,=,□,5
+F02_0_1,F02011104,다음을 계산하세요.,\begin{multiplication-and-division} 8\times4=32 & 32\div8=\boxed{\phantom{4}} & 32\div4=\boxed{\phantom{8}} \end{multiplication-and-division},8,×,4,=,32,32,÷,8,=,□,4
+F02_0_1,F02011205,다음을 계산하세요., 7 \times 2 = 14\leftrightarrow14\div2=\boxed{\phantom{7}} ,7,×,2,=,12,14,÷,2,=,□,7
+F02_0_1,F02011207,다음을 계산하세요., 7 \times 9 = 63\leftrightarrow63\div9=\boxed{\phantom{7}} ,7,×,9,=,63,63,÷,9,=,□,7
+F02_0_1,F02011208,다음을 계산하세요.,\begin{multiplication-and-division} 7\times4=28 & 28\div7=\boxed{\phantom{4}} & 28\div4=\boxed{\phantom{7}} \end{multiplication-and-division},7,×,4,=,28,28,÷,7,=,□,4
+F02_0_1,F02011209,다음을 계산하세요.,\begin{multiplication-and-division} 8\times5=40 & 40\div8=\boxed{\phantom{5}} & 40\div5=\boxed{\phantom{8}} \end{multiplication-and-division},8,×,5,=,40,40,÷,8,=,□,5
+F02_0_1,F02011210,다음을 계산하세요.,\begin{multiplication-and-division} 9\times3=27 & 27\div9=\boxed{\phantom{3}} & 27\div3=\boxed{\phantom{9}} \end{multiplication-and-division},9,×,3,=,27,27,÷,9,=,□,3
+F02_0_1,F02011301,다음을 계산하세요., 2 \times 2 = 4\leftrightarrow4\div2=\boxed{\phantom{2}} ,2,×,2,=,4,4,÷,2,=,□,2
+F02_0_1,F02011302,다음을 계산하세요.,3 \times 8 = 24\leftrightarrow24\div3=\boxed{\phantom{8}} ,3,×,8,=,24,24,÷,3,=,□,8
+F02_0_1,F02011303,다음을 계산하세요., 5 \times 5 = 25\leftrightarrow25\div5=\boxed{\phantom{5}} ,5,×,5,=,25,25,÷,5,=,□,5
+F02_0_1,F02011304,다음을 계산하세요.,\begin{multiplication-and-division} 6\times3=18 & 18\div6=\boxed{\phantom{3}} & 18\div3=\boxed{\phantom{6}} \end{multiplication-and-division},6,×,3,=,18,18,÷,6,=,□,3
+F02_0_1,F02011305,다음을 계산하세요.,\begin{multiplication-and-division} 4\times9=36 & 36\div4=\boxed{\phantom{9}} & 36\div9=\boxed{\phantom{4}} \end{multiplication-and-division},4,×,9,=,36,36,÷,4,=,□,9
+F02_0_1,F02011306,다음을 계산하세요.,\begin{multiplication-and-division} 6\times8=48 & 48\div6=\boxed{\phantom{8}} & 48\div8=\boxed{\phantom{6}} \end{multiplication-and-division},6,×,8,=,48,48,÷,6,=,□,8
+F02_0_1,F02011407,다음을 계산하세요., 4 \times 5 = 20\leftrightarrow20\div4=\boxed{\phantom{5}} ,4,×,5,=,20,20,÷,4,=,□,5
+F02_0_1,F02011408,다음을 계산하세요., 5 \times 9 = 45\leftrightarrow45\div5=\boxed{\phantom{9}} ,5,×,9,=,45,45,÷,5,=,□,9
+F02_0_1,F02011409,다음을 계산하세요.,6 \times 6 = 36\leftrightarrow36\div6=\boxed{\phantom{6}} ,6,×,6,=,36,36,÷,6,=,□,6
+F02_0_1,F02011410,다음을 계산하세요.,\begin{multiplication-and-division} 4\times2=8 & 8\div4=\boxed{\phantom{2}} & 8\div2=\boxed{\phantom{4}} \end{multiplication-and-division},4,×,2,=,8,8,÷,4,=,□,2
+F02_0_1,F02011411,다음을 계산하세요.,\begin{multiplication-and-division} 5\times3=15 & 15\div5=\boxed{\phantom{3}} & 15\div3=\boxed{\phantom{5}} \end{multiplication-and-division},5,×,3,=,15,15,÷,5,=,□,3
+F02_0_1,F02011412,다음을 계산하세요.,\begin{multiplication-and-division} 3\times4=12 & 12\div3=\boxed{\phantom{4}} & 12\div4=\boxed{\phantom{3}} \end{multiplication-and-division},3,×,4,=,12,12,÷,3,=,□,4
+F02_0_1,F02011501,다음을 계산하세요.,8 \times 6 = 48\leftrightarrow48\div6=\boxed{\phantom{8}} ,8,×,6,=,48,48,÷,6,=,□,8
+F02_0_1,F02011502,다음을 계산하세요.,7 \times 5 = 35\leftrightarrow35\div5=\boxed{\phantom{7}} ,7,×,5,=,35,35,÷,5,=,□,7
+F02_0_1,F02011503,다음을 계산하세요., 9 \times 9 = 81\leftrightarrow81\div9=\boxed{\phantom{9}} ,9,×,9,=,81,81,÷,9,=,□,9
+F02_0_1,F02011504,다음을 계산하세요.,\begin{multiplication-and-division} 9\times8=72 & 72\div9=\boxed{\phantom{8}} & 72\div8=\boxed{\phantom{9}} \end{multiplication-and-division},9,×,8,=,72,72,÷,9,=,□,8
+F02_0_1,F02011505,다음을 계산하세요.,\begin{multiplication-and-division} 7\times9=63 & 63\div7=\boxed{\phantom{9}} & 63\div9=\boxed{\phantom{7}} \end{multiplication-and-division},7,×,9,=,63,63,÷,7,=,□,9
+F02_0_1,F02011506,다음을 계산하세요.,\begin{multiplication-and-division} 8\times7=56 & 56\div8=\boxed{\phantom{7}} & 56\div7=\boxed{\phantom{8}} \end{multiplication-and-division},8,×,7,=,56,56,÷,8,=,□,7
+F02_0_1,F02011607,다음을 계산하세요.,9 \times 3 = 27\leftrightarrow27\div3=\boxed{\phantom{9}} ,9,×,3,=,27,27,÷,3,=,□,9
+F02_0_1,F02011608,다음을 계산하세요.,4 \times 8 = 32\leftrightarrow32\div8=\boxed{\phantom{4}} ,4,×,8,=,32,32,÷,8,=,□,4
+F02_0_1,F02011609,다음을 계산하세요.,7 \times 7 = 49\leftrightarrow49\div7=\boxed{\phantom{7}} ,7,×,7,=,49,49,÷,7,=,□,7
+F02_0_1,F02011610,다음을 계산하세요.,\begin{multiplication-and-division} 8\times2=16 & 16\div8=\boxed{\phantom{2}} & 16\div2=\boxed{\phantom{8}} \end{multiplication-and-division},8,×,2,=,16,16,÷,8,=,□,2
+F02_0_1,F02011611,다음을 계산하세요.,\begin{multiplication-and-division} 9\times7=63 & 63\div9=\boxed{\phantom{7}} & 63\div7=\boxed{\phantom{9}} \end{multiplication-and-division},9,×,7,=,63,63,÷,9,=,□,7
+F02_0_1,F02011612,다음을 계산하세요.,\begin{multiplication-and-division} 9\times6=54 & 54\div9=\boxed{\phantom{6}} & 54\div6=\boxed{\phantom{9}} \end{multiplication-and-division},9,×,6,=,54,54,÷,9,=,□,6
+F02_0_1,F02011701,다음을 계산하세요.,7 \times 3 = 21 \leftrightarrow21\div7=\boxed{\phantom{3}} ,7,×,3,=,21,21,÷,7,=,□,3
+F02_0_1,F02011702,다음을 계산하세요.,5 \times 2 = 10 \leftrightarrow10\div5=\boxed{\phantom{2}} ,5,×,2,=,10,10,÷,5,=,□,2
+F02_0_1,F02011703,다음을 계산하세요.,4 \times 9 = 36\leftrightarrow36\div9=\boxed{\phantom{4}} ,4,×,9,=,36,36,÷,9,=,□,4
+F02_0_1,F02011704,다음을 계산하세요.,\begin{multiplication-and-division} 6\times4=24 & 24\div6=\boxed{\phantom{4}} & 24\div4=\boxed{\phantom{6}} \end{multiplication-and-division},6,×,4,=,24,24,÷,6,=,□,4
+F02_0_1,F02011705,다음을 계산하세요.,\begin{multiplication-and-division} 3\times8=24 & 24\div3=\boxed{\phantom{8}} & 24\div8=\boxed{\phantom{3}} \end{multiplication-and-division},3,×,8,=,24,24,÷,3,=,□,8
+F02_0_1,F02011706,다음을 계산하세요.,\begin{multiplication-and-division} 5\times6=30 & 30\div5=\boxed{\phantom{6}} & 30\div6=\boxed{\phantom{5}} \end{multiplication-and-division},5,×,6,=,30,30,÷,5,=,□,6
+F02_0_1,F02011807,다음을 계산하세요.,2 \times 7= 14 \leftrightarrow14\div2=\boxed{\phantom{7}} ,2,×,7,=,14,14,÷,2,=,□,7
+F02_0_1,F02011808,다음을 계산하세요.,3 \times 3 = 9 \leftrightarrow9\div3=\boxed{\phantom{3}} ,3,×,3,=,9,9,÷,3,=,□,3
+F02_0_1,F02011809,다음을 계산하세요.,5 \times 8 = 40 \leftrightarrow40\div8=\boxed{\phantom{5}} ,5,×,8,=,40,40,÷,8,=,□,5
+F02_0_1,F02011810,다음을 계산하세요.,\begin{multiplication-and-division} 6\times7=42 & 42\div6=\boxed{\phantom{7}} & 42\div7=\boxed{\phantom{6}} \end{multiplication-and-division},6,×,7,=,42,42,÷,6,=,□,7
+F02_0_1,F02011811,다음을 계산하세요.,\begin{multiplication-and-division} 3\times5=15 & 15\div3=\boxed{\phantom{5}} & 15\div5=\boxed{\phantom{3}} \end{multiplication-and-division},3,×,5,=,15,15,÷,3,=,□,5
+F02_0_1,F02011812,다음을 계산하세요.,\begin{multiplication-and-division} 5\times9=45 & 45\div5=\boxed{\phantom{9}} & 45\div9=\boxed{\phantom{5}} \end{multiplication-and-division},5,×,9,=,45,45,÷,5,=,□,9
+F03_0_1,F03010901,다음을 계산하세요.,6 \times \boxed{\phantom{3}} = 18\leftrightarrow18\div6=\boxed{\phantom{3}},6,×,3,=,18,18,÷,6,=,□,3
+F03_0_1,F03010902,다음을 계산하세요.,7 \times \boxed{\phantom{5}} = 35\leftrightarrow35\div7=\boxed{\phantom{5}},7,×,5,=,35,35,÷,7,=,□,5
+F03_0_1,F03010903,다음을 계산하세요.,\begin{multiplication-and-division} 2\times\boxed{\phantom{6}}=12 & 12\div~2=\boxed{\phantom{6}} & 12\div\boxed{\phantom{6}}=2 \end{multiplication-and-division},2,×,6,=,12,12,÷,2,=,□,6
+F03_0_1,F03010904,다음을 계산하세요.,\begin{multiplication-and-division} 4\times\boxed{\phantom{9}}=36 & 36\div~4=\boxed{\phantom{9}} & 36\div\boxed{\phantom{9}}=4 \end{multiplication-and-division},4,×,9,=,36,36,÷,4,=,□,9
+F03_0_1,F03011005,다음을 계산하세요.,4 \times \boxed{\phantom{6}} = 24\leftrightarrow24\div4=\boxed{\phantom{6}},4,×,6,=,24,24,÷,4,=,□,6
+F03_0_1,F03011006,다음을 계산하세요.,8 \times \boxed{\phantom{5}} = 40\leftrightarrow40\div8=\boxed{\phantom{5}},8,×,5,=,40,40,÷,8,=,□,5
+F03_0_1,F03011007,다음을 계산하세요.,9 \times \boxed{\phantom{7}} = 63\leftrightarrow63\div9=\boxed{\phantom{7}},9,×,7,=,63,63,÷,9,=,□,7
+F03_0_1,F03011008,다음을 계산하세요.,\begin{multiplication-and-division} 4\times\boxed{\phantom{3}}=12 & 12\div~4=\boxed{\phantom{3}} & 12\div\boxed{\phantom{3}}=4 \end{multiplication-and-division},4,×,3,=,12,12,÷,4,=,□,3
+F03_0_1,F03011009,다음을 계산하세요.,\begin{multiplication-and-division} 9\times\boxed{\phantom{8}}=72 & 72\div~9=\boxed{\phantom{8}} & 72\div\boxed{\phantom{8}}=9 \end{multiplication-and-division},9,×,8,=,72,72,÷,9,=,□,8
+F03_0_1,F03011010,다음을 계산하세요.,\begin{multiplication-and-division} 5\times\boxed{\phantom{4}}=20 & 20\div~5=\boxed{\phantom{4}} & 20\div\boxed{\phantom{4}}=5 \end{multiplication-and-division},5,×,4,=,20,20,÷,5,=,□,4
+F03_0_1,F03011301,다음을 계산하세요.,7 \times \boxed{\phantom{2}} = 14\leftrightarrow14\div7=\boxed{\phantom{2}},7,×,2,=,14,14,÷,7,=,□,2
+F03_0_1,F03011302,다음을 계산하세요.,8 \times \boxed{\phantom{3}} = 24\leftrightarrow24\div8=\boxed{\phantom{3}},8,×,3,=,24,24,÷,8,=,□,3
+F03_0_1,F03011303,다음을 계산하세요.,6 \times \boxed{\phantom{9}} = 54\leftrightarrow54\div6=\boxed{\phantom{9}},6,×,9,=,54,54,÷,6,=,□,9
+F03_0_1,F03011304,다음을 계산하세요.,\begin{multiplication-and-division} 2\times\boxed{\phantom{8}}=16 & 16\div~2=\boxed{\phantom{8}} & 16\div\boxed{\phantom{8}}=2 \end{multiplication-and-division},2,×,8,=,16,16,÷,2,=,□,8
+F03_0_1,F03011305,다음을 계산하세요.,\begin{multiplication-and-division} 9\times\boxed{\phantom{4}}=36 & 36\div~9=\boxed{\phantom{4}} & 36\div\boxed{\phantom{4}}=9 \end{multiplication-and-division},9,×,4,=,36,36,÷,9,=,□,4
+F03_0_1,F03011306,다음을 계산하세요.,\begin{multiplication-and-division} 7\times\boxed{\phantom{6}}=42 & 42\div~7=\boxed{\phantom{6}} & 42\div\boxed{\phantom{6}}=7 \end{multiplication-and-division},7,×,6,=,42,42,÷,7,=,□,6
+F03_0_1,F03011407,다음을 계산하세요.,8 \times \boxed{\phantom{9}} = 72\leftrightarrow72\div8=\boxed{\phantom{9}},8,×,9,=,72,72,÷,8,=,□,9
+F03_0_1,F03011408,다음을 계산하세요.,9 \times \boxed{\phantom{5}} = 45\leftrightarrow45\div9=\boxed{\phantom{5}},9,×,5,=,45,45,÷,9,=,□,5
+F03_0_1,F03011409,다음을 계산하세요.,3 \times \boxed{\phantom{4}} = 12\leftrightarrow12\div3=\boxed{\phantom{4}},3,×,4,=,12,12,÷,3,=,□,4
+F03_0_1,F03011410,다음을 계산하세요.,\begin{multiplication-and-division} 5\times\boxed{\phantom{3}}=15 & 15\div~5=\boxed{\phantom{3}} & 15\div\boxed{\phantom{3}}=5 \end{multiplication-and-division},5,×,3,=,15,15,÷,5,=,□,3
+F03_0_1,F03011411,다음을 계산하세요.,\begin{multiplication-and-division} 4\times\boxed{\phantom{7}}=28 & 28\div~4=\boxed{\phantom{7}} & 28\div\boxed{\phantom{7}}=4 \end{multiplication-and-division},4,×,7,=,28,28,÷,4,=,□,7
+F03_0_1,F03011412,다음을 계산하세요.,\begin{multiplication-and-division} 8\times\boxed{\phantom{6}}=48 & 48\div~8=\boxed{\phantom{6}} & 48\div\boxed{\phantom{6}}=8 \end{multiplication-and-division},8,×,6,=,48,48,÷,8,=,□,6
+F03_0_1,F03011701,다음을 계산하세요.,8 \times \boxed{\phantom{4}} = 32\leftrightarrow32\div8=\boxed{\phantom{4}},8,×,4,=,32,32,÷,8,=,□,4
+F03_0_1,F03011702,다음을 계산하세요.,9 \times \boxed{\phantom{2}} = 18\leftrightarrow18\div9=\boxed{\phantom{2}},9,×,2,=,18,18,÷,9,=,□,2
+F03_0_1,F03011703,다음을 계산하세요.,7 \times \boxed{\phantom{7}} = 49\leftrightarrow49\div7=\boxed{\phantom{7}},7,×,7,=,49,49,÷,7,=,□,7
+F03_0_1,F03011704,다음을 계산하세요.,\begin{multiplication-and-division} 6\times\boxed{\phantom{5}}=30 & 30\div~6=\boxed{\phantom{5}} & 30\div\boxed{\phantom{5}}=6 \end{multiplication-and-division},6,×,5,=,30,30,÷,6,=,□,5
+F03_0_1,F03011705,다음을 계산하세요.,\begin{multiplication-and-division} 3\times\boxed{\phantom{9}}=27 & 27\div~3=\boxed{\phantom{9}} & 27\div\boxed{\phantom{9}}=3 \end{multiplication-and-division},3,×,9,=,27,27,÷,3,=,□,9
+F03_0_1,F03011706,다음을 계산하세요.,\begin{multiplication-and-division} 7\times\boxed{\phantom{8}}=56 & 56\div~7=\boxed{\phantom{8}} & 56\div\boxed{\phantom{8}}=7 \end{multiplication-and-division},7,×,8,=,56,56,÷,7,=,□,8
+F03_0_2,F03011101,다음 나눗셈을 하세요.,8 \div 2= \boxed{\phantom{4}} ,4,×,2,=,8,8,÷,2,=,□,4
+F03_0_2,F03011102,다음 나눗셈을 하세요.,21 \div 3= \boxed{\phantom{7}} ,7,×,3,=,21,21,÷,3,=,□,7
+F03_0_2,F03011103,다음 나눗셈을 하세요.,16 \div 4= \boxed{\phantom{4}} ,4,×,4,=,16,16,÷,4,=,□,4
+F03_0_2,F03011104,다음 나눗셈을 하세요.,15 \div 5= \boxed{\phantom{3}} ,3,×,5,=,15,15,÷,5,=,□,3
+F03_0_2,F03011105,다음 나눗셈을 하세요.,27 \div 9= \boxed{\phantom{3}} ,3,×,9,=,27,27,÷,9,=,□,3
+F03_0_2,F03011106,다음 나눗셈을 하세요.,30 \div 6= \boxed{\phantom{5}} ,5,×,6,=,30,30,÷,6,=,□,5
+F03_0_2,F03011107,다음 나눗셈을 하세요.,56 \div 7= \boxed{\phantom{8}} ,8,×,7,=,56,56,÷,7,=,□,8
+F03_0_2,F03011108,다음 나눗셈을 하세요.,48 \div 8= \boxed{\phantom{6}} ,6,×,8,=,48,48,÷,8,=,□,6
+F03_0_2,F03011109,다음 나눗셈을 하세요.,54 \div 9= \boxed{\phantom{6}} ,6,×,9,=,54,54,÷,9,=,□,6
+F03_0_2,F03011110,다음 나눗셈을 하세요.,12 \div 6= \boxed{\phantom{2}} ,2,×,6,=,12,12,÷,6,=,□,2
+F03_0_2,F03011211,다음 나눗셈을 하세요.,18 \div 2= \boxed{\phantom{9}} ,9,×,2,=,18,18,÷,2,=,□,9
+F03_0_2,F03011212,다음 나눗셈을 하세요.,35 \div 5= \boxed{\phantom{7}} ,7,×,5,=,35,35,÷,5,=,□,7
+F03_0_2,F03011213,다음 나눗셈을 하세요.,32 \div 8= \boxed{\phantom{4}} ,4,×,8,=,32,32,÷,8,=,□,4
+F03_0_2,F03011214,다음 나눗셈을 하세요.,24 \div 3= \boxed{\phantom{8}} ,8,×,3,=,24,24,÷,3,=,□,8
+F03_0_2,F03011215,다음 나눗셈을 하세요.,9 \div 9= \boxed{\phantom{1}} ,1,×,9,=,9,9,÷,9,=,□,1
+F03_0_2,F03011216,다음 나눗셈을 하세요.,28 \div 4= \boxed{\phantom{7}} ,7,×,4,=,28,28,÷,4,=,□,7
+F03_0_2,F03011217,다음 나눗셈을 하세요.,48 \div 6= \boxed{\phantom{8}} ,8,×,6,=,48,48,÷,6,=,□,8
+F03_0_2,F03011218,다음 나눗셈을 하세요.,21 \div 7= \boxed{\phantom{3}} ,3,×,7,=,21,21,÷,7,=,□,3
+F03_0_2,F03011219,다음 나눗셈을 하세요.,25 \div 5= \boxed{\phantom{5}} ,5,×,5,=,25,25,÷,5,=,□,5
+F03_0_2,F03011220,다음 나눗셈을 하세요.,35 \div 7= \boxed{\phantom{5}} ,5,×,7,=,35,35,÷,7,=,□,5
+F03_0_2,F03011221,다음 나눗셈을 하세요.,3 \div 3= \boxed{\phantom{1}} ,1,×,3,=,3,3,÷,3,=,□,1
+F03_0_2,F03011222,다음 나눗셈을 하세요.,36 \div 4= \boxed{\phantom{9}} ,9,×,4,=,36,36,÷,4,=,□,9
+F03_0_2,F03011223,다음 나눗셈을 하세요.,18 \div 6= \boxed{\phantom{3}} ,3,×,6,=,18,18,÷,6,=,□,3
+F03_0_2,F03011224,다음 나눗셈을 하세요.,16 \div 8= \boxed{\phantom{2}} ,2,×,8,=,16,16,÷,8,=,□,2
+F03_0_2,F03011225,다음 나눗셈을 하세요.,6 \div 2= \boxed{\phantom{3}} ,3,×,2,=,6,6,÷,2,=,□,3
+F03_0_2,F03011503,다음 나눗셈을 하세요.,2 \div 2= \boxed{\phantom{1}} ,1,×,2,=,2,2,÷,2,=,□,1
+F03_0_2,F03011504,다음 나눗셈을 하세요.,32 \div 4= \boxed{\phantom{8}} ,8,×,4,=,32,32,÷,4,=,□,8
+F03_0_2,F03011505,다음 나눗셈을 하세요.,72 \div 9= \boxed{\phantom{8}} ,8,×,9,=,72,72,÷,9,=,□,8
+F03_0_2,F03011506,다음 나눗셈을 하세요.,64 \div 8= \boxed{\phantom{8}} ,8,×,8,=,64,64,÷,8,=,□,8
+F03_0_2,F03011507,다음 나눗셈을 하세요.,10 \div 5= \boxed{\phantom{2}} ,2,×,5,=,10,10,÷,5,=,□,2
+F03_0_2,F03011508,다음 나눗셈을 하세요.,12 \div 4= \boxed{\phantom{3}} ,3,×,4,=,12,12,÷,4,=,□,3
+F03_0_2,F03011509,다음 나눗셈을 하세요.,40 \div 8= \boxed{\phantom{5}} ,5,×,8,=,40,40,÷,8,=,□,5
+F03_0_2,F03011510,다음 나눗셈을 하세요.,63 \div 7= \boxed{\phantom{9}} ,9,×,7,=,63,63,÷,7,=,□,9
+F03_0_2,F03011511,다음 나눗셈을 하세요.,6 \div 6= \boxed{\phantom{1}} ,1,×,6,=,6,6,÷,6,=,□,1
+F03_0_2,F03011512,다음 나눗셈을 하세요.,40 \div 5= \boxed{\phantom{8}} ,8,×,5,=,40,40,÷,5,=,□,8
+F03_0_2,F03011513,다음 나눗셈을 하세요.,9 \div 3= \boxed{\phantom{3}} ,3,×,3,=,9,9,÷,3,=,□,3
+F03_0_2,F03011514,다음 나눗셈을 하세요.,14 \div 2= \boxed{\phantom{7}} ,7,×,2,=,14,14,÷,2,=,□,7
+F03_0_2,F03011616,다음 나눗셈을 하세요.,5 \div 5= \boxed{\phantom{1}} ,1,×,5,=,5,5,÷,5,=,□,1
+F03_0_2,F03011617,다음 나눗셈을 하세요.,15 \div 3= \boxed{\phantom{5}} ,5,×,3,=,15,15,÷,3,=,□,5
+F03_0_2,F03011618,다음 나눗셈을 하세요.,42 \div 6= \boxed{\phantom{7}} ,7,×,6,=,42,42,÷,6,=,□,7
+F03_0_2,F03011619,다음 나눗셈을 하세요.,4 \div 2= \boxed{\phantom{2}} ,2,×,2,=,4,4,÷,2,=,□,2
+F03_0_2,F03011620,다음 나눗셈을 하세요.,20 \div 4= \boxed{\phantom{5}} ,5,×,4,=,20,20,÷,4,=,□,5
+F03_0_2,F03011621,다음 나눗셈을 하세요.,42 \div 7= \boxed{\phantom{6}} ,6,×,7,=,42,42,÷,7,=,□,6
+F03_0_2,F03011622,다음 나눗셈을 하세요.,36 \div 9= \boxed{\phantom{4}} ,4,×,9,=,36,36,÷,9,=,□,4
+F03_0_2,F03011624,다음 나눗셈을 하세요.,54 \div 6= \boxed{\phantom{9}} ,9,×,6,=,54,54,÷,6,=,□,9
+F03_0_2,F03011627,다음 나눗셈을 하세요.,7 \div 7= \boxed{\phantom{1}} ,1,×,7,=,7,7,÷,7,=,□,1
+F03_0_2,F03011628,다음 나눗셈을 하세요.,81 \div 9= \boxed{\phantom{9}} ,9,×,9,=,81,81,÷,9,=,□,9
+F03_0_2,F03011629,다음 나눗셈을 하세요.,8 \div 4= \boxed{\phantom{2}} ,2,×,4,=,8,8,÷,4,=,□,2
+F03_0_2,F03011630,다음 나눗셈을 하세요.,12 \div 3= \boxed{\phantom{4}} ,4,×,3,=,12,12,÷,3,=,□,4
+F03_0_2,F03011803,다음 나눗셈을 하세요.,8 \div 8= \boxed{\phantom{1}} ,1,×,8,=,8,8,÷,8,=,□,1
+F03_0_2,F03011805,다음 나눗셈을 하세요.,6 \div 3= \boxed{\phantom{2}} ,2,×,3,=,6,6,÷,3,=,□,2
+F03_0_2,F03011806,다음 나눗셈을 하세요.,12 \div 2= \boxed{\phantom{6}} ,6,×,2,=,12,12,÷,2,=,□,6
+F03_0_2,F03011807,다음 나눗셈을 하세요.,24 \div 6= \boxed{\phantom{4}} ,4,×,6,=,24,24,÷,6,=,□,4
+F03_0_2,F03011809,다음 나눗셈을 하세요.,20 \div 5= \boxed{\phantom{4}} ,4,×,5,=,20,20,÷,5,=,□,4
+F03_0_2,F03011810,다음 나눗셈을 하세요.,14 \div 7= \boxed{\phantom{2}} ,2,×,7,=,14,14,÷,7,=,□,2
+F03_0_2,F03011811,다음 나눗셈을 하세요.,45 \div 9= \boxed{\phantom{5}} ,5,×,9,=,45,45,÷,9,=,□,5
+F03_0_2,F03011812,다음 나눗셈을 하세요.,10 \div 2= \boxed{\phantom{5}} ,5,×,2,=,10,10,÷,2,=,□,5
+F03_0_2,F03011813,다음 나눗셈을 하세요.,36 \div 6= \boxed{\phantom{6}} ,6,×,6,=,36,36,÷,6,=,□,6
+F03_0_2,F03011814,다음 나눗셈을 하세요.,18 \div 3= \boxed{\phantom{6}} ,6,×,3,=,18,18,÷,3,=,□,6
+F03_0_2,F03011815,다음 나눗셈을 하세요.,4 \div 4= \boxed{\phantom{1}} ,1,×,4,=,4,4,÷,4,=,□,1
+F03_0_2,F03011816,다음 나눗셈을 하세요.,72 \div 8= \boxed{\phantom{9}} ,9,×,8,=,72,72,÷,8,=,□,9
+F03_0_2,F03021302,다음 나눗셈을 하세요.,30 \div 5= \boxed{\phantom{6}} ,6,×,5,=,30,30,÷,5,=,□,6
+F03_0_2,F03021308,다음 나눗셈을 하세요.,56 \div 8= \boxed{\phantom{7}} ,7,×,8,=,56,56,÷,8,=,□,7
+F03_0_2,F03021310,다음 나눗셈을 하세요.,24 \div 4= \boxed{\phantom{6}} ,6,×,4,=,24,24,÷,4,=,□,6
+F03_0_2,F03021313,다음 나눗셈을 하세요.,28 \div 7= \boxed{\phantom{4}} ,4,×,7,=,28,28,÷,7,=,□,4
+F03_0_2,F03021712,다음 나눗셈을 하세요.,49 \div 7= \boxed{\phantom{7}} ,7,×,7,=,49,49,÷,7,=,□,7
+F03_0_2,F03021827,다음 나눗셈을 하세요.,18 \div 9= \boxed{\phantom{2}} ,2,×,9,=,18,18,÷,9,=,□,2
+F03_0_2,F03031709,다음 나눗셈을 하세요.,16 \div 2= \boxed{\phantom{8}} ,8,×,2,=,16,16,÷,2,=,□,8

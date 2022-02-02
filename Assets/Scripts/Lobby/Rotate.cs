@@ -15,10 +15,6 @@ public class Rotate : MonoBehaviour
     public float speed = 30.0f; //How To Play
     public float Spaceshipspeed = 20.0f; //SpaceShip
 
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -52,8 +48,5 @@ public class Rotate : MonoBehaviour
         Spaceship.transform.Rotate(0, 0, Time.deltaTime * speed* Spaceshipright);
         //trObject.transform.rotation = (vRotatePos.z == dWholeAngle - 10) ?(QuaternionQuaternion.Slerp(from.rotation, to.rotation, Time.time * speed)):(Quaternion.Slerp(to.rotation, from.rotation, Time.time * speed;
         //trObject.rotation = (vRotatePos.z == dWholeAngle-10) ? Quaternion.AngleAxis(10, Vector3.forward) : Quaternion.AngleAxis(-10, Vector3.forward);
-        
-        Debug.Log("HowToPlay"+vRotatePos);
-        Debug.Log("SpaceShip"+ vSpaceShipRotatePos);
     }
 }

@@ -45,7 +45,6 @@ public class LobbyService : MonoBehaviour
     private void Start()
     {
         BindView();
-        Invoke("EntranceStore", 1f);
     }
 
     private void BindView()
@@ -64,6 +63,22 @@ public class LobbyService : MonoBehaviour
             })
             .AddTo(gameObject);
 
+        aseembleRobotStartButton.OnClickAsObservable()
+             .Subscribe(_ =>
+             {
+                 LocalDBDataService.Instance.PlayGameType = GameType.Assemble_Robot;
+                 SceneService.Instance.LoadScene("Store");
+             })
+            .AddTo(gameObject);
+
+        satelliteStartButton.OnClickAsObservable()
+             .Subscribe(_ =>
+             {
+                 LocalDBDataService.Instance.PlayGameType = GameType.Satellite;
+                 SceneService.Instance.LoadScene("Store");
+             })
+            .AddTo(gameObject);
+
         educationResultButton.OnClickAsObservable()
            .Subscribe(_ =>
            {
@@ -79,11 +94,11 @@ public class LobbyService : MonoBehaviour
             .AddTo(gameObject);
 
         DelSoundBar.OnClickAsObservable()
-        .Subscribe(_ =>
-        {
-            SettingWindow.SetActive(!SettingWindow.activeSelf);
-        })
-        .AddTo(gameObject);
+            .Subscribe(_ =>
+            {
+                SettingWindow.SetActive(!SettingWindow.activeSelf);
+            })
+            .AddTo(gameObject);
 
         QuestButton.OnClickAsObservable()
             .Subscribe(_ =>
@@ -107,29 +122,10 @@ public class LobbyService : MonoBehaviour
             .AddTo(gameObject);
 
         DelHowToPlayButton.OnClickAsObservable()
-        .Subscribe(_ =>
-        {
-            HowToPlayWindow.SetActive(!HowToPlayWindow.activeSelf);
-         })
-        .AddTo(gameObject);
-    }
-
-    void EntranceStore()
-    {
-        aseembleRobotStartButton.OnClickAsObservable()
-             .Subscribe(_ =>
+            .Subscribe(_ =>
             {
-                LocalDBDataService.Instance.PlayGameType = GameType.Assemble_Robot;
-                SceneService.Instance.LoadScene("Store");
+                HowToPlayWindow.SetActive(!HowToPlayWindow.activeSelf);
             })
-            .AddTo(gameObject);
-
-        satelliteStartButton.OnClickAsObservable()
-             .Subscribe(_ =>
-             {
-                 LocalDBDataService.Instance.PlayGameType = GameType.Satellite;
-                 SceneService.Instance.LoadScene("Store");
-             })
             .AddTo(gameObject);
     }
 }

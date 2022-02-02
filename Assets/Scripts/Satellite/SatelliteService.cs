@@ -1,17 +1,19 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-using UniRx;
 
 namespace SatelliteGame
 {
     public class SatelliteService : Singleton<SatelliteService>
     {
-        /*private RxCountDownTimer rxCountDownTimer;*/
+        private int questionCount = 1;
+        private const int maxQuestionCount = 5;
 
         [SerializeField]
-        private Text remainTimeText;
+        private Text missionCountText;
+
+        [SerializeField]
+        private Text missionContextText;
 
         [SerializeField]
         private GameObject resultPopupPanel;
@@ -21,48 +23,62 @@ namespace SatelliteGame
 
         [SerializeField]
         private Planet mainPlanet;
+        private Image mainPlanetImage;
 
-        /*private IDisposable countDownDisposable;
-        private IDisposable changeCountDownTextColorDisposable;*/
-
-        /*private void Awake()
-        {
-            rxCountDownTimer = GetComponent<RxCountDownTimer>();
-        }*/
+        [SerializeField]
+        private List<Sprite> planetSprites;
 
         private void Start()
         {
-            /*// 타이머의 남은 시간을 표시한다.
-            countDownDisposable = rxCountDownTimer.CountDownObservable
-                .Subscribe
-                (
-                    time =>
-                    {
-                        // onNext에서 시간을 표시한다.
-                        // remainTimeText.text = $"남은 시간 : {time}초";
-                    },
-                    () =>
-                    {
-                        // onComplete에서 문자를 지운다.
-                        ShowGameOverResult(false);
-                    }
-                ).AddTo(gameObject);
+            mainPlanetImage = mainPlanet.GetComponentInChildren<Image>();
 
-            // 타이머가 10초 이하로 되는 타이밍에 색을 붉은 색으로 한다.
-            changeCountDownTextColorDisposable = rxCountDownTimer.CountDownObservable
-                .First(timer => timer <= 10)
-                .Subscribe(_ => remainTimeText.color = Color.red);*/
+            GenerateQuestion();
         }
 
-        public void ShowGameOverResult(bool isClear)
+        private void GenerateQuestion()
         {
-            /*countDownDisposable.Dispose();
-            changeCountDownTextColorDisposable.Dispose();*/
+            missionCountText.text = $"미션 ({questionCount} / {maxQuestionCount})";
 
-            remainTimeText.text = $"종료!";
+            DBQuestDivisionData data = LocalDBDataService.Instance.GetRandomQuestDivisionData();
 
-            gameResultText.text = isClear ? $"게임 성공!" : $"게임 실패...";
-            resultPopupPanel.SetActive(true);
+            switch (data.stg_cd)
+            {
+                case "F02_0_1":
+                    missionContextText.text = $"{data.qst_cn1_1} {data.math_smb1_1} {data.qst_cn1_2} {data.math_smb1_2} {data.qst_cn1_3} ↔ {data.qst_cn2_1} {data.math_smb2_1} {data.qst_cn2_2} {data.math_smb2_2} {data.qst_cn2_3}";
+                    mainPlanetImage.sprite = planetSprites[0];
+                    break;
+                case "F03_0_1":
+                    missionContextText.text = $"{data.qst_cn1_1} {data.math_smb1_1} {data.qst_cn2_3} {data.math_smb1_2} {data.qst_cn1_3} ↔ {data.qst_cn2_1} {data.math_smb2_1} {data.qst_cn2_2} {data.math_smb2_2} {data.qst_cn2_3}";
+                    mainPlanetImage.sprite = planetSprites[1];
+                    break;
+                case "F03_0_2":
+                    missionContextText.text = $"{data.qst_cn2_1} {data.math_smb2_1} {data.qst_cn2_2} {data.math_smb2_2} {data.qst_cn2_3}";
+                    mainPlanetImage.sprite = planetSprites[2];
+                    break;
+            }
+
+            mainPlanet.SetPlanetScore(data.qst_cn2_1, data.boxed_cransr);
+        }
+
+        public void ShowGameResult(bool isClear)
+        {
+            if (isClear)
+            {
+                if (questionCount++ == maxQuestionCount)
+                {
+                    gameResultText.text = $"게임 성공!";
+                    resultPopupPanel.SetActive(true);
+                }
+                else
+                {
+                    GenerateQuestion();
+                }
+            }
+            else
+            {
+                gameResultText.text = $"게임 실패...";
+                resultPopupPanel.SetActive(true);
+            }
         }
     }
 }

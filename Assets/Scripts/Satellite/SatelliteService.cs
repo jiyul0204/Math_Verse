@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
 
 using UniRx;
 
@@ -34,6 +35,12 @@ namespace SatelliteGame
 
         [SerializeField]
         private GameObject successPopupPanel;
+
+        [SerializeField]
+        private GameObject HowToPlayPopupPanel;
+
+        [SerializeField]
+        private Button DelHowToPlayPopupPanel;
 
         [SerializeField]
         private Planet mainPlanet;
@@ -73,6 +80,14 @@ namespace SatelliteGame
                     SceneService.Instance.LoadScene(SceneName.Lobby);
                 })
                 .AddTo(gameObject);
+
+            DelHowToPlayPopupPanel.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
+                })
+                .AddTo(gameObject);
+            }
         }
 
         private void GenerateQuestion()

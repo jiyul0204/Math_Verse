@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 
 using UniRx;
@@ -46,3 +46,4 @@ public class LoginAndJoinService : MonoBehaviour
             .AddTo(gameObject);
     }
 }
+*/

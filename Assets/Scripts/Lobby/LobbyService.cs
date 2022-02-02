@@ -34,9 +34,6 @@ public class LobbyService : MonoBehaviour
     private Button DelHowToPlayButton;
 
     [SerializeField]
-    private Button DelSoundBar;
-
-    [SerializeField]
     private Button DelQuestWindow;
 
     [SerializeField]
@@ -52,14 +49,14 @@ public class LobbyService : MonoBehaviour
         topUICollectionButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                SceneService.Instance.LoadScene("CardCollection");
+                SceneService.Instance.LoadScene(SceneName.CardCollection);
             })
             .AddTo(gameObject);
 
         storeCollectionButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                SceneService.Instance.LoadScene("CardCollection");
+                SceneService.Instance.LoadScene(SceneName.CardCollection);
             })
             .AddTo(gameObject);
 
@@ -67,7 +64,7 @@ public class LobbyService : MonoBehaviour
              .Subscribe(_ =>
              {
                  LocalDBDataService.Instance.PlayGameType = GameType.Assemble_Robot;
-                 SceneService.Instance.LoadScene("Store");
+                 SceneService.Instance.LoadScene(SceneName.Store);
              })
             .AddTo(gameObject);
 
@@ -75,25 +72,18 @@ public class LobbyService : MonoBehaviour
              .Subscribe(_ =>
              {
                  LocalDBDataService.Instance.PlayGameType = GameType.Satellite;
-                 SceneService.Instance.LoadScene("Store");
+                 SceneService.Instance.LoadScene(SceneName.Store);
              })
             .AddTo(gameObject);
 
         educationResultButton.OnClickAsObservable()
            .Subscribe(_ =>
            {
-               SceneService.Instance.LoadScene("Education_Check");
+               SceneService.Instance.LoadScene(SceneName.Education_Check);
            })
            .AddTo(gameObject);
 
         SettingButton.OnClickAsObservable()
-            .Subscribe(_ =>
-            {
-                SettingWindow.SetActive(!SettingWindow.activeSelf);
-            })
-            .AddTo(gameObject);
-
-        DelSoundBar.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 SettingWindow.SetActive(!SettingWindow.activeSelf);

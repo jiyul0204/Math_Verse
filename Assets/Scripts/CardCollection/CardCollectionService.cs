@@ -18,7 +18,7 @@ public class CardCollectionService : MonoBehaviour
         backButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                SceneService.Instance.LoadScene("Lobby");
+                SceneService.Instance.LoadScene(SceneName.Lobby);
             })
             .AddTo(gameObject);
     }

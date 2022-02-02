@@ -24,7 +24,7 @@ public class PanelGameRestart : MonoBehaviour
             restartButton.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
-                    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+                    SceneService.Instance.ReloadScene();
                 })
                 .AddTo(gameObject);
         }
@@ -32,7 +32,7 @@ public class PanelGameRestart : MonoBehaviour
         goToLobbyButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                SceneManager.LoadScene("Lobby");
+                SceneService.Instance.LoadScene(SceneName.Lobby);
             })
             .AddTo(gameObject);
     }

@@ -2,10 +2,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UniRx;
+
 namespace SatelliteGame
 {
     public class SatelliteService : MonoBehaviour
     {
+        [SerializeField]
+        private GameObject pausePanel;
+
+        [SerializeField]
+        private Button pauseButton;
+
+        [SerializeField]
+        private Button retryButton;
+
+        [SerializeField]
+        private Button homeButton;
+
         private int questionCount = 1;
         private const int maxQuestionCount = 5;
 
@@ -32,7 +46,33 @@ namespace SatelliteGame
         {
             mainPlanetImage = mainPlanet.GetComponentInChildren<Image>();
 
+            BindView();
+
             GenerateQuestion();
+        }
+
+        private void BindView()
+        {
+            pauseButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    pausePanel.SetActive(true);
+                })
+                .AddTo(gameObject);
+
+            retryButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    SceneService.Instance.ReloadScene();
+                })
+                .AddTo(gameObject);
+
+            homeButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    SceneService.Instance.LoadScene(SceneName.Lobby);
+                })
+                .AddTo(gameObject);
         }
 
         private void GenerateQuestion()

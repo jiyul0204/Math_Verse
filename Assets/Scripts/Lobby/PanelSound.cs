@@ -23,6 +23,9 @@ public class PanelSound : MonoBehaviour
     [SerializeField]
     private Text sfxText;
 
+    [SerializeField]
+    private Button exitButton;
+
     private void Start()
     {
         if (AudioManager.Inst.IsMusicOn)
@@ -63,6 +66,13 @@ public class PanelSound : MonoBehaviour
             .Subscribe(_ =>
             {
                 SetSFXStatus();
+            })
+            .AddTo(gameObject);
+
+        exitButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                gameObject.SetActive(false);
             })
             .AddTo(gameObject);
     }

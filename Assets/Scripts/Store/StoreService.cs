@@ -44,7 +44,7 @@ public class StoreService : MonoBehaviour
         okButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                SceneService.Instance.LoadScene(LocalDBDataService.Instance.PlayGameType.ToString());
+                SceneService.Instance.LoadScene(LocalDBDataService.Instance.PlayGameType);
             })
             .AddTo(gameObject);
     }

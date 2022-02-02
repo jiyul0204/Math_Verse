@@ -9,7 +9,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
     //Transform ClickAnsObj = null;
     //Transform OldAnsObj = null;
-    static public int nStage=0;
+    public static int nStage = 0;
     public bool IsCorrect = true;
 
     private Vector3 invisdefaultposition;
@@ -23,8 +23,6 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     [SerializeField]
     CCalculate     m_CCal;
 
-    public Transform PopUp;
-    public Text PopUp_txt;
     private void Awake()
     {
         m_CCollsion = GetComponent<CollisionEvent>();
@@ -68,28 +66,22 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             transform.position = invisdefaultposition;
             //Invisiable.transform.position = defaultposition;
 
-
             int nAnsNum = CCalculate.AnsNum;
             SCriptTxt = GetComponentInChildren<Text>();
             int DragNum = int.Parse(SCriptTxt.text);
 
-            Debug.Log(nAnsNum);
-            Debug.Log(DragNum);
-
             if (nAnsNum == DragNum)
             {
                 ++nStage;
-                Invoke("waiting3second", 3.0f);
+                /*Invoke("waiting3second", 3.0f);*/
                 transform.position = defaultposition;
-                m_CCal.GenerateQuiz();
+                AssembleRobotService.Instance.ShowGameResult(true);
                 IsCorrect = true;
             }
             else
             {
                 nStage = 0;
-                m_CCal.GenerateQuiz();
-                PopUp_txt.text = "게임 오버";
-                PopUp.gameObject.SetActive(true);
+                AssembleRobotService.Instance.ShowGameResult(false);
                 transform.position = defaultposition;
                 IsCorrect = false;
             }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UniRx;
 
 using UniRx;
 
@@ -87,7 +86,6 @@ namespace SatelliteGame
                     HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
                 })
                 .AddTo(gameObject);
-            }
         }
 
         private void GenerateQuestion()

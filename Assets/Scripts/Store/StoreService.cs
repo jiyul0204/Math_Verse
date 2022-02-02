@@ -6,6 +6,12 @@ using UniRx;
 public class StoreService : MonoBehaviour
 {
     [SerializeField]
+    private GameObject pausePanel;
+
+    [SerializeField]
+    private Button pauseButton;
+
+    [SerializeField]
     private Button prevQuestButton;
 
     [SerializeField]
@@ -16,6 +22,9 @@ public class StoreService : MonoBehaviour
 
     [SerializeField]
     private Button okButton;
+
+    [SerializeField]
+    private Button goToLobbyButton;
 
     // Start is called before the first frame update
     private void Start()
@@ -29,6 +38,13 @@ public class StoreService : MonoBehaviour
 
     private void BindView()
     {
+        pauseButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    pausePanel.SetActive(true);
+                })
+                .AddTo(gameObject);
+
         prevQuestButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
@@ -50,6 +66,13 @@ public class StoreService : MonoBehaviour
             {
                 AudioManager.Inst.PlaySFX(SoundType.store_enter_guest.ToString());
                 SceneService.Instance.LoadScene(LocalDBDataService.Instance.PlayGameType);
+            })
+            .AddTo(gameObject);
+
+        goToLobbyButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                SceneService.Instance.LoadScene(SceneName.Lobby);
             })
             .AddTo(gameObject);
     }

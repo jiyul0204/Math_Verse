@@ -19,9 +19,6 @@ namespace SatelliteGame
         private GameObject resultPopupPanel;
 
         [SerializeField]
-        private Text gameResultText;
-
-        [SerializeField]
         private Planet mainPlanet;
         private Image mainPlanetImage;
 
@@ -66,7 +63,6 @@ namespace SatelliteGame
             {
                 if (questionCount++ == maxQuestionCount)
                 {
-                    gameResultText.text = $"게임 성공!";
                     resultPopupPanel.SetActive(true);
                 }
                 else
@@ -76,7 +72,6 @@ namespace SatelliteGame
             }
             else
             {
-                gameResultText.text = $"게임 실패...";
                 resultPopupPanel.SetActive(true);
             }
         }

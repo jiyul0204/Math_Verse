@@ -9,7 +9,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
     //Transform ClickAnsObj = null;
     //Transform OldAnsObj = null;
-    public static int nStage = 0;
+    static public int nStage = 0;
     public bool IsCorrect = true;
 
     private Vector3 invisdefaultposition;
@@ -25,6 +25,7 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void Awake()
     {
+        nStage = 0;
         m_CCollsion = GetComponent<CollisionEvent>();
         m_CCal = CCalculate.Instance;
     }

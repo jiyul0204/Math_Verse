@@ -56,6 +56,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 42f8a90037f6bb1428421b7f48b6cb2c, type: 3}
   - {fileID: 21300000, guid: 84358a00db7eef44096c61b423f41796, type: 3}
   - {fileID: 21300000, guid: 48847140b49e5cb46a3c703d90b6842a, type: 3}
+  - {fileID: 21300000, guid: 41b4814049c73314c9374a118bedf509, type: 3}
   - {fileID: 21300000, guid: 240c8940eb283004ba6ba294cbe1b58a, type: 3}
   - {fileID: 21300000, guid: a655c350bf870a14287b7c9875a63b77, type: 3}
   - {fileID: 21300000, guid: f4f89180e9c87434c8b788253e2d7c68, type: 3}
@@ -79,7 +80,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f12742c1e0f42a048a2636116a328c45, type: 3}
   - {fileID: 21300000, guid: e0dcfad1e38a5c943bef7c05ee72aae4, type: 3}
   - {fileID: 21300000, guid: 485970f113684fd4db1d6dc4b5183340, type: 3}
+  - {fileID: 21300000, guid: e8a4b302d4b3e694bb9f7bf347298f83, type: 3}
   - {fileID: 21300000, guid: 7de974028a0f6734e8be281de24bb029, type: 3}
+  - {fileID: 21300000, guid: e849e0224d8dd2f4f9c54351f02841e4, type: 3}
   - {fileID: 21300000, guid: 3d12d2328625d944f819d2925aeff212, type: 3}
   - {fileID: 21300000, guid: c0ef15322bb580f4bbe65c900cbee978, type: 3}
   - {fileID: 21300000, guid: 63f98f42d75207a47becc13d69f8252a, type: 3}
@@ -93,6 +96,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1d77f663b3503a743b80d0a3b286d21b, type: 3}
   - {fileID: 21300000, guid: 06bc4673a0519eb4ca09904851a78292, type: 3}
   - {fileID: 21300000, guid: 5ca68083582f9f64f8aa5f668aab0d79, type: 3}
+  - {fileID: 21300000, guid: c67d01a38304e34419bd2e77044ac19c, type: 3}
   - {fileID: 21300000, guid: f34d6fa3ede095a4cb687c163f11f9a9, type: 3}
   - {fileID: 21300000, guid: 8152edc3c6ffe134e87da6e7b85e71b2, type: 3}
   - {fileID: 21300000, guid: 9ec3a8f306a6ccb468070ff90b38fc46, type: 3}
@@ -247,6 +251,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c6338c4d277a2b846adbfd9d1a57ca37, type: 3}
   - {fileID: 21300000, guid: b07f4b6d9c07f65468a2f9de489a475a, type: 3}
   - {fileID: 21300000, guid: fb52607db30f1fd47a61d0ce0b8977d3, type: 3}
+  - {fileID: 21300000, guid: 216fcc7d555a6af49995841eaebd7590, type: 3}
   - {fileID: 21300000, guid: 642bbf7d48afb4840a0923c0cfffd774, type: 3}
   - {fileID: 21300000, guid: 250d808d6050b9e458d900e61f0d82c7, type: 3}
   - {fileID: 21300000, guid: 8cd1dfade5cca3b43ac7beb0bcbf2784, type: 3}
@@ -283,6 +288,7 @@ SpriteAtlas:
   - Addition
   - UI_background_Middle
   - Close
+  - Talk
   - Mid5
   - Ans4
   - ClickDivide
@@ -306,7 +312,9 @@ SpriteAtlas:
   - Ans7
   - UI_magnetHolder_01
   - Mid3
+  - ExplainRobotAssembly
   - Ans0
+  - ExplainCardCollection
   - UI_lobby2
   - ui_cardCollection
   - UI_circle
@@ -320,6 +328,7 @@ SpriteAtlas:
   - UI_card_back_03
   - left cloud
   - CircleLegend
+  - tool
   - Ans0
   - cash register
   - Mid6
@@ -474,6 +483,7 @@ SpriteAtlas:
   - UI_lobby4
   - Ans4
   - Ans6
+  - ExplainUFO
   - Mid5
   - Ans1
   - star

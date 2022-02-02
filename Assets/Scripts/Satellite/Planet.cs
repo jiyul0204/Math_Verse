@@ -7,6 +7,9 @@ namespace SatelliteGame
 {
     public class Planet : MonoBehaviour
     {
+        [SerializeField]
+        private SatelliteService satelliteService;
+
         private RectTransform rectTransform;
 
         #region Number
@@ -116,7 +119,7 @@ namespace SatelliteGame
 
             yield return new WaitForSeconds(2.0f);
 
-            SatelliteService.Instance.ShowGameResult(isClear);
+            satelliteService.ShowGameResult(isClear);
         }
 
         private void CreateSatellite(int transformIndex)

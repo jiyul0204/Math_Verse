@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace SatelliteGame
 {
-    public class SatelliteService : Singleton<SatelliteService>
+    public class SatelliteService : MonoBehaviour
     {
         private int questionCount = 1;
         private const int maxQuestionCount = 5;
@@ -34,7 +34,14 @@ namespace SatelliteGame
 
         private void GenerateQuestion()
         {
-            missionCountText.text = $"미션 ({questionCount} / {maxQuestionCount})";
+            if (missionCountText == null)
+            {
+                Debug.Log($"[KHW] missionCountText is null");
+            }
+            else
+            {
+                missionCountText.text = $"미션 ({questionCount} / {maxQuestionCount})";
+            }
 
             DBQuestDivisionData data = LocalDBDataService.Instance.GetRandomQuestDivisionData();
 

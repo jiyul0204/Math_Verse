@@ -16,7 +16,10 @@ namespace SatelliteGame
         private Text missionContextText;
 
         [SerializeField]
-        private GameObject resultPopupPanel;
+        private GameObject restartPopupPanel;
+
+        [SerializeField]
+        private GameObject successPopupPanel;
 
         [SerializeField]
         private Planet mainPlanet;
@@ -34,14 +37,7 @@ namespace SatelliteGame
 
         private void GenerateQuestion()
         {
-            if (missionCountText == null)
-            {
-                Debug.Log($"[KHW] missionCountText is null");
-            }
-            else
-            {
-                missionCountText.text = $"미션 ({questionCount} / {maxQuestionCount})";
-            }
+            missionCountText.text = $"미션 ({questionCount} / {maxQuestionCount})";
 
             DBQuestDivisionData data = LocalDBDataService.Instance.GetRandomQuestDivisionData();
 
@@ -70,7 +66,7 @@ namespace SatelliteGame
             {
                 if (questionCount++ == maxQuestionCount)
                 {
-                    resultPopupPanel.SetActive(true);
+                    successPopupPanel.SetActive(true);
                 }
                 else
                 {
@@ -79,7 +75,7 @@ namespace SatelliteGame
             }
             else
             {
-                resultPopupPanel.SetActive(true);
+                restartPopupPanel.SetActive(true);
             }
         }
     }

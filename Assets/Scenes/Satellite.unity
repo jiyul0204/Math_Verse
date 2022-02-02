@@ -745,7 +745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 172674593}
   pauseButton: {fileID: 147423663}
-  retryButton: {fileID: 0}
   homeButton: {fileID: 172674594}
   missionCountText: {fileID: 1870096552}
   missionContextText: {fileID: 759519811}
@@ -1468,6 +1467,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690422256}
     m_Modifications:
+    - target: {fileID: 3751774557786335432, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3751774557786335432, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3751774557786335435, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
       propertyPath: Spaceship
       value: 
@@ -1479,6 +1486,10 @@ PrefabInstance:
     - target: {fileID: 3751774557786335438, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
       propertyPath: m_Name
       value: Button (HowToPlay)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3751774557786335438, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3751774557786335439, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
       propertyPath: m_Pivot.x
@@ -1546,7 +1557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751774557786335439, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -182.77
+      value: -182.76999
       objectReference: {fileID: 0}
     - target: {fileID: 3751774557786335439, guid: 74ee02b975d74e642bb984e0b9442c89, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2202,6 +2213,44 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3883746400314241964, guid: 2ee24d362486c724fa81a2d2f5d4cca7, type: 3}
   m_PrefabInstance: {fileID: 3883746399967399667}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &1001192800
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001192798}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
+--- !u!114 &1001192801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001192798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1174369562
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2371,44 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4994745802096862480, guid: 162aef2ee0e28f7439c5a2c1aabea39f, type: 3}
   m_PrefabInstance: {fileID: 4994745800800358399}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297033968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297033966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &1297033969
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297033966}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &1300131717
 GameObject:
   m_ObjectHideFlags: 0

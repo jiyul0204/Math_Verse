@@ -22,20 +22,8 @@ public class AudioManager : MonoBehaviour
     [Header("배경음 설정")]
 
     [Tooltip("배경음 On/Off")]
-    private bool musicOnDebug;
-
     [SerializeField]
-    bool _musicOn
-    {
-        get
-        {
-            return musicOnDebug;
-        }
-        set
-        {
-            musicOnDebug = value;
-        }
-    }
+    bool _musicOn;
 
     [Tooltip("배경음 볼륨")]
     [Range(0, 1)]

@@ -41,6 +41,8 @@ public class LobbyService : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Inst.PlayBGM(SoundType.main_bgm.ToString());
+
         BindView();
     }
 
@@ -49,6 +51,7 @@ public class LobbyService : MonoBehaviour
         topUICollectionButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 SceneService.Instance.LoadScene(SceneName.CardCollection);
             })
             .AddTo(gameObject);
@@ -56,6 +59,7 @@ public class LobbyService : MonoBehaviour
         storeCollectionButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 SceneService.Instance.LoadScene(SceneName.CardCollection);
             })
             .AddTo(gameObject);
@@ -63,6 +67,7 @@ public class LobbyService : MonoBehaviour
         aseembleRobotStartButton.OnClickAsObservable()
              .Subscribe(_ =>
              {
+                 AudioManager.Inst.PlaySFX(SoundType.store_door_touch.ToString());
                  LocalDBDataService.Instance.PlayGameType = GameType.Assemble_Robot;
                  SceneService.Instance.LoadScene(SceneName.Store);
              })
@@ -71,6 +76,7 @@ public class LobbyService : MonoBehaviour
         satelliteStartButton.OnClickAsObservable()
              .Subscribe(_ =>
              {
+                 AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                  LocalDBDataService.Instance.PlayGameType = GameType.Satellite;
                  SceneService.Instance.LoadScene(SceneName.Store);
              })
@@ -79,6 +85,7 @@ public class LobbyService : MonoBehaviour
         educationResultButton.OnClickAsObservable()
            .Subscribe(_ =>
            {
+               AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                SceneService.Instance.LoadScene(SceneName.Education_Check);
            })
            .AddTo(gameObject);
@@ -86,6 +93,7 @@ public class LobbyService : MonoBehaviour
         SettingButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 SettingWindow.SetActive(!SettingWindow.activeSelf);
             })
             .AddTo(gameObject);
@@ -93,6 +101,7 @@ public class LobbyService : MonoBehaviour
         QuestButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 QuestWindow.SetActive(!QuestWindow.activeSelf);
             })
             .AddTo(gameObject);
@@ -100,6 +109,7 @@ public class LobbyService : MonoBehaviour
         DelQuestWindow.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 QuestWindow.SetActive(!QuestWindow.activeSelf);
             })
             .AddTo(gameObject);
@@ -107,6 +117,7 @@ public class LobbyService : MonoBehaviour
         HowToPlayButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 HowToPlayWindow.SetActive(!HowToPlayWindow.activeSelf);
             })
             .AddTo(gameObject);
@@ -114,6 +125,7 @@ public class LobbyService : MonoBehaviour
         DelHowToPlayButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 HowToPlayWindow.SetActive(!HowToPlayWindow.activeSelf);
             })
             .AddTo(gameObject);

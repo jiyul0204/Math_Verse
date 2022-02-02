@@ -115,7 +115,16 @@ namespace SatelliteGame
 
             bool isClear = targetSatellite.CompareNumber(centerNumberValue);
 
-            centerNumberText.text = isClear ? "성공" : "실패";
+            if (isClear)
+            {
+                centerNumberText.text = "성공";
+                AudioManager.Inst.PlaySFX(SoundType.division_correct.ToString());
+            }
+            else
+            {
+                centerNumberText.text = "실패";
+                AudioManager.Inst.PlaySFX(SoundType.division_incorrect.ToString());
+            }
 
             yield return new WaitForSeconds(2.0f);
 

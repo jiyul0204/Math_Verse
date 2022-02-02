@@ -19,6 +19,7 @@ namespace SatelliteGame
 
         private int questionCount = 1;
         private const int maxQuestionCount = 5;
+        private string stg_cd;
 
         [SerializeField]
         private Text missionCountText;
@@ -53,6 +54,9 @@ namespace SatelliteGame
 
         private void Start()
         {
+            AudioManager.Inst.PlayBGM(SoundType.division_bgm.ToString());
+            AudioManager.Inst.PlaySFX(SoundType.division_enter.ToString());
+
             mainPlanetImage = mainPlanet.GetComponentInChildren<Image>();
 
             BindView();
@@ -96,8 +100,6 @@ namespace SatelliteGame
                     HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
                 })
                 .AddTo(gameObject);
-
-
         }
 
         private void GenerateQuestion()
@@ -106,7 +108,9 @@ namespace SatelliteGame
 
             DBQuestDivisionData data = LocalDBDataService.Instance.GetRandomQuestDivisionData();
 
-            switch (data.stg_cd)
+            stg_cd = data.stg_cd;
+
+            switch (stg_cd)
             {
                 case "F02_0_1":
                     missionContextText.text = $"{data.qst_cn1_1} {data.math_smb1_1} {data.qst_cn1_2} {data.math_smb1_2} {data.qst_cn1_3} ↔ {data.qst_cn2_1} {data.math_smb2_1} {data.qst_cn2_2} {data.math_smb2_2} {data.qst_cn2_3}";
@@ -131,6 +135,19 @@ namespace SatelliteGame
             {
                 if (questionCount++ == maxQuestionCount)
                 {
+                    switch (stg_cd)
+                    {
+                        case "F02_0_1":
+                            PlayerInfoService.Instance.SaveData(CardCollectionCard.CardPlanetA, true);
+                            break;
+                        case "F03_0_1":
+                            PlayerInfoService.Instance.SaveData(CardCollectionCard.CardPlanetB, true);
+                            break;
+                        case "F03_0_2":
+                            PlayerInfoService.Instance.SaveData(CardCollectionCard.CardPlanetC, true);
+                            break;
+                    }
+
                     successPopupPanel.SetActive(true);
                 }
                 else

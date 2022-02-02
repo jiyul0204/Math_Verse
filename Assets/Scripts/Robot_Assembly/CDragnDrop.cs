@@ -39,6 +39,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
+        AudioManager.Inst.PlaySFX(SoundType.multiplication_parts_selection.ToString());
+
         //Transform ClickAnsObj = this.transform;
         //if (OldAnsObj != null)
         //{ }
@@ -73,6 +75,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
             if (nAnsNum == DragNum)
             {
+                AudioManager.Inst.PlaySFX(SoundType.multiplication_correct.ToString());
+
                 ++nStage;
                 /*Invoke("waiting3second", 3.0f);*/
                 transform.position = defaultposition;
@@ -81,6 +85,8 @@ public class CDragnDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             }
             else
             {
+                AudioManager.Inst.PlaySFX(SoundType.multiplication_incorrect.ToString());
+
                 nStage = 0;
                 AssembleRobotService.Instance.ShowGameResult(false);
                 transform.position = defaultposition;

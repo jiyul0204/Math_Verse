@@ -150,6 +150,8 @@ public class CCalculate : MonoBehaviour
 
     public void GenerateQuiz()
     {
+        AudioManager.Inst.PlaySFX(SoundType.multiplication_new_question.ToString());
+
         CChangeimg.ChangeImg();
         for (int n = 0; n < 3; n++)
             nArrnum[n] = 1;//정규화

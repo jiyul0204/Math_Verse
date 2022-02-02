@@ -75,6 +75,7 @@ namespace SatelliteGame
             objectButton.OnPointerDownAsObservable()
                 .Subscribe(_ =>
                 {
+                    AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                     StopRevolve();
                 })
                 .AddTo(gameObject);

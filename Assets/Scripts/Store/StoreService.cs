@@ -20,6 +20,8 @@ public class StoreService : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        AudioManager.Inst.PlayBGM(SoundType.store_bgm.ToString());
+
         BindView();
 
         questTypeText.text = LocalDBDataService.Instance.GetCurrentQuestName();
@@ -30,6 +32,7 @@ public class StoreService : MonoBehaviour
         prevQuestButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 questTypeText.text = LocalDBDataService.Instance.GetPreviousQuestName();
             })
             .AddTo(gameObject);
@@ -37,6 +40,7 @@ public class StoreService : MonoBehaviour
         nextQuestButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.main_button_touch.ToString());
                 questTypeText.text = LocalDBDataService.Instance.GetNextQuestName();
             })
             .AddTo(gameObject);
@@ -44,6 +48,7 @@ public class StoreService : MonoBehaviour
         okButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                AudioManager.Inst.PlaySFX(SoundType.store_enter_guest.ToString());
                 SceneService.Instance.LoadScene(LocalDBDataService.Instance.PlayGameType);
             })
             .AddTo(gameObject);

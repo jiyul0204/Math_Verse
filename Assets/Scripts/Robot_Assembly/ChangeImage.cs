@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class ChangeImage : MonoBehaviour
 {
-    System.Random random = new System.Random();
     public Image MidImg;
     public Image FinImg;
     public Image AnsImg1;
@@ -23,21 +20,23 @@ public class ChangeImage : MonoBehaviour
 
     string SetVersion()  //구구단 수 입력
     {
-        return Convert.ToChar(random.Next(65, 69)).ToString();
+        AssembleRobotService.Instance.QuestionCodeNumber = UnityEngine.Random.Range(65, 70);
+
+        return Convert.ToChar(AssembleRobotService.Instance.QuestionCodeNumber).ToString();
     }
 
-    private void Awake()
+    private void Start()
     {
         //여러개의 로봇이 생겼을 경우 Path를 랜덤으로 돌려준다 .
         string ForcePath = "Robot\\Robot" + SetVersion();
         AddPath = ForcePath + "\\AddBody\\Mid";
         AnsPath = ForcePath + "\\RobotBody\\Ans";
+
         Debug.Log(AddPath);
-    }
-    private void Start()
-    {
+
         ChangeImg();
     }
+
     public void ChangeImg()
     {
         int nStage = CDragnDrop.nStage;

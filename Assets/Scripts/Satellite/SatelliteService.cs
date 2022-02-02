@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
 
 namespace SatelliteGame
 {
@@ -22,6 +23,12 @@ namespace SatelliteGame
         private GameObject successPopupPanel;
 
         [SerializeField]
+        private GameObject HowToPlayPopupPanel;
+
+        [SerializeField]
+        private Button DelHowToPlayPopupPanel;
+
+        [SerializeField]
         private Planet mainPlanet;
         private Image mainPlanetImage;
 
@@ -35,6 +42,15 @@ namespace SatelliteGame
             GenerateQuestion();
         }
 
+        private void Update()
+        {
+            DelHowToPlayPopupPanel.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
+            })
+            .AddTo(gameObject);
+            }
         private void GenerateQuestion()
         {
             missionCountText.text = $"미션 ({questionCount} / {maxQuestionCount})";

@@ -152,6 +152,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f33f4ce62242f2540bcd77aeaaeb6165, type: 3}
   - {fileID: 21300000, guid: 568f53079130a9f44be76f36278df590, type: 3}
   - {fileID: 21300000, guid: a659a017aa68323439181e1b1421339b, type: 3}
+  - {fileID: 21300000, guid: 74d5051727402a34ebb84c38a454ca9e, type: 3}
   - {fileID: 21300000, guid: 8df24e1772a2ffe40b1a725dd487138d, type: 3}
   - {fileID: 21300000, guid: 96eb764785a79f448932db63d433062c, type: 3}
   - {fileID: 21300000, guid: 787fb8770ddf17045b3951e782c54cb5, type: 3}
@@ -384,6 +385,7 @@ SpriteAtlas:
   - cloud
   - Ans2
   - Mid2
+  - StateliteHowtoplay
   - Ans5
   - Ans3
   - Textneon

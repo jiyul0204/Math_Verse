@@ -1071,6 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1662f1f576def9f488303f35b9643bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  satelliteService: {fileID: 488574669}
   centerNumberText: {fileID: 859648065}
   satellitePrefab: {fileID: 7126893558069346037, guid: 98d56d57db23d0947a7fbb33c52cdd5b, type: 3}
   satelliteMoveSpeed: 30

@@ -42,6 +42,12 @@ namespace SatelliteGame
         private Button DelHowToPlayPopupPanel;
 
         [SerializeField]
+        private Button HowToPlay;
+
+        [SerializeField]
+        private Button HowToPlay2;
+
+        [SerializeField]
         private Planet mainPlanet;
         private Image mainPlanetImage;
 
@@ -86,6 +92,22 @@ namespace SatelliteGame
                     HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
                 })
                 .AddTo(gameObject);
+
+            HowToPlay.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
+                })
+                .AddTo(gameObject);
+
+            HowToPlay2.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
+                })
+                .AddTo(gameObject);
+
+
         }
 
         private void GenerateQuestion()

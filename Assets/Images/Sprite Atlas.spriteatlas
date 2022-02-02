@@ -65,6 +65,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a813d3a061209644e94df4c4a5ac8a0a, type: 3}
   - {fileID: 21300000, guid: ca0ff9a0b57ceca4c8d87274b1bfdc34, type: 3}
   - {fileID: 21300000, guid: f77a9fa0a4b378a499f6cd882296d0ae, type: 3}
+  - {fileID: 21300000, guid: c6e563c04ab02564b8fc9d928c36da09, type: 3}
   - {fileID: 21300000, guid: 39fd25e05d0582a4d8d17255042354d8, type: 3}
   - {fileID: 21300000, guid: 4530f0f069c22dc49a236cdffd307aa6, type: 3}
   - {fileID: 21300000, guid: 6438d1f0b09db7a4eaa60651632a51f8, type: 3}
@@ -298,6 +299,7 @@ SpriteAtlas:
   - Mid8
   - UI_MathVerse
   - Lobby_NoAdd
+  - HTP
   - Ans7
   - satellite_2
   - Multiplication

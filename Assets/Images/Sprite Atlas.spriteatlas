@@ -187,6 +187,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5cc9af29ad423e14f8d005705bf26c61, type: 3}
   - {fileID: 21300000, guid: f3cab5397628dfd46987e23daaf8d57d, type: 3}
   - {fileID: 21300000, guid: 4e7cc569c69c80e49a8e83182c63d123, type: 3}
+  - {fileID: 21300000, guid: d50162a998476554ab29211eae517637, type: 3}
   - {fileID: 21300000, guid: b02b95f937f22c54c93243f183041403, type: 3}
   - {fileID: 21300000, guid: ffba6af99df798541aa7679dbf65333a, type: 3}
   - {fileID: 21300000, guid: b951140aeb11493488ae6ad9b2c640b4, type: 3}
@@ -204,6 +205,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 15f652ea99eddd24489b431a7f6472eb, type: 3}
   - {fileID: 21300000, guid: 487533faf529d2c48af80da118b18ef3, type: 3}
   - {fileID: 21300000, guid: 9f45671bb748fde4594de4e30e7f67b2, type: 3}
+  - {fileID: 21300000, guid: 233c5b2bba02d04439ff3af6c94455a6, type: 3}
   - {fileID: 21300000, guid: 9523b33b2da4f5440bdf226b697af2e2, type: 3}
   - {fileID: 21300000, guid: ae521c3b241ef33499bdb04c81947790, type: 3}
   - {fileID: 21300000, guid: 0017094bab07d674a94f4af3fdf306e3, type: 3}
@@ -421,6 +423,7 @@ SpriteAtlas:
   - Mid0
   - playbox_white
   - Start
+  - HTDROBOT
   - user character_1
   - UI_background_Top
   - UI_lobby
@@ -438,6 +441,7 @@ SpriteAtlas:
   - Mid4
   - Subtraction
   - Ans4
+  - HowToPlay(Robot)
   - rusty_robot
   - Ans5
   - lamp

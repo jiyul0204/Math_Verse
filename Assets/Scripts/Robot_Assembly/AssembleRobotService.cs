@@ -18,6 +18,15 @@ public class AssembleRobotService : MonoBehaviour
     private Button homeButton;
 
     [SerializeField]
+    private Button DelButton;
+
+    [SerializeField]
+    private Button HowToPlayButton;
+
+    [SerializeField]
+    private GameObject HowToPlayPopupPanel;
+
+    [SerializeField]
     private GameObject restartPopupPanel;
 
     [SerializeField]
@@ -43,6 +52,22 @@ public class AssembleRobotService : MonoBehaviour
                 pausePanel.SetActive(true);
             })
             .AddTo(gameObject);
+
+        HowToPlayButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
+            })
+            .AddTo(gameObject);
+
+        DelButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                HowToPlayPopupPanel.SetActive(!HowToPlayPopupPanel.activeSelf);
+            })
+            .AddTo(gameObject);
+
+
 
         homeButton.OnClickAsObservable()
             .Subscribe(_ =>

@@ -7,10 +7,10 @@ using UniRx;
 public class PanelGameRestart : MonoBehaviour
 {
     [SerializeField]
-    private Button yesButton;
+    private Button restartButton;
 
     [SerializeField]
-    private Button noButton;
+    private Button goToLobbyButton;
 
     private void Start()
     {
@@ -19,14 +19,17 @@ public class PanelGameRestart : MonoBehaviour
 
     private void BindView()
     {
-        yesButton.OnClickAsObservable()
-            .Subscribe(_ =>
-            {
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-            })
-            .AddTo(gameObject);
+        if (restartButton != null)
+        {
+            restartButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+                })
+                .AddTo(gameObject);
+        }
 
-        noButton.OnClickAsObservable()
+        goToLobbyButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 SceneManager.LoadScene("Lobby");

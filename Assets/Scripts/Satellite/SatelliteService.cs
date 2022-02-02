@@ -15,9 +15,6 @@ namespace SatelliteGame
         private Button pauseButton;
 
         [SerializeField]
-        private Button retryButton;
-
-        [SerializeField]
         private Button homeButton;
 
         private int questionCount = 1;
@@ -69,13 +66,6 @@ namespace SatelliteGame
                 .Subscribe(_ =>
                 {
                     pausePanel.SetActive(true);
-                })
-                .AddTo(gameObject);
-
-            retryButton.OnClickAsObservable()
-                .Subscribe(_ =>
-                {
-                    SceneService.Instance.ReloadScene();
                 })
                 .AddTo(gameObject);
 
